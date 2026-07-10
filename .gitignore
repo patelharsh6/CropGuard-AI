@@ -1,0 +1,27 @@
+# Virtual environment
+venv/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Dataset - too large for git, and reproducible via kaggle download command in README
+data/
+
+# Generated embeddings/FAISS index - large binaries, regenerate via scripts/
+embeddings/
+*.npy
+*.faiss
+*.index
+
+# Kaggle credentials - should never be committed
+kaggle.json
+
+# OS/editor junk
+.vscode/
+.idea/
+Thumbs.db
+.DS_Store
+
+# Jupyter
+.ipynb_checkpoints/
