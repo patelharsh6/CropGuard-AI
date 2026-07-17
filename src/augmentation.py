@@ -156,15 +156,27 @@ def _get_backgrounds(bg_dir=BACKGROUNDS_DIR):
     return backgrounds
 
 
+# GrabCut's cost scales with pixel count, so segment on a downsized copy and
+# upscale the resulting alpha mask. 128px keeps mask quality nearly identical
+# at ~1/3 the pixels of a 224px input (and far less for larger inputs).
+SEGMENT_SIZE = 128
+
+
 def _segment_leaf(image):
     """
     Rough foreground (leaf) alpha mask for a PlantVillage-style image on a
     mostly-uniform background. Uses GrabCut with a central rectangle, falling
-    back to Otsu saturation thresholding if GrabCut degenerates. Returns a
-    feathered float alpha map in [0, 1] with shape (H, W).
+    back to Otsu saturation thresholding if GrabCut degenerates. Segmentation
+    runs on a SEGMENT_SIZE x SEGMENT_SIZE copy for speed; the feathered alpha
+    is upscaled back. Returns a float alpha map in [0, 1] with shape (H, W).
     """
     image = np.ascontiguousarray(image)
-    h, w = image.shape[:2]
+    full_h, full_w = image.shape[:2]
+
+    # Downsize for segmentation — GrabCut runtime scales with pixel count.
+    small = cv2.resize(image, (SEGMENT_SIZE, SEGMENT_SIZE),
+                       interpolation=cv2.INTER_AREA)
+    h, w = small.shape[:2]
 
     mask = None
     try:
@@ -172,7 +184,7 @@ def _segment_leaf(image):
         rect = (int(w * 0.08), int(h * 0.08), int(w * 0.84), int(h * 0.84))
         bgd = np.zeros((1, 65), np.float64)
         fgd = np.zeros((1, 65), np.float64)
-        cv2.grabCut(image, gc_mask, rect, bgd, fgd, 3, cv2.GC_INIT_WITH_RECT)
+        cv2.grabCut(small, gc_mask, rect, bgd, fgd, 3, cv2.GC_INIT_WITH_RECT)
         mask = np.where((gc_mask == cv2.GC_FGD) | (gc_mask == cv2.GC_PR_FGD), 1, 0).astype(np.uint8)
     except Exception:
         mask = None
@@ -180,7 +192,7 @@ def _segment_leaf(image):
     frac = float(mask.mean()) if mask is not None else 0.0
     if mask is None or frac < 0.05 or frac > 0.98:
         # Fallback: leaves are more saturated than the neutral lab background
-        hsv = cv2.cvtColor(image, cv2.COLOR_RGB2HSV)
+        hsv = cv2.cvtColor(small, cv2.COLOR_RGB2HSV)
         sat = hsv[:, :, 1]
         _, mask = cv2.threshold(sat, 0, 1, cv2.THRESH_BINARY + cv2.THRESH_OTSU)
         mask = mask.astype(np.uint8)
@@ -197,6 +209,11 @@ def _segment_leaf(image):
 
     # Feather the edges so the composite doesn't have a hard cut-out look
     alpha = cv2.GaussianBlur(mask.astype(np.float32), (7, 7), 0)
+
+    # Upscale the alpha back to the source resolution (bilinear keeps the
+    # feathered edge smooth).
+    if (full_h, full_w) != (h, w):
+        alpha = cv2.resize(alpha, (full_w, full_h), interpolation=cv2.INTER_LINEAR)
     return np.clip(alpha, 0.0, 1.0)
 
 
