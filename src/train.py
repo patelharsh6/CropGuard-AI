@@ -93,6 +93,11 @@ def get_datasets():
     # Augmentation runs per-image, so unbatch -> augment -> re-batch -> prefetch.
     train_ds = train_base.unbatch()
     train_ds = apply_augmentations_to_dataset(train_ds)
+    # NOTE: unbatch->map->batch makes the dataset cardinality UNKNOWN, so Keras
+    # prints "Your input ran out of data; interrupting training" when it hits the
+    # natural end of each fit's first epoch — verified harmless: all 529 batches
+    # (16914 images) are consumed per epoch, nothing is dropped, and val/test
+    # (known cardinality, 114 batches) are unaffected. No .repeat() needed.
     train_ds = train_ds.batch(BATCH_SIZE).prefetch(tf.data.AUTOTUNE)
 
     return train_ds, val_ds, test_ds, df, label_map, num_classes

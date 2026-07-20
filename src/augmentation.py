@@ -267,11 +267,12 @@ def get_training_augmentation(config=AUG_CONFIG):
         A.HorizontalFlip(p=config['p_horizontal_flip']),
         A.VerticalFlip(p=config['p_vertical_flip']),
         
-        # Shift, Scale, Rotate
-        A.ShiftScaleRotate(
-            shift_limit=0.0, # Handled by other transforms if needed
-            scale_limit=config['scale_limit'], 
-            rotate_limit=config['rotation_limit'], 
+        # Shift, Scale, Rotate (A.Affine replaces the deprecated A.ShiftScaleRotate;
+        # scale_limit=s maps to scale=(1-s, 1+s), rotate_limit=r to rotate=(-r, r))
+        A.Affine(
+            translate_percent=0.0, # Shift handled by other transforms if needed
+            scale=(1.0 - config['scale_limit'], 1.0 + config['scale_limit']),
+            rotate=(-config['rotation_limit'], config['rotation_limit']),
             border_mode=cv2.BORDER_REFLECT_101,
             p=config['p_rotation']
         ),
