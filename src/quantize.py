@@ -76,7 +76,18 @@ def convert_to_int8(model) -> bytes:
 
 
 def _make_interpreter(tflite_bytes: bytes) -> tf.lite.Interpreter:
-    interp = tf.lite.Interpreter(model_content=tflite_bytes)
+    # Disable the auto XNNPACK delegate: it can't prepare some ops in this
+    # fully-quantized MobileNetV3 graph (squeeze-excite / hard-swish), so fall
+    # back to TFLite's built-in reference kernels. Both the accuracy and latency
+    # interpreters go through here, so the fix applies to both.
+    # NB: reference kernels are slower than XNNPACK-accelerated ones, making the
+    # latency benchmark an even rougher proxy for real devices — correctness only.
+    interp = tf.lite.Interpreter(
+        model_content=tflite_bytes,
+        experimental_op_resolver_type=(
+            tf.lite.experimental.OpResolverType.BUILTIN_WITHOUT_DEFAULT_DELEGATES
+        ),
+    )
     interp.allocate_tensors()
     return interp
 
