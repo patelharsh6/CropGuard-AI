@@ -1,7 +1,6 @@
 import os
 import glob
 import pandas as pd
-from sklearn.model_selection import train_test_split
 import tensorflow as tf
 
 # Configuration constants
@@ -16,6 +15,10 @@ def create_dataset_csv(data_dir=DATA_DIR, output_csv=CSV_PATH):
     Scans the data directory, filters for specified crops, prints class stats,
     and creates a stratified 70/15/15 train/val/test split saved to a CSV.
     """
+    # Imported lazily so modules that only need the constants (e.g. src.quantize)
+    # don't require sklearn at import time.
+    from sklearn.model_selection import train_test_split
+
     image_paths = []
     labels = []
     class_counts = {}
