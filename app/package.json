@@ -1,0 +1,16 @@
+{
+  "name": "cropguard-ai",
+  "version": "0.1.0",
+  "description": "CropGuard AI — browser inference test harness",
+  "type": "module",
+  "scripts": {
+    "dev": "npx serve . --cors -l 3000",
+    "start": "npx serve . --cors -l 3000"
+  },
+  "dependencies": {
+    "@litertjs/core": "^0.1.0"
+  },
+  "devDependencies": {
+    "serve": "^14.2.4"
+  }
+}

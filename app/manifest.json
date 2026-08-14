@@ -1,0 +1,23 @@
+{
+  "name": "CropGuard AI",
+  "short_name": "CropGuard",
+  "description": "On-device plant disease detection powered by LiteRT.js",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0f1b0e",
+  "theme_color": "#2d7a3a",
+  "icons": [
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
