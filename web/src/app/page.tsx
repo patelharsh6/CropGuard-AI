@@ -3,6 +3,7 @@
 import { useState, useRef } from 'react';
 import { useCropGuardModel, InferenceResult } from '@/lib/useCropGuardModel';
 import { CLASS_NAMES } from '@/lib/constants';
+import { DISEASE_INFO } from '@/lib/diseaseInfo';
 
 export default function Home() {
   const { isModelReady, status, error, infer } = useCropGuardModel();
@@ -127,6 +128,50 @@ export default function Home() {
                 </div>
               );
             })}
+          </div>
+        </div>
+      )}
+
+      {result && DISEASE_INFO[result.bestClass] && (
+        <div className="bg-[#111f11] border border-[#2d5a2d] rounded p-4 mt-4">
+          <h2 className="text-[#66bb6a] font-bold text-xl mb-3">
+            {DISEASE_INFO[result.bestClass].displayName}
+          </h2>
+          
+          <div className="mb-4">
+            <h3 className="text-[#81c784] font-semibold mb-1">Likely Cause:</h3>
+            <p className="text-gray-300 text-sm">{DISEASE_INFO[result.bestClass].cause}</p>
+          </div>
+          
+          <div className="mb-4">
+            <h3 className="text-[#81c784] font-semibold mb-1">Prevention & Care:</h3>
+            <ul className="list-disc list-inside text-gray-300 text-sm space-y-1">
+              {DISEASE_INFO[result.bestClass].prevention.map((bullet, idx) => (
+                <li key={idx}>{bullet}</li>
+              ))}
+            </ul>
+          </div>
+          
+          <div className="mb-4">
+            <h3 className="text-[#81c784] font-semibold mb-1">General Treatment Guidance:</h3>
+            <p className="text-gray-300 text-sm">{DISEASE_INFO[result.bestClass].treatmentCategory}</p>
+          </div>
+          
+          <div className="mt-6 pt-3 border-t border-[#1e3a1e] text-xs text-gray-400">
+            <p>
+              <span className="font-semibold text-gray-300">Disclaimer:</span> This is general information only and not a substitute for professional agricultural advice.
+            </p>
+            <p className="mt-1">
+              For specific treatment guidance, see:{' '}
+              <a 
+                href={DISEASE_INFO[result.bestClass].referenceUrl} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-[#66bb6a] hover:underline"
+              >
+                Extension Resource
+              </a>
+            </p>
           </div>
         </div>
       )}
