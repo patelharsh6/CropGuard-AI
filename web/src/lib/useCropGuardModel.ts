@@ -7,6 +7,10 @@ import { preprocessImage } from './preprocess';
 const WASM_PATH = '/litert_wasm/';
 const MODEL_URL = '/cropguard_v1_production.tflite';
 
+// Module-level promise to ensure we only load the WASM runtime once,
+// preventing issues with React StrictMode double-mounting.
+let liteRtInitPromise: Promise<unknown> | null = null;
+
 export interface InferenceResult {
   bestClass: ClassName;
   bestIndex: number;
@@ -31,7 +35,10 @@ export function useCropGuardModel() {
     async function initModel() {
       try {
         setStatus('Initializing LiteRT Wasm runtime...');
-        await loadLiteRt(WASM_PATH);
+        if (!liteRtInitPromise) {
+          liteRtInitPromise = loadLiteRt(WASM_PATH);
+        }
+        await liteRtInitPromise;
 
         if (!isMounted) return;
         setStatus('Loading & compiling model (1.15 MB)...');
