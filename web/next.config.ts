@@ -11,6 +11,9 @@ const nextConfig: NextConfig = {
     fetches: {},
     browserConsole: false,
   },
+  // Allow phones/tablets on the local network to access the dev server.
+  // Next.js 16 blocks cross-origin dev resource requests by default.
+  allowedDevOrigins: ['10.64.111.37'],
 };
 
 export default nextConfig;
