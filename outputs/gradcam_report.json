@@ -1,0 +1,1589 @@
+{
+  "model": "models\\cropguard_v1.keras",
+  "layers": {
+    "deep": "activation_17",
+    "mid": "activation_11"
+  },
+  "mask_threshold": 0.5,
+  "cohorts": {
+    "correct_high": {
+      "summary": {
+        "deep": {
+          "n": 8,
+          "mean_cam_mass_in_leaf": 0.5286597316360597,
+          "mean_lift_vs_area": 1.5780535828108389,
+          "peak_in_leaf_rate": 0.625
+        },
+        "mid": {
+          "n": 8,
+          "mean_cam_mass_in_leaf": 0.39242120604026337,
+          "mean_lift_vs_area": 1.1605305379724302,
+          "peak_in_leaf_rate": 0.25
+        },
+        "n_images": 8,
+        "n_masks_plausible": 8,
+        "mean_leaf_area_frac": 0.3741878587372449,
+        "accuracy": 1.0,
+        "mean_confidence": 0.9871543049812317,
+        "keras_tflite_agreement": 1.0
+      },
+      "images": [
+        {
+          "path": "data/plantvillage_dataset/color/Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot/54ff4537-6187-4a07-b478-7a06d159915c___RS_GLSp 9368.JPG",
+          "true_label": "Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot",
+          "pred_label": "Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot",
+          "confidence": 0.9214699268341064,
+          "calibrated_confidence": 0.9416574469707899,
+          "correct": true,
+          "leaf_area_frac": 0.19672751913265307,
+          "mask_plausible": true,
+          "keras_tflite_agree": true,
+          "layers": {
+            "deep": {
+              "cam_mass_in_leaf": 0.17558666845691398,
+              "lift_vs_area": 0.8925374001108414,
+              "peak_in_leaf": false
+            },
+            "mid": {
+              "cam_mass_in_leaf": 0.14922390597147508,
+              "lift_vs_area": 0.7585309194635532,
+              "peak_in_leaf": false
+            }
+          },
+          "panel": "outputs/gradcam/correct_high/00_Corn_Cercospora_Gray_leaf_spot.jpg"
+        },
+        {
+          "path": "data/plantvillage_dataset/color/Corn_(maize)___Common_rust_/RS_Rust 2467.JPG",
+          "true_label": "Corn_(maize)___Common_rust_",
+          "pred_label": "Corn_(maize)___Common_rust_",
+          "confidence": 0.9999898672103882,
+          "calibrated_confidence": 0.9999978459714405,
+          "correct": true,
+          "leaf_area_frac": 0.3628627232142857,
+          "mask_plausible": true,
+          "keras_tflite_agree": true,
+          "layers": {
+            "deep": {
+              "cam_mass_in_leaf": 0.3799353199031599,
+              "lift_vs_area": 1.0470497397408112,
+              "peak_in_leaf": true
+            },
+            "mid": {
+              "cam_mass_in_leaf": 0.1415169757960564,
+              "lift_vs_area": 0.39000141580397246,
+              "peak_in_leaf": false
+            }
+          },
+          "panel": "outputs/gradcam/correct_high/01_Corn_Common_rust.jpg"
+        },
+        {
+          "path": "data/plantvillage_dataset/color/Corn_(maize)___Northern_Leaf_Blight/3a29a411-e364-4a88-8c32-14051876ec60___RS_NLB 3713.JPG",
+          "true_label": "Corn_(maize)___Northern_Leaf_Blight",
+          "pred_label": "Corn_(maize)___Northern_Leaf_Blight",
+          "confidence": 0.9997636675834656,
+          "calibrated_confidence": 0.9999179688228125,
+          "correct": true,
+          "leaf_area_frac": 0.05970982142857143,
+          "mask_plausible": true,
+          "keras_tflite_agree": true,
+          "layers": {
+            "deep": {
+              "cam_mass_in_leaf": 0.1925649327457888,
+              "lift_vs_area": 3.2250127054247995,
+              "peak_in_leaf": true
+            },
+            "mid": {
+              "cam_mass_in_leaf": 0.1357714673936578,
+              "lift_vs_area": 2.2738548557891103,
+              "peak_in_leaf": false
+            }
+          },
+          "panel": "outputs/gradcam/correct_high/02_Corn_Northern_Leaf_Blight.jpg"
+        },
+        {
+          "path": "data/plantvillage_dataset/color/Corn_(maize)___healthy/384dee4e-f5d5-4c86-a3f8-279946157984___R.S_HL 8278 copy.jpg",
+          "true_label": "Corn_(maize)___healthy",
+          "pred_label": "Corn_(maize)___healthy",
+          "confidence": 0.9978609681129456,
+          "calibrated_confidence": 0.9990807007110287,
+          "correct": true,
+          "leaf_area_frac": 0.49533641581632654,
+          "mask_plausible": true,
+          "keras_tflite_agree": true,
+          "layers": {
+            "deep": {
+              "cam_mass_in_leaf": 0.29853348271539815,
+              "lift_vs_area": 0.6026883410609084,
+              "peak_in_leaf": false
+            },
+            "mid": {
+              "cam_mass_in_leaf": 0.36325102411337323,
+              "lift_vs_area": 0.7333420530261775,
+              "peak_in_leaf": false
+            }
+          },
+          "panel": "outputs/gradcam/correct_high/03_Corn_healthy.jpg"
+        },
+        {
+          "path": "data/plantvillage_dataset/color/Potato___Early_blight/b09e0cba-0564-4dde-a90d-3c0d90d6336e___RS_Early.B 7776.JPG",
+          "true_label": "Potato___Early_blight",
+          "pred_label": "Potato___Early_blight",
+          "confidence": 0.9991083741188049,
+          "calibrated_confidence": 0.9996699888126193,
+          "correct": true,
+          "leaf_area_frac": 0.412109375,
+          "mask_plausible": true,
+          "keras_tflite_agree": true,
+          "layers": {
+            "deep": {
+              "cam_mass_in_leaf": 0.8075024780551141,
+              "lift_vs_area": 1.9594372927214143,
+              "peak_in_leaf": true
+            },
+            "mid": {
+              "cam_mass_in_leaf": 0.841482128612908,
+              "lift_vs_area": 2.0418902836483834,
+              "peak_in_leaf": true
+            }
+          },
+          "panel": "outputs/gradcam/correct_high/04_Potato_Early_blight.jpg"
+        },
+        {
+          "path": "data/plantvillage_dataset/color/Potato___Late_blight/ba15e1af-3f3a-4eef-8be1-4f0a221444fd___RS_LB 2866.JPG",
+          "true_label": "Potato___Late_blight",
+          "pred_label": "Potato___Late_blight",
+          "confidence": 0.9992620348930359,
+          "calibrated_confidence": 0.9997033319153451,
+          "correct": true,
+          "leaf_area_frac": 0.4821029974489796,
+          "mask_plausible": true,
+          "keras_tflite_agree": true,
+          "layers": {
+            "deep": {
+              "cam_mass_in_leaf": 0.8409630782532718,
+              "lift_vs_area": 1.7443639278394445,
+              "peak_in_leaf": true
+            },
+            "mid": {
+              "cam_mass_in_leaf": 0.5536836421548026,
+              "lift_vs_area": 1.1484758341777335,
+              "peak_in_leaf": true
+            }
+          },
+          "panel": "outputs/gradcam/correct_high/05_Potato_Late_blight.jpg"
+        },
+        {
+          "path": "data/plantvillage_dataset/color/Potato___healthy/43fd6ace-3712-494a-9aba-de5482d22561___RS_HL 1968.JPG",
+          "true_label": "Potato___healthy",
+          "pred_label": "Potato___healthy",
+          "confidence": 0.999196469783783,
+          "calibrated_confidence": 0.9996776547513787,
+          "correct": true,
+          "leaf_area_frac": 0.5477519132653061,
+          "mask_plausible": true,
+          "keras_tflite_agree": true,
+          "layers": {
+            "deep": {
+              "cam_mass_in_leaf": 0.7732844067571534,
+              "lift_vs_area": 1.4117420460430405,
+              "peak_in_leaf": false
+            },
+            "mid": {
+              "cam_mass_in_leaf": 0.5319856434867922,
+              "lift_vs_area": 0.9712164040020843,
+              "peak_in_leaf": false
+            }
+          },
+          "panel": "outputs/gradcam/correct_high/06_Potato_healthy.jpg"
+        },
+        {
+          "path": "data/plantvillage_dataset/color/Tomato___Bacterial_spot/54692b7d-86bd-45db-b3c7-30dc1964a137___GCREC_Bact.Sp 6265.JPG",
+          "true_label": "Tomato___Bacterial_spot",
+          "pred_label": "Tomato___Bacterial_spot",
+          "confidence": 0.980583131313324,
+          "calibrated_confidence": 0.9889632128434042,
+          "correct": true,
+          "leaf_area_frac": 0.43690210459183676,
+          "mask_plausible": true,
+          "keras_tflite_agree": true,
+          "layers": {
+            "deep": {
+              "cam_mass_in_leaf": 0.7609074862016779,
+              "lift_vs_area": 1.7415972095454515,
+              "peak_in_leaf": true
+            },
+            "mid": {
+              "cam_mass_in_leaf": 0.4224548607930414,
+              "lift_vs_area": 0.9669325378684264,
+              "peak_in_leaf": false
+            }
+          },
+          "panel": "outputs/gradcam/correct_high/07_Tomato_Bacterial_spot.jpg"
+        }
+      ]
+    },
+    "cluster": {
+      "summary": {
+        "deep": {
+          "n": 8,
+          "mean_cam_mass_in_leaf": 0.5388872797415508,
+          "mean_lift_vs_area": 1.3183961255551253,
+          "peak_in_leaf_rate": 0.875
+        },
+        "mid": {
+          "n": 8,
+          "mean_cam_mass_in_leaf": 0.3216539801315868,
+          "mean_lift_vs_area": 0.7865272223005595,
+          "peak_in_leaf_rate": 0.25
+        },
+        "n_images": 8,
+        "n_masks_plausible": 8,
+        "mean_leaf_area_frac": 0.4058115433673469,
+        "accuracy": 0.25,
+        "mean_confidence": 0.6853079088032246,
+        "keras_tflite_agreement": 0.75
+      },
+      "images": [
+        {
+          "path": "data/plantvillage_dataset/color/Tomato___Early_blight/240300f1-a601-4363-84e8-670af8a124a1___RS_Erly.B 7762.JPG",
+          "true_label": "Tomato___Early_blight",
+          "pred_label": "Tomato___Target_Spot",
+          "confidence": 0.7197036147117615,
+          "calibrated_confidence": 0.7695721775858336,
+          "correct": false,
+          "leaf_area_frac": 0.35154257015306123,
+          "mask_plausible": true,
+          "keras_tflite_agree": true,
+          "layers": {
+            "deep": {
+              "cam_mass_in_leaf": 0.5469879110257031,
+              "lift_vs_area": 1.555964931324093,
+              "peak_in_leaf": true
+            },
+            "mid": {
+              "cam_mass_in_leaf": 0.23536585420055975,
+              "lift_vs_area": 0.6695230512142006,
+              "peak_in_leaf": false
+            }
+          },
+          "true_class_confidence": 0.11570345610380173,
+          "panel": "outputs/gradcam/cluster/00_Tomato_Early_blight.jpg"
+        },
+        {
+          "path": "data/plantvillage_dataset/color/Tomato___Septoria_leaf_spot/ef52809f-d100-4e76-82b6-6091dc98deae___Matt.S_CG 7781.JPG",
+          "true_label": "Tomato___Septoria_leaf_spot",
+          "pred_label": "Tomato___Septoria_leaf_spot",
+          "confidence": 0.49299097061157227,
+          "calibrated_confidence": 0.49651972171553643,
+          "correct": true,
+          "leaf_area_frac": 0.5000996492346939,
+          "mask_plausible": true,
+          "keras_tflite_agree": false,
+          "layers": {
+            "deep": {
+              "cam_mass_in_leaf": 0.6956617866989208,
+              "lift_vs_area": 1.391046339991434,
+              "peak_in_leaf": true
+            },
+            "mid": {
+              "cam_mass_in_leaf": 0.40035310992160283,
+              "lift_vs_area": 0.8005466721167793,
+              "peak_in_leaf": false
+            }
+          },
+          "panel": "outputs/gradcam/cluster/01_Tomato_Septoria_leaf_spot.jpg"
+        },
+        {
+          "path": "data/plantvillage_dataset/color/Tomato___Spider_mites Two-spotted_spider_mite/d9d22025-cee6-4963-ac70-bfa8a7af30a2___Com.G_SpM_FL 1624.JPG",
+          "true_label": "Tomato___Spider_mites Two-spotted_spider_mite",
+          "pred_label": "Tomato___Spider_mites Two-spotted_spider_mite",
+          "confidence": 0.5241144895553589,
+          "calibrated_confidence": 0.5414178419934966,
+          "correct": true,
+          "leaf_area_frac": 0.39750079719387754,
+          "mask_plausible": true,
+          "keras_tflite_agree": false,
+          "layers": {
+            "deep": {
+              "cam_mass_in_leaf": 0.31161094743742507,
+              "lift_vs_area": 0.7839253396149531,
+              "peak_in_leaf": false
+            },
+            "mid": {
+              "cam_mass_in_leaf": 0.12802117348162853,
+              "lift_vs_area": 0.322065199328864,
+              "peak_in_leaf": false
+            }
+          },
+          "panel": "outputs/gradcam/cluster/02_Tomato_Spider_mites.jpg"
+        },
+        {
+          "path": "data/plantvillage_dataset/color/Tomato___Target_Spot/41f2bcea-5197-46c0-9cae-73724af3a5b8___Com.G_TgS_FL 9812.JPG",
+          "true_label": "Tomato___Target_Spot",
+          "pred_label": "Tomato___Spider_mites Two-spotted_spider_mite",
+          "confidence": 0.6558021306991577,
+          "calibrated_confidence": 0.6840246417023325,
+          "correct": false,
+          "leaf_area_frac": 0.3621452487244898,
+          "mask_plausible": true,
+          "keras_tflite_agree": true,
+          "layers": {
+            "deep": {
+              "cam_mass_in_leaf": 0.3427950584455522,
+              "lift_vs_area": 0.9465678747765135,
+              "peak_in_leaf": true
+            },
+            "mid": {
+              "cam_mass_in_leaf": 0.3452731227236247,
+              "lift_vs_area": 0.9534106106312583,
+              "peak_in_leaf": false
+            }
+          },
+          "true_class_confidence": 0.3018091917037964,
+          "panel": "outputs/gradcam/cluster/03_Tomato_Target_Spot.jpg"
+        },
+        {
+          "path": "data/plantvillage_dataset/color/Tomato___Early_blight/fc38942e-e609-41a2-970c-cc1a67b16fe2___RS_Erly.B 7793.JPG",
+          "true_label": "Tomato___Early_blight",
+          "pred_label": "Tomato___Target_Spot",
+          "confidence": 0.9063332080841064,
+          "calibrated_confidence": 0.9347090554243621,
+          "correct": false,
+          "leaf_area_frac": 0.46269132653061223,
+          "mask_plausible": true,
+          "keras_tflite_agree": true,
+          "layers": {
+            "deep": {
+              "cam_mass_in_leaf": 0.7851012969393503,
+              "lift_vs_area": 1.6968143812555496,
+              "peak_in_leaf": true
+            },
+            "mid": {
+              "cam_mass_in_leaf": 0.48522519934916886,
+              "lift_vs_area": 1.048701740288762,
+              "peak_in_leaf": true
+            }
+          },
+          "true_class_confidence": 0.07071665674448013,
+          "panel": "outputs/gradcam/cluster/04_Tomato_Early_blight.jpg"
+        },
+        {
+          "path": "data/plantvillage_dataset/color/Tomato___Septoria_leaf_spot/5bd0232d-e941-400e-8b38-fa47a26d49a6___JR_Sept.L.S 2544.JPG",
+          "true_label": "Tomato___Septoria_leaf_spot",
+          "pred_label": "Tomato___Target_Spot",
+          "confidence": 0.8569362163543701,
+          "calibrated_confidence": 0.8960505545264185,
+          "correct": false,
+          "leaf_area_frac": 0.3724888392857143,
+          "mask_plausible": true,
+          "keras_tflite_agree": true,
+          "layers": {
+            "deep": {
+              "cam_mass_in_leaf": 0.7426575703489703,
+              "lift_vs_area": 1.9937713349293704,
+              "peak_in_leaf": true
+            },
+            "mid": {
+              "cam_mass_in_leaf": 0.3833838312243566,
+              "lift_vs_area": 1.0292491768599954,
+              "peak_in_leaf": false
+            }
+          },
+          "true_class_confidence": 0.05107133463025093,
+          "panel": "outputs/gradcam/cluster/05_Tomato_Septoria_leaf_spot.jpg"
+        },
+        {
+          "path": "data/plantvillage_dataset/color/Tomato___Spider_mites Two-spotted_spider_mite/f03d3d30-cc06-48e0-9a8f-978f705cc2e8___Com.G_SpM_FL 1278.JPG",
+          "true_label": "Tomato___Spider_mites Two-spotted_spider_mite",
+          "pred_label": "Tomato___Target_Spot",
+          "confidence": 0.4508766233921051,
+          "calibrated_confidence": 0.4660132687215607,
+          "correct": false,
+          "leaf_area_frac": 0.41344467474489793,
+          "mask_plausible": true,
+          "keras_tflite_agree": true,
+          "layers": {
+            "deep": {
+              "cam_mass_in_leaf": 0.6755519577462995,
+              "lift_vs_area": 1.6339597508738648,
+              "peak_in_leaf": true
+            },
+            "mid": {
+              "cam_mass_in_leaf": 0.42832536746850763,
+              "lift_vs_area": 1.0359919806266493,
+              "peak_in_leaf": true
+            }
+          },
+          "true_class_confidence": 0.20577983558177948,
+          "panel": "outputs/gradcam/cluster/06_Tomato_Spider_mites.jpg"
+        },
+        {
+          "path": "data/plantvillage_dataset/color/Tomato___Target_Spot/ab2f57d3-2cd1-492e-8785-111b062792c6___Com.G_TgS_FL 9984.JPG",
+          "true_label": "Tomato___Target_Spot",
+          "pred_label": "Tomato___Spider_mites Two-spotted_spider_mite",
+          "confidence": 0.8757060170173645,
+          "calibrated_confidence": 0.9114169260545912,
+          "correct": false,
+          "leaf_area_frac": 0.38657924107142855,
+          "mask_plausible": true,
+          "keras_tflite_agree": true,
+          "layers": {
+            "deep": {
+              "cam_mass_in_leaf": 0.21073170929018542,
+              "lift_vs_area": 0.5451190516752252,
+              "peak_in_leaf": true
+            },
+            "mid": {
+              "cam_mass_in_leaf": 0.1672841826832456,
+              "lift_vs_area": 0.43272934733796625,
+              "peak_in_leaf": false
+            }
+          },
+          "true_class_confidence": 0.08423967659473419,
+          "panel": "outputs/gradcam/cluster/07_Tomato_Target_Spot.jpg"
+        }
+      ]
+    },
+    "real_world": {
+      "summary": {
+        "deep": {
+          "n": 16,
+          "mean_cam_mass_in_leaf": 0.5341147033028336,
+          "mean_lift_vs_area": 1.5636321151825148,
+          "peak_in_leaf_rate": 0.5625
+        },
+        "mid": {
+          "n": 16,
+          "mean_cam_mass_in_leaf": 0.44709694947440587,
+          "mean_lift_vs_area": 1.2062088727946154,
+          "peak_in_leaf_rate": 0.3125
+        },
+        "n_images": 17,
+        "n_masks_plausible": 16,
+        "mean_leaf_area_frac": 0.41510757134885207,
+        "accuracy": 0.5882352941176471,
+        "mean_confidence": 0.7343390759299783,
+        "keras_tflite_agreement": 0.8235294117647058
+      },
+      "images": [
+        {
+          "path": "real_world_test/Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot/image.png",
+          "true_label": "Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot",
+          "pred_label": "Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot",
+          "confidence": 0.9731821417808533,
+          "calibrated_confidence": 0.9839872455007317,
+          "correct": true,
+          "leaf_area_frac": 0.7473294005102041,
+          "mask_plausible": true,
+          "keras_tflite_agree": true,
+          "layers": {
+            "deep": {
+              "cam_mass_in_leaf": 0.7237942121380351,
+              "lift_vs_area": 0.9685076107589217,
+              "peak_in_leaf": true
+            },
+            "mid": {
+              "cam_mass_in_leaf": 0.7974806667647624,
+              "lift_vs_area": 1.0671073106722682,
+              "peak_in_leaf": true
+            }
+          },
+          "panel": "outputs/gradcam/real_world/00_real_world_test_Corn_Cercospora_Gray_leaf_spot.jpg"
+        },
+        {
+          "path": "real_world_test/Corn_(maize)___Common_rust_/image.png",
+          "true_label": "Corn_(maize)___Common_rust_",
+          "pred_label": "Corn_(maize)___Common_rust_",
+          "confidence": 0.940597414970398,
+          "calibrated_confidence": 0.9578983633695453,
+          "correct": true,
+          "leaf_area_frac": 0.3505261479591837,
+          "mask_plausible": true,
+          "keras_tflite_agree": true,
+          "layers": {
+            "deep": {
+              "cam_mass_in_leaf": 0.35278026653196987,
+              "lift_vs_area": 1.006430671680016,
+              "peak_in_leaf": true
+            },
+            "mid": {
+              "cam_mass_in_leaf": 0.30237703068757477,
+              "lift_vs_area": 0.862637587660891,
+              "peak_in_leaf": true
+            }
+          },
+          "panel": "outputs/gradcam/real_world/01_real_world_test_Corn_Common_rust.jpg"
+        },
+        {
+          "path": "real_world_test/Corn_(maize)___Northern_Leaf_Blight/image.png",
+          "true_label": "Corn_(maize)___Northern_Leaf_Blight",
+          "pred_label": "Corn_(maize)___Northern_Leaf_Blight",
+          "confidence": 0.9868546724319458,
+          "calibrated_confidence": 0.9931243980207664,
+          "correct": true,
+          "leaf_area_frac": 0.05767697704081633,
+          "mask_plausible": true,
+          "keras_tflite_agree": true,
+          "layers": {
+            "deep": {
+              "cam_mass_in_leaf": 0.2182573044746263,
+              "lift_vs_area": 3.7841321732269693,
+              "peak_in_leaf": false
+            },
+            "mid": {
+              "cam_mass_in_leaf": 0.14837642066689885,
+              "lift_vs_area": 2.572541563020842,
+              "peak_in_leaf": false
+            }
+          },
+          "panel": "outputs/gradcam/real_world/02_real_world_test_Corn_Northern_Leaf_Blight.jpg"
+        },
+        {
+          "path": "real_world_test/Corn_(maize)___healthy/image.png",
+          "true_label": "Corn_(maize)___healthy",
+          "pred_label": "Corn_(maize)___healthy",
+          "confidence": 0.48985597491264343,
+          "calibrated_confidence": 0.5341072930684652,
+          "correct": true,
+          "leaf_area_frac": 0.2975526147959184,
+          "mask_plausible": true,
+          "keras_tflite_agree": true,
+          "layers": {
+            "deep": {
+              "cam_mass_in_leaf": 0.21549150135761075,
+              "lift_vs_area": 0.7242130992712308,
+              "peak_in_leaf": false
+            },
+            "mid": {
+              "cam_mass_in_leaf": 0.3062760807747656,
+              "lift_vs_area": 1.0293173897491386,
+              "peak_in_leaf": false
+            }
+          },
+          "panel": "outputs/gradcam/real_world/03_real_world_test_Corn_healthy.jpg"
+        },
+        {
+          "path": "real_world_test/Potato___Early_blight/image.png",
+          "true_label": "Potato___Early_blight",
+          "pred_label": "Potato___Early_blight",
+          "confidence": 0.9964751601219177,
+          "calibrated_confidence": 0.9983528087399907,
+          "correct": true,
+          "leaf_area_frac": 0.6709183673469388,
+          "mask_plausible": true,
+          "keras_tflite_agree": true,
+          "layers": {
+            "deep": {
+              "cam_mass_in_leaf": 0.5386257329870848,
+              "lift_vs_area": 0.802818583007366,
+              "peak_in_leaf": false
+            },
+            "mid": {
+              "cam_mass_in_leaf": 0.5027584507150615,
+              "lift_vs_area": 0.749358603347164,
+              "peak_in_leaf": false
+            }
+          },
+          "panel": "outputs/gradcam/real_world/04_real_world_test_Potato_Early_blight.jpg"
+        },
+        {
+          "path": "real_world_test/Potato___Late_blight/image.png",
+          "true_label": "Potato___Late_blight",
+          "pred_label": "Tomato___Late_blight",
+          "confidence": 0.9571232199668884,
+          "calibrated_confidence": 0.9719040336326271,
+          "correct": false,
+          "leaf_area_frac": 0.04510124362244898,
+          "mask_plausible": false,
+          "keras_tflite_agree": true,
+          "layers": {
+            "deep": {
+              "cam_mass_in_leaf": 0.45264207961605235,
+              "lift_vs_area": 10.036133003453399,
+              "peak_in_leaf": true
+            },
+            "mid": {
+              "cam_mass_in_leaf": 0.04382209863947779,
+              "lift_vs_area": 0.9716383655918858,
+              "peak_in_leaf": false
+            }
+          },
+          "true_class_confidence": 0.038503486663103104,
+          "panel": "outputs/gradcam/real_world/05_real_world_test_Potato_Late_blight.jpg"
+        },
+        {
+          "path": "real_world_test/Potato___healthy/image.png",
+          "true_label": "Potato___healthy",
+          "pred_label": "Potato___healthy",
+          "confidence": 0.7547821998596191,
+          "calibrated_confidence": 0.7837815827166205,
+          "correct": true,
+          "leaf_area_frac": 0.26149952168367346,
+          "mask_plausible": true,
+          "keras_tflite_agree": true,
+          "layers": {
+            "deep": {
+              "cam_mass_in_leaf": 0.3298190210129965,
+              "lift_vs_area": 1.2612605135544632,
+              "peak_in_leaf": false
+            },
+            "mid": {
+              "cam_mass_in_leaf": 0.2145804574369837,
+              "lift_vs_area": 0.8205768639858314,
+              "peak_in_leaf": false
+            }
+          },
+          "panel": "outputs/gradcam/real_world/06_real_world_test_Potato_healthy.jpg"
+        },
+        {
+          "path": "real_world_test/Tomato___Bacterial_spot/image.png",
+          "true_label": "Tomato___Bacterial_spot",
+          "pred_label": "Tomato___Septoria_leaf_spot",
+          "confidence": 0.9771451950073242,
+          "calibrated_confidence": 0.9865240918023296,
+          "correct": false,
+          "leaf_area_frac": 0.7377630739795918,
+          "mask_plausible": true,
+          "keras_tflite_agree": true,
+          "layers": {
+            "deep": {
+              "cam_mass_in_leaf": 0.9233109690843767,
+              "lift_vs_area": 1.2515006533248065,
+              "peak_in_leaf": true
+            },
+            "mid": {
+              "cam_mass_in_leaf": 0.8671000813584048,
+              "lift_vs_area": 1.1753096785952595,
+              "peak_in_leaf": true
+            }
+          },
+          "true_class_confidence": 0.018952950835227966,
+          "panel": "outputs/gradcam/real_world/07_real_world_test_Tomato_Bacterial_spot.jpg"
+        },
+        {
+          "path": "real_world_test/Tomato___Early_blight/image.png",
+          "true_label": "Tomato___Early_blight",
+          "pred_label": "Tomato___Early_blight",
+          "confidence": 0.5379717350006104,
+          "calibrated_confidence": 0.5547514311056344,
+          "correct": true,
+          "leaf_area_frac": 0.20065369897959184,
+          "mask_plausible": true,
+          "keras_tflite_agree": false,
+          "layers": {
+            "deep": {
+              "cam_mass_in_leaf": 0.5981471967211991,
+              "lift_vs_area": 2.9809926244222176,
+              "peak_in_leaf": false
+            },
+            "mid": {
+              "cam_mass_in_leaf": 0.422716442167314,
+              "lift_vs_area": 2.1066964841266533,
+              "peak_in_leaf": false
+            }
+          },
+          "panel": "outputs/gradcam/real_world/08_real_world_test_Tomato_Early_blight.jpg"
+        },
+        {
+          "path": "real_world_test/Tomato___Late_blight/image.png",
+          "true_label": "Tomato___Late_blight",
+          "pred_label": "Tomato___Late_blight",
+          "confidence": 0.66074538230896,
+          "calibrated_confidence": 0.7071467458160345,
+          "correct": true,
+          "leaf_area_frac": 0.23032924107142858,
+          "mask_plausible": true,
+          "keras_tflite_agree": true,
+          "layers": {
+            "deep": {
+              "cam_mass_in_leaf": 0.17084788718387262,
+              "lift_vs_area": 0.7417550910563289,
+              "peak_in_leaf": false
+            },
+            "mid": {
+              "cam_mass_in_leaf": 0.20213829617152604,
+              "lift_vs_area": 0.8776058794412469,
+              "peak_in_leaf": false
+            }
+          },
+          "panel": "outputs/gradcam/real_world/09_real_world_test_Tomato_Late_blight.jpg"
+        },
+        {
+          "path": "real_world_test/Tomato___Leaf_Mold/image.png",
+          "true_label": "Tomato___Leaf_Mold",
+          "pred_label": "Tomato___Leaf_Mold",
+          "confidence": 0.7793207168579102,
+          "calibrated_confidence": 0.8230530220037113,
+          "correct": true,
+          "leaf_area_frac": 0.8744419642857143,
+          "mask_plausible": true,
+          "keras_tflite_agree": true,
+          "layers": {
+            "deep": {
+              "cam_mass_in_leaf": 0.9860101239629655,
+              "lift_vs_area": 1.127587837997214,
+              "peak_in_leaf": true
+            },
+            "mid": {
+              "cam_mass_in_leaf": 0.8929777955139291,
+              "lift_vs_area": 1.0211973258206515,
+              "peak_in_leaf": false
+            }
+          },
+          "panel": "outputs/gradcam/real_world/10_real_world_test_Tomato_Leaf_Mold.jpg"
+        },
+        {
+          "path": "real_world_test/Tomato___Septoria_leaf_spot/image.png",
+          "true_label": "Tomato___Septoria_leaf_spot",
+          "pred_label": "Tomato___Early_blight",
+          "confidence": 0.7928811311721802,
+          "calibrated_confidence": 0.8262050128178049,
+          "correct": false,
+          "leaf_area_frac": 0.20960220025510204,
+          "mask_plausible": true,
+          "keras_tflite_agree": true,
+          "layers": {
+            "deep": {
+              "cam_mass_in_leaf": 0.3879544098737083,
+              "lift_vs_area": 1.8509080983001984,
+              "peak_in_leaf": true
+            },
+            "mid": {
+              "cam_mass_in_leaf": 0.27869634501118495,
+              "lift_vs_area": 1.329644176788173,
+              "peak_in_leaf": false
+            }
+          },
+          "true_class_confidence": 0.006636005360633135,
+          "panel": "outputs/gradcam/real_world/11_real_world_test_Tomato_Septoria_leaf_spot.jpg"
+        },
+        {
+          "path": "real_world_test/Tomato___Spider_mites Two-spotted_spider_mite/image.png",
+          "true_label": "Tomato___Spider_mites Two-spotted_spider_mite",
+          "pred_label": "Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot",
+          "confidence": 0.2815132439136505,
+          "calibrated_confidence": 0.29723456384192404,
+          "correct": false,
+          "leaf_area_frac": 0.5839644451530612,
+          "mask_plausible": true,
+          "keras_tflite_agree": true,
+          "layers": {
+            "deep": {
+              "cam_mass_in_leaf": 0.3953819397993311,
+              "lift_vs_area": 0.677065090316755,
+              "peak_in_leaf": false
+            },
+            "mid": {
+              "cam_mass_in_leaf": 0.4614018962841589,
+              "lift_vs_area": 0.7901198439627984,
+              "peak_in_leaf": true
+            }
+          },
+          "true_class_confidence": 0.0009059736039489508,
+          "panel": "outputs/gradcam/real_world/12_real_world_test_Tomato_Spider_mites.jpg"
+        },
+        {
+          "path": "real_world_test/Tomato___Target_Spot/image.png",
+          "true_label": "Tomato___Target_Spot",
+          "pred_label": "Potato___Early_blight",
+          "confidence": 0.5347347259521484,
+          "calibrated_confidence": 0.5501529525539223,
+          "correct": false,
+          "leaf_area_frac": 0.4068080357142857,
+          "mask_plausible": true,
+          "keras_tflite_agree": false,
+          "layers": {
+            "deep": {
+              "cam_mass_in_leaf": 0.5497795504019938,
+              "lift_vs_area": 1.3514471252680011,
+              "peak_in_leaf": true
+            },
+            "mid": {
+              "cam_mass_in_leaf": 0.6058232957318114,
+              "lift_vs_area": 1.4892117228414348,
+              "peak_in_leaf": true
+            }
+          },
+          "true_class_confidence": 5.807185630146705e-07,
+          "panel": "outputs/gradcam/real_world/13_real_world_test_Tomato_Target_Spot.jpg"
+        },
+        {
+          "path": "real_world_test/Tomato___Tomato_Yellow_Leaf_Curl_Virus/image.png",
+          "true_label": "Tomato___Tomato_Yellow_Leaf_Curl_Virus",
+          "pred_label": "Tomato___Septoria_leaf_spot",
+          "confidence": 0.35886502265930176,
+          "calibrated_confidence": 0.38130880697872627,
+          "correct": false,
+          "leaf_area_frac": 0.3771125637755102,
+          "mask_plausible": true,
+          "keras_tflite_agree": false,
+          "layers": {
+            "deep": {
+              "cam_mass_in_leaf": 0.5740755833486211,
+              "lift_vs_area": 1.522292382945799,
+              "peak_in_leaf": true
+            },
+            "mid": {
+              "cam_mass_in_leaf": 0.4123840997184227,
+              "lift_vs_area": 1.09353052465234,
+              "peak_in_leaf": false
+            }
+          },
+          "true_class_confidence": 0.0156878512352705,
+          "panel": "outputs/gradcam/real_world/14_real_world_test_Tomato_Yellow_Leaf_Curl_Virus.jpg"
+        },
+        {
+          "path": "real_world_test/Tomato___Tomato_mosaic_virus/image.png",
+          "true_label": "Tomato___Tomato_mosaic_virus",
+          "pred_label": "Tomato___Leaf_Mold",
+          "confidence": 0.7366847991943359,
+          "calibrated_confidence": 0.7982272956663193,
+          "correct": false,
+          "leaf_area_frac": 0.33906648596938777,
+          "mask_plausible": true,
+          "keras_tflite_agree": true,
+          "layers": {
+            "deep": {
+              "cam_mass_in_leaf": 0.8669806203166656,
+              "lift_vs_area": 2.556963475284136,
+              "peak_in_leaf": true
+            },
+            "mid": {
+              "cam_mass_in_leaf": 0.41615413252907024,
+              "lift_vs_area": 1.2273525982353863,
+              "peak_in_leaf": false
+            }
+          },
+          "true_class_confidence": 0.0013365932973101735,
+          "panel": "outputs/gradcam/real_world/15_real_world_test_Tomato_mosaic_virus.jpg"
+        },
+        {
+          "path": "real_world_test/Tomato___healthy/image.png",
+          "true_label": "Tomato___healthy",
+          "pred_label": "Tomato___healthy",
+          "confidence": 0.7250315546989441,
+          "calibrated_confidence": 0.7523685962924536,
+          "correct": true,
+          "leaf_area_frac": 0.29647640306122447,
+          "mask_plausible": true,
+          "keras_tflite_agree": true,
+          "layers": {
+            "deep": {
+              "cam_mass_in_leaf": 0.7145789336502808,
+              "lift_vs_area": 2.4102388125058143,
+              "peak_in_leaf": true
+            },
+            "mid": {
+              "cam_mass_in_leaf": 0.322309700058625,
+              "lift_vs_area": 1.0871344118137651,
+              "peak_in_leaf": false
+            }
+          },
+          "panel": "outputs/gradcam/real_world/16_real_world_test_Tomato_healthy.jpg"
+        }
+      ]
+    },
+    "web_sourced": {
+      "summary": {
+        "deep": {
+          "n": 19,
+          "mean_cam_mass_in_leaf": 0.2715741439077112,
+          "mean_lift_vs_area": 1.5021256399736755,
+          "peak_in_leaf_rate": 0.2631578947368421
+        },
+        "mid": {
+          "n": 19,
+          "mean_cam_mass_in_leaf": 0.24056619202391288,
+          "mean_lift_vs_area": 1.2467792309512171,
+          "peak_in_leaf_rate": 0.3157894736842105
+        },
+        "n_images": 20,
+        "n_masks_plausible": 19,
+        "mean_leaf_area_frac": 0.19868064413265304,
+        "accuracy": 0.35,
+        "mean_confidence": 0.6644746422767639,
+        "keras_tflite_agreement": 0.8
+      },
+      "images": [
+        {
+          "path": "web_sourced_test/Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot/01_Gray_leaf_spot_Cercospora_zeae-maydis_5465607.png",
+          "true_label": "Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot",
+          "pred_label": "Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot",
+          "confidence": 0.9653520584106445,
+          "calibrated_confidence": 0.9780588565060452,
+          "correct": true,
+          "leaf_area_frac": 0.13434709821428573,
+          "mask_plausible": true,
+          "keras_tflite_agree": true,
+          "layers": {
+            "deep": {
+              "cam_mass_in_leaf": 0.184554743676525,
+              "lift_vs_area": 1.373715890626512,
+              "peak_in_leaf": false
+            },
+            "mid": {
+              "cam_mass_in_leaf": 0.18304603907747974,
+              "lift_vs_area": 1.362485989727284,
+              "peak_in_leaf": true
+            }
+          },
+          "panel": "outputs/gradcam/web_sourced/00_web_sourced_test_Corn_Cercospora_Gray_leaf_spot.jpg"
+        },
+        {
+          "path": "web_sourced_test/Corn_(maize)___Common_rust_/00_Puccinia_sorghi_Schwein._1538032.jpg",
+          "true_label": "Corn_(maize)___Common_rust_",
+          "pred_label": "Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot",
+          "confidence": 0.8683221936225891,
+          "calibrated_confidence": 0.8979928645493973,
+          "correct": false,
+          "leaf_area_frac": 0.11001275510204081,
+          "mask_plausible": true,
+          "keras_tflite_agree": true,
+          "layers": {
+            "deep": {
+              "cam_mass_in_leaf": 0.09561740500355659,
+              "lift_vs_area": 0.8691483538874014,
+              "peak_in_leaf": false
+            },
+            "mid": {
+              "cam_mass_in_leaf": 0.08657180412563431,
+              "lift_vs_area": 0.7869251528637369,
+              "peak_in_leaf": false
+            }
+          },
+          "true_class_confidence": 0.019760029390454292,
+          "panel": "outputs/gradcam/web_sourced/01_web_sourced_test_Corn_Common_rust.jpg"
+        },
+        {
+          "path": "web_sourced_test/Corn_(maize)___Common_rust_/02_Puccinia_sorghi_(15).jpg",
+          "true_label": "Corn_(maize)___Common_rust_",
+          "pred_label": "Potato___Early_blight",
+          "confidence": 0.7388155460357666,
+          "calibrated_confidence": 0.7870354109081487,
+          "correct": false,
+          "leaf_area_frac": 0.11521444515306123,
+          "mask_plausible": true,
+          "keras_tflite_agree": false,
+          "layers": {
+            "deep": {
+              "cam_mass_in_leaf": 0.07817664749424638,
+              "lift_vs_area": 0.6785316493117638,
+              "peak_in_leaf": false
+            },
+            "mid": {
+              "cam_mass_in_leaf": 0.09272091261382981,
+              "lift_vs_area": 0.8047681216591462,
+              "peak_in_leaf": false
+            }
+          },
+          "true_class_confidence": 0.10274010896682739,
+          "panel": "outputs/gradcam/web_sourced/02_web_sourced_test_Corn_Common_rust.jpg"
+        },
+        {
+          "path": "web_sourced_test/Corn_(maize)___Common_rust_/03_Puccinia_sorghi_(07).jpg",
+          "true_label": "Corn_(maize)___Common_rust_",
+          "pred_label": "Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot",
+          "confidence": 0.5524031519889832,
+          "calibrated_confidence": 0.5598304736474039,
+          "correct": false,
+          "leaf_area_frac": 0.05235570790816327,
+          "mask_plausible": true,
+          "keras_tflite_agree": true,
+          "layers": {
+            "deep": {
+              "cam_mass_in_leaf": 0.019362156346435788,
+              "lift_vs_area": 0.36981939735011876,
+              "peak_in_leaf": false
+            },
+            "mid": {
+              "cam_mass_in_leaf": 0.01652757687756304,
+              "lift_vs_area": 0.3156786057893426,
+              "peak_in_leaf": false
+            }
+          },
+          "true_class_confidence": 0.0024451613426208496,
+          "panel": "outputs/gradcam/web_sourced/03_web_sourced_test_Corn_Common_rust.jpg"
+        },
+        {
+          "path": "web_sourced_test/Corn_(maize)___Northern_Leaf_Blight/t02_Exserohilum_turcicum_a1__2_.jpg",
+          "true_label": "Corn_(maize)___Northern_Leaf_Blight",
+          "pred_label": "Corn_(maize)___Northern_Leaf_Blight",
+          "confidence": 0.8603506088256836,
+          "calibrated_confidence": 0.8902467153668808,
+          "correct": true,
+          "leaf_area_frac": 0.16167091836734693,
+          "mask_plausible": true,
+          "keras_tflite_agree": true,
+          "layers": {
+            "deep": {
+              "cam_mass_in_leaf": 0.6015204007819897,
+              "lift_vs_area": 3.720646897144615,
+              "peak_in_leaf": true
+            },
+            "mid": {
+              "cam_mass_in_leaf": 0.2959585971139573,
+              "lift_vs_area": 1.83062359082716,
+              "peak_in_leaf": true
+            }
+          },
+          "panel": "outputs/gradcam/web_sourced/04_web_sourced_test_Corn_Northern_Leaf_Blight.jpg"
+        },
+        {
+          "path": "web_sourced_test/Corn_(maize)___Northern_Leaf_Blight/t03_Helmintosporioza_li\u015bci_kukurydzy.jpg",
+          "true_label": "Corn_(maize)___Northern_Leaf_Blight",
+          "pred_label": "Corn_(maize)___Northern_Leaf_Blight",
+          "confidence": 0.6757626533508301,
+          "calibrated_confidence": 0.7046883657981227,
+          "correct": true,
+          "leaf_area_frac": 0.23628826530612246,
+          "mask_plausible": true,
+          "keras_tflite_agree": true,
+          "layers": {
+            "deep": {
+              "cam_mass_in_leaf": 0.652388715747467,
+              "lift_vs_area": 2.7609865217058793,
+              "peak_in_leaf": true
+            },
+            "mid": {
+              "cam_mass_in_leaf": 0.34297807929848984,
+              "lift_vs_area": 1.4515239631309906,
+              "peak_in_leaf": true
+            }
+          },
+          "panel": "outputs/gradcam/web_sourced/05_web_sourced_test_Corn_Northern_Leaf_Blight.jpg"
+        },
+        {
+          "path": "web_sourced_test/Potato___Late_blight/00_Late_blight_on_potato_leaf_2.jpg",
+          "true_label": "Potato___Late_blight",
+          "pred_label": "Tomato___Late_blight",
+          "confidence": 0.7534668445587158,
+          "calibrated_confidence": 0.7829194345600211,
+          "correct": false,
+          "leaf_area_frac": 0.09695870535714286,
+          "mask_plausible": true,
+          "keras_tflite_agree": true,
+          "layers": {
+            "deep": {
+              "cam_mass_in_leaf": 0.46922108419084374,
+              "lift_vs_area": 4.839390980546717,
+              "peak_in_leaf": true
+            },
+            "mid": {
+              "cam_mass_in_leaf": 0.06920555381396866,
+              "lift_vs_area": 0.7137631794798954,
+              "peak_in_leaf": true
+            }
+          },
+          "true_class_confidence": 0.23399941623210907,
+          "panel": "outputs/gradcam/web_sourced/06_web_sourced_test_Potato_Late_blight.jpg"
+        },
+        {
+          "path": "web_sourced_test/Potato___Late_blight/01_Potato_Late_Blight.JPG",
+          "true_label": "Potato___Late_blight",
+          "pred_label": "Potato___Early_blight",
+          "confidence": 0.5481590032577515,
+          "calibrated_confidence": 0.5711797729718826,
+          "correct": false,
+          "leaf_area_frac": 0.15547273596938777,
+          "mask_plausible": true,
+          "keras_tflite_agree": false,
+          "layers": {
+            "deep": {
+              "cam_mass_in_leaf": 0.15772724819557876,
+              "lift_vs_area": 1.0145010133907653,
+              "peak_in_leaf": true
+            },
+            "mid": {
+              "cam_mass_in_leaf": 0.14270021333575295,
+              "lift_vs_area": 0.9178471868138366,
+              "peak_in_leaf": false
+            }
+          },
+          "true_class_confidence": 0.3816758692264557,
+          "panel": "outputs/gradcam/web_sourced/07_web_sourced_test_Potato_Late_blight.jpg"
+        },
+        {
+          "path": "web_sourced_test/Potato___Late_blight/t02_Phytophthora_infestans_on_potato_leaf_2.jpg",
+          "true_label": "Potato___Late_blight",
+          "pred_label": "Potato___Late_blight",
+          "confidence": 0.6610136032104492,
+          "calibrated_confidence": 0.7097661303360996,
+          "correct": true,
+          "leaf_area_frac": 0.12364477040816327,
+          "mask_plausible": true,
+          "keras_tflite_agree": true,
+          "layers": {
+            "deep": {
+              "cam_mass_in_leaf": 0.27399800737495683,
+              "lift_vs_area": 2.2160096740886255,
+              "peak_in_leaf": false
+            },
+            "mid": {
+              "cam_mass_in_leaf": 0.4935078626505811,
+              "lift_vs_area": 3.9913363179167565,
+              "peak_in_leaf": false
+            }
+          },
+          "panel": "outputs/gradcam/web_sourced/08_web_sourced_test_Potato_Late_blight.jpg"
+        },
+        {
+          "path": "web_sourced_test/Potato___healthy/00_Starr-110731-8128-Solanum_tuberosum-leaves-Hawea_Pl_Olinda-Maui__25102276025_.jp.jpg",
+          "true_label": "Potato___healthy",
+          "pred_label": "Tomato___Late_blight",
+          "confidence": 0.3080452084541321,
+          "calibrated_confidence": 0.32920838016059367,
+          "correct": false,
+          "leaf_area_frac": 0.5468550701530612,
+          "mask_plausible": true,
+          "keras_tflite_agree": false,
+          "layers": {
+            "deep": {
+              "cam_mass_in_leaf": 0.3726215308816408,
+              "lift_vs_area": 0.6813899170347756,
+              "peak_in_leaf": false
+            },
+            "mid": {
+              "cam_mass_in_leaf": 0.5849592831215331,
+              "lift_vs_area": 1.0696788144577443,
+              "peak_in_leaf": false
+            }
+          },
+          "true_class_confidence": 5.938558729212673e-07,
+          "panel": "outputs/gradcam/web_sourced/09_web_sourced_test_Potato_healthy.jpg"
+        },
+        {
+          "path": "web_sourced_test/Potato___healthy/01_Russain_blue_potato_leaves.jpg",
+          "true_label": "Potato___healthy",
+          "pred_label": "Tomato___Early_blight",
+          "confidence": 0.3888239562511444,
+          "calibrated_confidence": 0.4239472181028847,
+          "correct": false,
+          "leaf_area_frac": 0.061822385204081634,
+          "mask_plausible": true,
+          "keras_tflite_agree": true,
+          "layers": {
+            "deep": {
+              "cam_mass_in_leaf": 0.02704546022764016,
+              "lift_vs_area": 0.4374703457066643,
+              "peak_in_leaf": false
+            },
+            "mid": {
+              "cam_mass_in_leaf": 0.08444984993963511,
+              "lift_vs_area": 1.3660076307450455,
+              "peak_in_leaf": false
+            }
+          },
+          "true_class_confidence": 3.94480193790514e-05,
+          "panel": "outputs/gradcam/web_sourced/10_web_sourced_test_Potato_healthy.jpg"
+        },
+        {
+          "path": "web_sourced_test/Tomato___Early_blight/00_Alternaria_solani_-_leaf_lesions.jpg",
+          "true_label": "Tomato___Early_blight",
+          "pred_label": "Tomato___Early_blight",
+          "confidence": 0.6821536421775818,
+          "calibrated_confidence": 0.7163516769823508,
+          "correct": true,
+          "leaf_area_frac": 0.20135124362244897,
+          "mask_plausible": true,
+          "keras_tflite_agree": false,
+          "layers": {
+            "deep": {
+              "cam_mass_in_leaf": 0.6333457118171866,
+              "lift_vs_area": 3.1454770302028265,
+              "peak_in_leaf": false
+            },
+            "mid": {
+              "cam_mass_in_leaf": 0.47013702494722526,
+              "lift_vs_area": 2.3349099637485873,
+              "peak_in_leaf": true
+            }
+          },
+          "panel": "outputs/gradcam/web_sourced/11_web_sourced_test_Tomato_Early_blight.jpg"
+        },
+        {
+          "path": "web_sourced_test/Tomato___Late_blight/00_Tomato_late_blight_leaf_curl_2_(5816171413).jpg",
+          "true_label": "Tomato___Late_blight",
+          "pred_label": "Tomato___Late_blight",
+          "confidence": 0.9317998290061951,
+          "calibrated_confidence": 0.9568927482650615,
+          "correct": true,
+          "leaf_area_frac": 0.1558514030612245,
+          "mask_plausible": true,
+          "keras_tflite_agree": true,
+          "layers": {
+            "deep": {
+              "cam_mass_in_leaf": 0.11256643279454731,
+              "lift_vs_area": 0.7222676895011771,
+              "peak_in_leaf": false
+            },
+            "mid": {
+              "cam_mass_in_leaf": 0.1349546126001671,
+              "lift_vs_area": 0.8659184963971848,
+              "peak_in_leaf": false
+            }
+          },
+          "panel": "outputs/gradcam/web_sourced/12_web_sourced_test_Tomato_Late_blight.jpg"
+        },
+        {
+          "path": "web_sourced_test/Tomato___Late_blight/01_Tomato_late_blight_leaf_sporulating_lesions_1_(5816170621).jpg",
+          "true_label": "Tomato___Late_blight",
+          "pred_label": "Tomato___Late_blight",
+          "confidence": 0.4274071455001831,
+          "calibrated_confidence": 0.45084450482878446,
+          "correct": true,
+          "leaf_area_frac": 0.22544642857142858,
+          "mask_plausible": true,
+          "keras_tflite_agree": true,
+          "layers": {
+            "deep": {
+              "cam_mass_in_leaf": 0.11332506905094966,
+              "lift_vs_area": 0.5026696132160935,
+              "peak_in_leaf": false
+            },
+            "mid": {
+              "cam_mass_in_leaf": 0.18986765387589424,
+              "lift_vs_area": 0.8421852369940656,
+              "peak_in_leaf": false
+            }
+          },
+          "panel": "outputs/gradcam/web_sourced/13_web_sourced_test_Tomato_Late_blight.jpg"
+        },
+        {
+          "path": "web_sourced_test/Tomato___Late_blight/02_Late_blight_on_tomato_leaf_(7871756748).jpg",
+          "true_label": "Tomato___Late_blight",
+          "pred_label": "Corn_(maize)___Common_rust_",
+          "confidence": 0.683437705039978,
+          "calibrated_confidence": 0.7275194522524677,
+          "correct": false,
+          "leaf_area_frac": 0.35867745535714285,
+          "mask_plausible": true,
+          "keras_tflite_agree": true,
+          "layers": {
+            "deep": {
+              "cam_mass_in_leaf": 0.14670194768339864,
+              "lift_vs_area": 0.40900799727522424,
+              "peak_in_leaf": false
+            },
+            "mid": {
+              "cam_mass_in_leaf": 0.2928885250759057,
+              "lift_vs_area": 0.8165791317557728,
+              "peak_in_leaf": false
+            }
+          },
+          "true_class_confidence": 0.22637465596199036,
+          "panel": "outputs/gradcam/web_sourced/14_web_sourced_test_Tomato_Late_blight.jpg"
+        },
+        {
+          "path": "web_sourced_test/Tomato___Leaf_Mold/t02_TomateBlattUnterseiteSamtfleckenCladosporiumfulvum.jpg",
+          "true_label": "Tomato___Leaf_Mold",
+          "pred_label": "Tomato___Early_blight",
+          "confidence": 0.7150300145149231,
+          "calibrated_confidence": 0.7578213223157967,
+          "correct": false,
+          "leaf_area_frac": 0.3491310586734694,
+          "mask_plausible": true,
+          "keras_tflite_agree": true,
+          "layers": {
+            "deep": {
+              "cam_mass_in_leaf": 0.37743581911204394,
+              "lift_vs_area": 1.0810720207652653,
+              "peak_in_leaf": false
+            },
+            "mid": {
+              "cam_mass_in_leaf": 0.40772521851393323,
+              "lift_vs_area": 1.1678285514416664,
+              "peak_in_leaf": true
+            }
+          },
+          "true_class_confidence": 0.0002366205008001998,
+          "panel": "outputs/gradcam/web_sourced/15_web_sourced_test_Tomato_Leaf_Mold.jpg"
+        },
+        {
+          "path": "web_sourced_test/Tomato___Septoria_leaf_spot/00_Septoria_leaf_spot_symptoms_on_tomato_leaf_(Septoria_lycopersici_on_Solanum_lycopersicum_leaf).jpg",
+          "true_label": "Tomato___Septoria_leaf_spot",
+          "pred_label": "Tomato___Bacterial_spot",
+          "confidence": 0.8265649080276489,
+          "calibrated_confidence": 0.871213820555967,
+          "correct": false,
+          "leaf_area_frac": 0.12380420918367346,
+          "mask_plausible": true,
+          "keras_tflite_agree": true,
+          "layers": {
+            "deep": {
+              "cam_mass_in_leaf": 0.16613384946140083,
+              "lift_vs_area": 1.341907925076505,
+              "peak_in_leaf": false
+            },
+            "mid": {
+              "cam_mass_in_leaf": 0.1363923285443363,
+              "lift_vs_area": 1.1016776363555407,
+              "peak_in_leaf": false
+            }
+          },
+          "true_class_confidence": 0.09625864028930664,
+          "panel": "outputs/gradcam/web_sourced/16_web_sourced_test_Tomato_Septoria_leaf_spot.jpg"
+        },
+        {
+          "path": "web_sourced_test/Tomato___Septoria_leaf_spot/01_Septoria_lycopersici_malagutii_leaf_spot_on_tomato_leaf.jpg",
+          "true_label": "Tomato___Septoria_leaf_spot",
+          "pred_label": "Tomato___Early_blight",
+          "confidence": 0.5960280299186707,
+          "calibrated_confidence": 0.6395323588943677,
+          "correct": false,
+          "leaf_area_frac": 0.3056640625,
+          "mask_plausible": true,
+          "keras_tflite_agree": true,
+          "layers": {
+            "deep": {
+              "cam_mass_in_leaf": 0.40110567158170624,
+              "lift_vs_area": 1.312243475078809,
+              "peak_in_leaf": true
+            },
+            "mid": {
+              "cam_mass_in_leaf": 0.26112949156352844,
+              "lift_vs_area": 0.8543022343803615,
+              "peak_in_leaf": false
+            }
+          },
+          "true_class_confidence": 0.27068233489990234,
+          "panel": "outputs/gradcam/web_sourced/17_web_sourced_test_Tomato_Septoria_leaf_spot.jpg"
+        },
+        {
+          "path": "web_sourced_test/Tomato___Septoria_leaf_spot/02_Tomato_septoria_leaf_spot_3029.jpg",
+          "true_label": "Tomato___Septoria_leaf_spot",
+          "pred_label": "Tomato___Late_blight",
+          "confidence": 0.6979357600212097,
+          "calibrated_confidence": 0.7514524963337195,
+          "correct": false,
+          "leaf_area_frac": 0.26036352040816324,
+          "mask_plausible": true,
+          "keras_tflite_agree": true,
+          "layers": {
+            "deep": {
+              "cam_mass_in_leaf": 0.2770608328243985,
+              "lift_vs_area": 1.0641307675900964,
+              "peak_in_leaf": false
+            },
+            "mid": {
+              "cam_mass_in_leaf": 0.28503702136493064,
+              "lift_vs_area": 1.094765583589005,
+              "peak_in_leaf": false
+            }
+          },
+          "true_class_confidence": 0.03518766909837723,
+          "panel": "outputs/gradcam/web_sourced/18_web_sourced_test_Tomato_Septoria_leaf_spot.jpg"
+        },
+        {
+          "path": "web_sourced_test/Tomato___healthy/00_Healthy_tomato_leaves__7871755330_.jpg",
+          "true_label": "Tomato___healthy",
+          "pred_label": "Tomato___Early_blight",
+          "confidence": 0.4086209833621979,
+          "calibrated_confidence": 0.43897794136525603,
+          "correct": false,
+          "leaf_area_frac": 0.024713010204081634,
+          "mask_plausible": false,
+          "keras_tflite_agree": true,
+          "layers": {
+            "deep": {
+              "cam_mass_in_leaf": 0.025935393536745236,
+              "lift_vs_area": 1.0494631500804266,
+              "peak_in_leaf": false
+            },
+            "mid": {
+              "cam_mass_in_leaf": 0.05259306590583875,
+              "lift_vs_area": 2.1281529636220684,
+              "peak_in_leaf": false
+            }
+          },
+          "true_class_confidence": 0.11192852258682251,
+          "panel": "outputs/gradcam/web_sourced/19_web_sourced_test_Tomato_healthy.jpg"
+        }
+      ]
+    },
+    "ood": {
+      "summary": {
+        "deep": {
+          "n": 2,
+          "mean_cam_mass_in_leaf": 0.06193589312459894,
+          "mean_lift_vs_area": 0.37926351086350796,
+          "peak_in_leaf_rate": 0.0
+        },
+        "mid": {
+          "n": 2,
+          "mean_cam_mass_in_leaf": 0.04802945770287601,
+          "mean_lift_vs_area": 0.27477651334278647,
+          "peak_in_leaf_rate": 0.0
+        },
+        "n_images": 4,
+        "n_masks_plausible": 2,
+        "mean_leaf_area_frac": 0.13347018494897958,
+        "accuracy": null,
+        "mean_confidence": 0.6903531551361084,
+        "keras_tflite_agreement": 1.0
+      },
+      "images": [
+        {
+          "path": "web_sourced_test/_ood/00_A_micro_photo_of_a_potato_plant_leaf.jpg",
+          "true_label": null,
+          "pred_label": "Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot",
+          "confidence": 0.6576406359672546,
+          "calibrated_confidence": 0.693649839830363,
+          "correct": null,
+          "leaf_area_frac": 0.09159757653061225,
+          "mask_plausible": true,
+          "keras_tflite_agree": true,
+          "layers": {
+            "deep": {
+              "cam_mass_in_leaf": 0.009986577070158018,
+              "lift_vs_area": 0.10902665166933175,
+              "peak_in_leaf": false
+            },
+            "mid": {
+              "cam_mass_in_leaf": 0.0003294938209387724,
+              "lift_vs_area": 0.003597189286210584,
+              "peak_in_leaf": false
+            }
+          },
+          "panel": "outputs/gradcam/ood/00_web_sourced_test_00_A_micro_photo_of_a_potato_plant_leaf.jpg"
+        },
+        {
+          "path": "web_sourced_test/_ood/00_A_young_corn_plant.jpg",
+          "true_label": null,
+          "pred_label": "Tomato___Early_blight",
+          "confidence": 0.5201759934425354,
+          "calibrated_confidence": 0.5690353490836705,
+          "correct": null,
+          "leaf_area_frac": 0.027004942602040817,
+          "mask_plausible": false,
+          "keras_tflite_agree": true,
+          "layers": {
+            "deep": {
+              "cam_mass_in_leaf": 0.002971923439945373,
+              "lift_vs_area": 0.11005109263667825,
+              "peak_in_leaf": false
+            },
+            "mid": {
+              "cam_mass_in_leaf": 0.01212405288762068,
+              "lift_vs_area": 0.4489568101027714,
+              "peak_in_leaf": false
+            }
+          },
+          "panel": "outputs/gradcam/ood/01_web_sourced_test_00_A_young_corn_plant.jpg"
+        },
+        {
+          "path": "web_sourced_test/_ood/00_Northern_corn_leaf_blight.JPG",
+          "true_label": null,
+          "pred_label": "Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot",
+          "confidence": 0.6157275438308716,
+          "calibrated_confidence": 0.6489866018977951,
+          "correct": null,
+          "leaf_area_frac": 0.17534279336734693,
+          "mask_plausible": true,
+          "keras_tflite_agree": true,
+          "layers": {
+            "deep": {
+              "cam_mass_in_leaf": 0.11388520917903987,
+              "lift_vs_area": 0.6495003700576841,
+              "peak_in_leaf": false
+            },
+            "mid": {
+              "cam_mass_in_leaf": 0.09572942158481325,
+              "lift_vs_area": 0.5459558373993624,
+              "peak_in_leaf": false
+            }
+          },
+          "panel": "outputs/gradcam/ood/02_web_sourced_test_00_Northern_corn_leaf_blight.jpg"
+        },
+        {
+          "path": "web_sourced_test/_ood/t03_Passalora_fulva_a1__1_.jpg",
+          "true_label": null,
+          "pred_label": "Tomato___Early_blight",
+          "confidence": 0.967868447303772,
+          "calibrated_confidence": 0.9826619346512048,
+          "correct": null,
+          "leaf_area_frac": 0.02893813775510204,
+          "mask_plausible": false,
+          "keras_tflite_agree": true,
+          "layers": {
+            "deep": {
+              "cam_mass_in_leaf": 0.013120802224564337,
+              "lift_vs_area": 0.4534086586912811,
+              "peak_in_leaf": false
+            },
+            "mid": {
+              "cam_mass_in_leaf": 0.04219948675114448,
+              "lift_vs_area": 1.4582654595216429,
+              "peak_in_leaf": false
+            }
+          },
+          "panel": "outputs/gradcam/ood/03_web_sourced_test_t03_Passalora_fulva_a1__1_.jpg"
+        }
+      ]
+    }
+  },
+  "head_reconstruction_max_abs_error": 1.1920928955078125e-07,
+  "leakage_sweep": {
+    "n_sampled": 200,
+    "seed": 42,
+    "all": {
+      "deep": {
+        "n": 197,
+        "mean_cam_mass_in_leaf": 0.6248480521607952,
+        "mean_lift_vs_area": 1.656527208724293,
+        "peak_in_leaf_rate": 0.8578680203045685
+      },
+      "mid": {
+        "n": 197,
+        "mean_cam_mass_in_leaf": 0.5190587332368592,
+        "mean_lift_vs_area": 1.3894167191577493,
+        "peak_in_leaf_rate": 0.6091370558375635
+      },
+      "n_images": 200,
+      "n_masks_plausible": 197,
+      "mean_leaf_area_frac": 0.38708952608644975,
+      "accuracy": 0.95,
+      "mean_confidence": 0.9339532041549683,
+      "keras_tflite_agreement": 0.98
+    },
+    "correct": {
+      "deep": {
+        "n": 187,
+        "mean_cam_mass_in_leaf": 0.6288169969167805,
+        "mean_lift_vs_area": 1.6616012229393755,
+        "peak_in_leaf_rate": 0.8609625668449198
+      },
+      "mid": {
+        "n": 187,
+        "mean_cam_mass_in_leaf": 0.5272415396814322,
+        "mean_lift_vs_area": 1.4047935263057567,
+        "peak_in_leaf_rate": 0.6256684491978609
+      },
+      "n_images": 190,
+      "n_masks_plausible": 187,
+      "mean_leaf_area_frac": 0.3898563686838372,
+      "accuracy": 1.0,
+      "mean_confidence": 0.9472508882221423,
+      "keras_tflite_agreement": 0.9894736842105263
+    },
+    "wrong": {
+      "deep": {
+        "n": 10,
+        "mean_cam_mass_in_leaf": 0.5506287852238697,
+        "mean_lift_vs_area": 1.5616431429022561,
+        "peak_in_leaf_rate": 0.8
+      },
+      "mid": {
+        "n": 10,
+        "mean_cam_mass_in_leaf": 0.36604025272334406,
+        "mean_lift_vs_area": 1.1018704254900074,
+        "peak_in_leaf_rate": 0.3
+      },
+      "n_images": 10,
+      "n_masks_plausible": 10,
+      "mean_leaf_area_frac": 0.33534956951530615,
+      "accuracy": 0.0,
+      "mean_confidence": 0.6812972068786621,
+      "keras_tflite_agreement": 0.8
+    }
+  }
+}

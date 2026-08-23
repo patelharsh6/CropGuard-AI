@@ -28,6 +28,7 @@ crops before widening to all 14.
 - [Engineering highlight: the quantization debugging story](#-engineering-highlight-the-quantization-debugging-story)
 - [Confidence tiers and calibration: turning a guess into a measurement](#-confidence-tiers-and-calibration-turning-a-guess-into-a-measurement)
 - [Domain shift: what happens outside the lab](#-domain-shift-what-happens-outside-the-lab)
+- [Explainability: what the model actually looks at](#-explainability-what-the-model-actually-looks-at)
 - [Architecture](#-architecture)
 - [Setup and run](#-setup-and-run)
 - [Treatment & actionable advice](#-treatment--actionable-advice)
@@ -380,6 +381,58 @@ brightly and evenly lit studio images.
 
 ---
 
+## 🔬 Explainability: what the model actually looks at
+
+Accuracy says how often the model is right. It does not say *why*. That matters here
+because the whole training set is a detached leaf on a plain background, so a network can
+score 0.94 by reading the background — the reason `BackgroundReplace` exists in the
+augmentation pipeline. `python -m src.explain` runs Grad-CAM over the Keras model and
+measures it. Full write-up: [`docs/EXPLAINABILITY.md`](docs/EXPLAINABILITY.md).
+
+The metric: fraction of CAM mass inside a leaf mask, divided by the mask's own area
+fraction — because a heatmap that ignores the image entirely already scores
+`mass == area`. So **lift > 1 means attention concentrates on the leaf**.
+
+| 200 random test images | leaf area | CAM mass in leaf | lift | hottest pixel on leaf |
+|---|---|---|---|---|
+| all | 0.387 | 0.625 | **1.66** | **86%** |
+| correct (n=190) | 0.390 | 0.629 | 1.66 | 86% |
+| wrong (n=10) | 0.335 | 0.551 | 1.56 | 80% |
+
+**No background shortcut.** Attention is 1.66× denser on the leaf than chance, and the
+corruption sweep already showed background replacement costing only 0.06 accuracy. The
+accuracy collapse under domain shift is therefore *not* explained by background reliance.
+
+**And attention does not flag its own errors** — the correct-vs-wrong gap is real in
+direction but tiny, on 10 wrong images. Not an abstention signal.
+
+Three failures that were hypotheses before now have explanations:
+
+- **The tomato brown-lesion cluster** (its accuracy falls to 0.30 on field photos) is a
+  discrimination failure, not leakage: on cluster errors the hottest pixel is on the leaf
+  87.5% of the time. Rendering the predicted *and* true class side by side shows two
+  plausible maps on different lesion regions. Brown spots versus brown spots, at a 7×7
+  feature grid.
+- **The surviving confident errors** put near-identical heatmaps for both classes on the
+  correct lesion. The Potato → *Tomato* Late blight error at 0.957 finds the right
+  pathology and picks the wrong host.
+- **Whole-plant photos** are the worst case: the map latches onto one leaf-shaped blob and
+  commits — including a tomato field scene at **0.983 calibrated, above the shipped HIGH
+  gate**. A closed-set softmax cannot say "that is not one leaf", which is exactly what
+  Phase 4's OOD gate is for.
+
+Two side findings worth their own lines: at the final layer, Grad-CAM on this architecture
+is provably identical to plain CAM (`d logit/d A = W[k,c]/49`, verified to 4e-9), which is
+why a second 14×14 map is computed; and the shipped quantized model disagrees with the
+float model on **1 shifted prediction in 5** while agreeing on 98% of clean ones — so
+every heatmap explains the float model, not always the browser.
+
+Honest caveat: the leaf mask is the same rough GrabCut segmentation, and on field photos it
+often segments the *lesion* instead of the leaf. The test-split sweep above is the
+measurement; the field-photo attention numbers are descriptive.
+
+---
+
 ## 🏛 Architecture
 
 Two halves, no server between them:
@@ -402,7 +455,7 @@ See [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md) for the detailed data flow an
 | `src/` | Python pipeline. Run as packages from the repo root (`python -m src.train`). |
 | `web/` | **Current** frontend (Next.js/TypeScript). |
 | `app/` | **Legacy** vanilla HTML/JS LiteRT harness, kept as reference. New work goes in `web/`. |
-| `docs/` | Architecture, the quantization investigation, and the domain-shift write-up. |
+| `docs/` | Architecture, the quantization investigation, and the domain-shift, calibration and explainability write-ups. |
 | `real_world_test/` | Hand-taken field photos. **Empty on purpose** — see its README. |
 | `web_sourced_test/` | 20 hand-vetted Commons photos + `provenance.json` (licence/attribution). |
 | `scripts/investigations/` | One-off diagnostics from the quantization hunt; not part of the pipeline. |
@@ -563,8 +616,12 @@ just called unreliable would contradict itself.
    architecture change.
 8. **No baselines or ablations**, so architecture and augmentation choices rest on
    argument rather than controlled measurement.
-9. **No explainability evidence** that the model attends to lesions rather than to
-   background or leaf shape.
+9. **Attention is measured, but the ruler is rough.** Grad-CAM mass sits 1.66× more
+   densely on the leaf than area alone would give (86% of hottest pixels on-leaf), so the
+   background shortcut `BackgroundReplace` was written against is not present. But the
+   leaf mask is the same rough GrabCut segmentation, which on field photos often segments
+   the lesion rather than the leaf, and only 10 wrong predictions fell in the sweep — too
+   few to tell whether off-leaf attention predicts error. See `docs/EXPLAINABILITY.md`.
 10. **No test suite and no experiment tracking.** Results live in JSON reports and prose,
    not a machine-readable registry.
 
@@ -579,7 +636,7 @@ Roadmap and full detail in `plan.md`.
 | **0 — Housekeeping & honesty** | README rewrite, link-check, model card, tier confirmation | ✅ **Complete** |
 | **1 — Real-world test set** | Field evaluation tooling, domain-shift measurement | ✅ **Complete** |
 | **2 — Calibration** | ECE/MCE, reliability diagram, temperature scaling (T = 0.8878), derived thresholds (0.945 / 0.595), risk–coverage (AURC 0.0067) | ✅ **Complete** |
-| 3 — Explainability | Grad-CAM, background-leakage quantification | ⬜ Not started |
+| **3 — Explainability** | Grad-CAM (deep 7×7 + mid 14×14), CAM-mass-in-leaf leakage metric, 200-image sweep, per-cohort attention analysis | ✅ **Complete** |
 | 4 — OOD gate | MSP vs energy vs Mahalanobis, AUROC/FPR@95, ship the winner | ⬜ Not started |
 | 5 — Baselines & ablations | Sanity floors, architecture comparison, augmentation / class-weight / fine-tuning ablations, INT8 "minimalistic" capstone | ⬜ Not started |
 | 6 — Engineering rigor | pytest suite, cross-language preprocessing parity test, CI | ⬜ Not started |
@@ -616,14 +673,29 @@ much as the numbers: the plan's own suggested 0.95 accuracy target was worthless
 0.940 unconditional accuracy, and taking it literally would have made the app *less* safe.
 Still no model change — the weights remain byte-identical.
 
-**Nothing in Phases 0–2 changed the model.** No retraining, no accuracy improvement — the
+**Phase 3 — complete.** Built: `src/explain.py`, `docs/EXPLAINABILITY.md`, and 57
+attention panels in `outputs/gradcam/`. The background-leakage question is answered — CAM
+mass concentrates on the leaf at **1.66× area** on held-out test data, and the corruption
+sweep already showed the model nearly indifferent to background replacement — so the
+accuracy collapse under shift is *not* a background shortcut. Three open failures now have
+explanations rather than hypotheses: the brown-lesion cluster is a discrimination failure
+with attention correctly on-leaf; the two surviving confident errors put identical
+heatmaps on the right lesion and pick the wrong class (one wrong *host*); and on
+whole-plant photos the map latches onto a single leaf-shaped blob and commits — one at
+0.983 calibrated, above the HIGH gate, which is the clearest argument yet for Phase 4.
+Two side findings: at the final layer Grad-CAM here is provably identical to CAM (verified
+numerically), and the shipped quantized model disagrees with the float model on ~1 shifted
+prediction in 5 while agreeing on 98% of clean ones.
+
+**Nothing in Phases 0–3 changed the model.** No retraining, no accuracy improvement — the
 weights are byte-identical to where they started. What changed is how much is *known*: the
 tier thresholds went from unjustified magic numbers to measured operating points, the
 out-of-distribution gap went from unmeasured to quantified across three test sets, the
 robustness profile went from assumed to ranked, and the safety story went from "the tier
 system protects the user" to "the tier system protects the user on two of three
 distributions tested" to "the tier system is measured, and its worst case is 5.9% rather
-than 23.5%". Phases 3–5 are where numbers would move next — an OOD gate would cut the
+than 23.5%", and the attention maps now say the remaining errors are discrimination
+failures rather than data artifacts. Phases 4–5 are where numbers would move next — an OOD gate would cut the
 remaining confidently-wrong rate, and a
 noise augmentation would close the 0.39 gap identified in Part 3.
 

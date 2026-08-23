@@ -92,7 +92,7 @@ dynamic-range TFLite **0.9401**, **1.15 MB**, **22 ms** median latency (XNNPACK)
 |---|---|
 | **No baseline or ablation study** | "Why MobileNetV3-Small? Why transfer learning? Did augmentation actually help?" — currently unanswerable with numbers. |
 | ~~**No calibration analysis**~~ — **DONE (Phase 2)** | Was: the 0.85 / 0.50 thresholds are magic numbers. Now: T = 0.8878, test ECE 0.0187 → 0.0075, thresholds derived at 0.945 / 0.595, `docs/CALIBRATION.md`. |
-| **No explainability** | "How do you know it looks at the lesion and not the background?" — especially pointed given `BackgroundReplace` exists precisely because backgrounds leak. |
+| ~~**No explainability**~~ — **DONE (Phase 3)** | Was: "how do you know it looks at the lesion and not the background?" Now: CAM mass sits 1.66× denser on the leaf than area alone (86% of peaks on-leaf, n=200), the brown-lesion cluster is shown to be a discrimination failure with on-leaf attention, and OOD photos are shown latching onto one leaf-shaped blob. `docs/EXPLAINABILITY.md`. |
 | **No OOD / not-a-leaf detection** | Known limitation 1 (whole-plant photo → 79.7% confidence on a wrong class) is currently unmitigated. |
 | **No tests, no experiment tracking** | `notebooks/` is empty; there is no test suite; results live in prose, not a machine-readable registry. |
 
@@ -322,20 +322,100 @@ Phase 3 and Phase 4 territory.
 *Concepts: softmax is not a probability, ECE and reliability diagrams, temperature
 scaling, selective prediction / abstention, precision-coverage tradeoff.*
 
-## Phase 3 — Explainability: Grad-CAM (1–2 days)
+## Phase 3 — Explainability: Grad-CAM — ✅ **COMPLETE (2026-08-23)**
 
-- [ ] New `src/explain.py`: Grad-CAM on the last conv block of the Keras model.
-      Overlay heatmaps for (a) correct high-confidence predictions, (b) the confused
-      tomato brown-lesion cluster, (c) the real-world photos from Phase 1, (d) the
-      known out-of-distribution whole-plant failure → `outputs/gradcam/`.
-- [ ] **Answer the background-leakage question explicitly:** does attention land on
-      the lesion, or on soil/hand/background? Quantify it — fraction of CAM mass
-      inside a leaf mask, reusing the GrabCut segmentation already written for
-      `BackgroundReplace`. This closes the loop on why that augmentation exists.
-- [ ] Write findings into `docs/EXPLAINABILITY.md`.
-- [ ] *Stretch:* export a second `.tflite` with the conv feature map as an extra
-      output and render the heatmap in the browser. Great demo, non-trivial — only
-      after the Python analysis is done.
+- [x] `src/explain.py` — Grad-CAM over the Keras model at two layers (deep `activation_17`
+      7×7, and mid `activation_11` 14×14), with the softmax head re-applied inside the
+      tape to recover true logits (asserted against `model.predict()`, max|Δ| = 1.2e-07).
+      Panels for five cohorts → `outputs/gradcam/` (57 panels): `correct_high`,
+      `cluster` (rendered for predicted *and* true class), `real_world`, `web_sourced`,
+      `ood`.
+- [x] Background-leakage question answered and quantified: CAM mass inside the
+      `_segment_leaf` GrabCut mask, normalised by the mask's own area
+      (`lift`), over a 200-image random test sample split by correct/wrong.
+- [x] `docs/EXPLAINABILITY.md`.
+- [ ] *Stretch (not done):* export a second `.tflite` with the conv feature map as an
+      extra output and render the heatmap in the browser.
+
+### Result A — no background shortcut (n = 200 test images, seed 42)
+
+| group | n | leaf area | CAM mass in leaf | **lift** | peak in leaf |
+|---|---|---|---|---|---|
+| all | 200 (197 usable masks) | 0.387 | 0.625 | **1.66** | **0.858** |
+| correct | 190 | 0.390 | 0.629 | 1.66 | 0.861 |
+| wrong | 10 | 0.335 | 0.551 | 1.56 | 0.800 |
+
+Mid layer: lift 1.39 overall, peak-in-leaf 0.61 (correct 0.63 / wrong 0.30).
+
+`BackgroundReplace`'s premise was that the studio background *could* be learned. It was
+not: attention is 1.66× denser on the leaf than area alone would give, which lines up with
+`background_replace` costing only 0.0615 accuracy in the Phase 1 corruption sweep. **The
+domain-shift collapse is not background reliance.** Whether the augmentation *caused* this
+is a Phase 5 ablation, not something these maps can settle.
+
+Attention also does **not** flag its own errors — the correct/wrong gap is consistent in
+direction across both layers but tiny, on n = 10 wrong images. Not an abstention signal at
+this sample size; the mid-layer gap (1.40 → 1.10) is the one worth re-measuring on a few
+hundred errors.
+
+### Result B — the three open failures now have explanations
+
+1. **Brown-lesion cluster = discrimination failure, not leakage.** On cluster errors the
+   peak is on-leaf 87.5% of the time and deep lift is 1.32. Rendering predicted and true
+   class side by side gives two plausible on-leaf maps over *different* lesion regions.
+   Brown spots versus brown spots at a 7×7 grid → resolution/capacity, i.e. Phase 5, not
+   data cleanup.
+2. **The two surviving confident errors are class confusion with correct localisation.**
+   `Potato → Tomato Late blight` (0.957) puts both class maps on the same necrotic lesion —
+   right pathology, wrong host. `Bacterial_spot → Septoria` (0.977, the error
+   `docs/CALIBRATION.md` §5 calls unreachable by any threshold) has near-identical maps for
+   both classes on the same spotted lamina.
+3. **OOD photos: the map picks a leaf-shaped blob and commits.** Deep lift 0.38, peak never
+   inside the mask. One whole-plant tomato scene scores **0.983 calibrated — above the
+   shipped HIGH gate**. Phase 4 stays load-bearing, and the maps suggest a gate feature:
+   OOD maps are diffuse or a small blob far from any leaf mask, in-distribution maps are
+   lesion-locked.
+
+### Result C — attention survives the shift that accuracy does not
+
+| cohort | n | acc (Keras) | mean conf | deep lift | mid lift |
+|---|---|---|---|---|---|
+| correct_high | 8 | 1.000 | 0.987 | 1.58 | 1.16 |
+| cluster | 8 | 0.250 | 0.685 | 1.32 | 0.79 |
+| real_world | 17 | 0.588 | 0.734 | 1.56 | 1.21 |
+| web_sourced | 20 | 0.350 | 0.665 | 1.50 | 1.25 |
+| ood | 4 | — | 0.690 | 0.38 | 0.27 |
+
+Accuracy falls 1.00 → 0.35 while deep lift barely moves — the model keeps finding the
+diseased tissue and keeps mislabelling it. Consistent with Phase 1's "crop right, disease
+wrong".
+
+### Side findings
+
+- **Grad-CAM at the final layer is provably plain CAM here.** With GAP + one Dense layer,
+  `d logit_c / d A[i,j,k] = W[k,c]/49`, constant in space — verified numerically (gradient
+  spatial variance 3.1e-17; channel weights match `W[:,c]/49` to 3.7e-09). Hence the
+  second 14×14 map, where the gradient actually varies.
+- **The shipped quantized model and the float model disagree under shift.**
+  `keras_tflite_agree`: 0.980 on the clean test sweep, but 0.824 / 0.800 / 0.750 on
+  real_world / web_sourced / cluster. So the domain-shift numbers are properties of the
+  *quantized artifact*, not the architecture — a cheap unmeasured experiment — and the
+  heatmaps explain the float model, not always what the browser computed.
+- **JPEG decoder sensitivity.** cv2 and tf.io decode the same JPEG up to ~4 grey levels
+  apart, enough to flip a borderline cluster image from Target Spot 0.488 to Spider mites
+  0.662. `src/explain.py` uses `tf.io` to stay consistent with the rest of the repo. Good
+  argument for the Phase 6 preprocessing-parity test.
+
+### What Phase 3 changes about the roadmap
+
+- **Phase 4 (OOD) is confirmed as the highest-value remaining item**, and now has a
+  candidate feature beyond MSP/energy/Mahalanobis: CAM dispersion.
+- **Phase 5 gains two rows**: train-without-`BackgroundReplace` (to test whether the
+  augmentation caused Result A), and a float-vs-quantized comparison on the shifted sets.
+- **Phase 6 gains a concrete test**: decoder/preprocessing parity, which is now known to
+  change predictions and not merely pixels.
+- A hand-annotated leaf-mask set (~30 images) would upgrade Result A from indicative to
+  solid; the GrabCut mask is the weakest link in the measurement.
 
 *Concepts: CAM / Grad-CAM mechanics, shortcut learning and spurious correlation,
 qualitative error analysis.*
@@ -418,13 +498,13 @@ What to be ready to whiteboard, and which artifact in this repo backs it up.
 |---|---|
 | Transfer learning, layer freezing, two-phase fine-tuning, why BN stays frozen | `src/train.py`, Phase 5 ablation |
 | Class imbalance — class weights vs resampling vs focal loss, and why per-class recall is the metric that shows it worked | `outputs/classification_report.json`, Phase 5 ablation |
-| Data augmentation and closing a domain gap | `src/augmentation.py` `BackgroundReplace`, Phase 3 CAM check |
+| Data augmentation and closing a domain gap | `src/augmentation.py` `BackgroundReplace`, verified by the Phase 3 CAM check (lift 1.66) |
 | Stratified splitting, leakage, reproducible seeds | `data/dataset_split.csv`, Phase 6 tests |
 | Metrics beyond accuracy — precision/recall/F1, top-k, confusion structure | `src/evaluate.py` |
 | **Calibration** — ECE, reliability diagrams, temperature scaling | `src/calibration.py`, `docs/CALIBRATION.md`, `outputs/reliability_diagram.png` |
 | **Selective prediction / abstention**, risk–coverage | `outputs/risk_coverage.png` (AURC 0.0067) plus the derived thresholds in `confidenceTier.ts` |
 | **OOD / open-set** — MSP vs energy vs Mahalanobis, AUROC | Phase 4 |
-| **Explainability** — Grad-CAM, shortcut learning | Phase 3 |
+| **Explainability** — Grad-CAM, shortcut learning | `src/explain.py`, `docs/EXPLAINABILITY.md` (Phase 3) |
 | **Baselines and ablations** — experimental discipline | Phase 5 |
 | Quantization — PTQ dynamic-range vs full INT8, weights vs activations, QAT, architecture sensitivity (hard-swish, SE blocks) | `docs/quantization_findings.md`, Phase 5 capstone |
 | Edge / on-device deployment — model size, latency, XNNPACK, WASM, preprocessing parity | `web/src/lib/`, `src/benchmark_pipeline.py` |

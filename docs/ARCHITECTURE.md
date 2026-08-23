@@ -30,6 +30,8 @@ The end-to-end pipeline follows this path:
 | `src/train.py` | The main two-phase transfer learning routine, metric logging, and model saving. |
 | `src/evaluate.py` | Computes test metrics, top-3 accuracy, and analyzes confusion matrices. Identified explainable confusion patterns (e.g., visually similar Tomato brown-lesion diseases and Corn Northern Leaf Blight/Gray leaf spot). |
 | `src/quantize.py` | TFLite conversion logic, including the calibration dataset generator attempts. |
+| `src/calibration.py` | Temperature scaling, ECE/MCE, risk–coverage, and the derivation of the shipped confidence thresholds. *(See `docs/CALIBRATION.md`.)* |
+| `src/explain.py` | Grad-CAM at two layers plus the CAM-mass-in-leaf background-leakage metric, over five image cohorts and a random test sweep. *(See `docs/EXPLAINABILITY.md`.)* |
 | `src/benchmark_pipeline.py` | Utility for timing and profiling inference latencies. |
 
 ## ⚠️ Known Environment Quirks
