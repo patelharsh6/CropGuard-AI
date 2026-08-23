@@ -1,0 +1,116 @@
+{
+  "n_images": 602,
+  "seed": 42,
+  "clean_accuracy": 0.9335548172757475,
+  "note": "Lower bound. Corruptions overlap the training augmentation family; real field photos are expected to be worse. Not a substitute for real_world_test/.",
+  "corruptions": {
+    "clean": {
+      "accuracy": 0.9335548172757475,
+      "top3_accuracy": 0.9966777408637874,
+      "mean_confidence": 0.9108977913856506,
+      "high_tier_coverage": 0.8006644518272426,
+      "high_tier_accuracy": 0.9937759336099585,
+      "confidently_wrong_rate": 0.0049833887043189366,
+      "accuracy_drop_vs_clean": 0.0
+    },
+    "background_replace": {
+      "accuracy": 0.872093023255814,
+      "top3_accuracy": 0.9850498338870431,
+      "mean_confidence": 0.8441862463951111,
+      "high_tier_coverage": 0.6146179401993356,
+      "high_tier_accuracy": 0.9891891891891892,
+      "confidently_wrong_rate": 0.006644518272425249,
+      "accuracy_drop_vs_clean": 0.06146179401993357
+    },
+    "motion_blur": {
+      "accuracy": 0.920265780730897,
+      "top3_accuracy": 0.9850498338870431,
+      "mean_confidence": 0.8873292207717896,
+      "high_tier_coverage": 0.729235880398671,
+      "high_tier_accuracy": 0.9908883826879271,
+      "confidently_wrong_rate": 0.006644518272425249,
+      "accuracy_drop_vs_clean": 0.013289036544850474
+    },
+    "defocus_blur": {
+      "accuracy": 0.8837209302325582,
+      "top3_accuracy": 0.9850498338870431,
+      "mean_confidence": 0.8757798671722412,
+      "high_tier_coverage": 0.7209302325581395,
+      "high_tier_accuracy": 0.988479262672811,
+      "confidently_wrong_rate": 0.008305647840531562,
+      "accuracy_drop_vs_clean": 0.04983388704318936
+    },
+    "underexposed": {
+      "accuracy": 0.7674418604651163,
+      "top3_accuracy": 0.9086378737541528,
+      "mean_confidence": 0.7995782494544983,
+      "high_tier_coverage": 0.5581395348837209,
+      "high_tier_accuracy": 0.9613095238095238,
+      "confidently_wrong_rate": 0.02159468438538206,
+      "accuracy_drop_vs_clean": 0.1661129568106312
+    },
+    "overexposed": {
+      "accuracy": 0.9435215946843853,
+      "top3_accuracy": 0.9966777408637874,
+      "mean_confidence": 0.9119366407394409,
+      "high_tier_coverage": 0.7973421926910299,
+      "high_tier_accuracy": 0.9875,
+      "confidently_wrong_rate": 0.009966777408637873,
+      "accuracy_drop_vs_clean": -0.009966777408637828
+    },
+    "white_balance": {
+      "accuracy": 0.9269102990033222,
+      "top3_accuracy": 0.9933554817275747,
+      "mean_confidence": 0.9108779430389404,
+      "high_tier_coverage": 0.7890365448504983,
+      "high_tier_accuracy": 0.9894736842105263,
+      "confidently_wrong_rate": 0.008305647840531562,
+      "accuracy_drop_vs_clean": 0.006644518272425293
+    },
+    "jpeg_artifacts": {
+      "accuracy": 0.8887043189368771,
+      "top3_accuracy": 0.9850498338870431,
+      "mean_confidence": 0.884800910949707,
+      "high_tier_coverage": 0.729235880398671,
+      "high_tier_accuracy": 0.979498861047836,
+      "confidently_wrong_rate": 0.014950166112956811,
+      "accuracy_drop_vs_clean": 0.04485049833887045
+    },
+    "off_angle": {
+      "accuracy": 0.9053156146179402,
+      "top3_accuracy": 0.9966777408637874,
+      "mean_confidence": 0.8927609324455261,
+      "high_tier_coverage": 0.7441860465116279,
+      "high_tier_accuracy": 0.9910714285714286,
+      "confidently_wrong_rate": 0.006644518272425249,
+      "accuracy_drop_vs_clean": 0.028239202657807327
+    },
+    "sensor_noise": {
+      "accuracy": 0.9003322259136213,
+      "top3_accuracy": 0.9900332225913622,
+      "mean_confidence": 0.8915579915046692,
+      "high_tier_coverage": 0.7524916943521595,
+      "high_tier_accuracy": 0.977924944812362,
+      "confidently_wrong_rate": 0.016611295681063124,
+      "accuracy_drop_vs_clean": 0.03322259136212624
+    },
+    "sensor_noise_severe": {
+      "accuracy": 0.5398671096345515,
+      "top3_accuracy": 0.7990033222591362,
+      "mean_confidence": 0.7675325274467468,
+      "high_tier_coverage": 0.473421926910299,
+      "high_tier_accuracy": 0.7614035087719299,
+      "confidently_wrong_rate": 0.11295681063122924,
+      "accuracy_drop_vs_clean": 0.393687707641196
+    },
+    "field_composite": {
+      "accuracy": 0.7641196013289037,
+      "top3_accuracy": 0.9352159468438538,
+      "mean_confidence": 0.7563098669052124,
+      "high_tier_coverage": 0.4601328903654485,
+      "high_tier_accuracy": 0.9711191335740073,
+      "confidently_wrong_rate": 0.013289036544850499,
+      "accuracy_drop_vs_clean": 0.16943521594684385
+    }
+  }
+}

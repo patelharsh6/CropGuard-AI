@@ -5,6 +5,7 @@ import { useCropGuardModel, InferenceResult } from '@/lib/useCropGuardModel';
 import { CLASS_NAMES } from '@/lib/constants';
 import { DISEASE_INFO } from '@/lib/diseaseInfo';
 import { getTier, getTopN, ConfidenceTier, TopPrediction } from '@/lib/confidenceTier';
+import { TEMPERATURE } from '@/lib/calibration';
 
 // ─── Sub-components ────────────────────────────────────────────────────────────
 
@@ -17,16 +18,22 @@ function RawOutputTable({ result }: { result: InferenceResult }) {
         onClick={() => setOpen(o => !o)}
         className="text-xs text-gray-500 hover:text-gray-300 transition-colors"
       >
-        {open ? '▲ Hide' : '▼ Show'} raw softmax output (17 classes)
+        {open ? '▲ Hide' : '▼ Show'} model output (17 classes)
       </button>
       {open && (
         <div className="mt-2 overflow-y-auto max-h-64 text-xs text-gray-400 whitespace-pre font-mono">
+          {/* Column header aligned with the '[nn] ' + 35-char name + two 8-char
+              numbers laid out below. */}
+          <div className="text-gray-500">
+            {''.padEnd(5 + 35)}{'calibrated'.padStart(8)} {'raw'.padStart(8)}  (T = {TEMPERATURE})
+          </div>
           {CLASS_NAMES.map((name, i) => {
             const prob = result.probabilities[i];
+            const raw = result.rawProbabilities[i];
             const bar = '█'.repeat(Math.round(prob * 30));
             return (
               <div key={i}>
-                [{String(i).padStart(2, '0')}] {name.padEnd(35)} {prob.toFixed(6)}  {bar}
+                [{String(i).padStart(2, '0')}] {name.padEnd(35)} {prob.toFixed(6)} {raw.toFixed(6)}  {bar}
               </div>
             );
           })}

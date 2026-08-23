@@ -15,6 +15,10 @@ artifact the browser loads) over a split and reporting, per tier:
 Also prints a coverage/accuracy sweep over candidate HIGH thresholds — a
 preview of the risk-coverage analysis Phase 2 does properly.
 
+Superseded by src/calibration.py, which does the calibration properly and
+derives the thresholds the frontend now ships. This script is kept as the
+uncalibrated baseline: same model, intuited thresholds, raw softmax.
+
 Run:  python -m src.eval_tiers            # test split (default)
       python -m src.eval_tiers --split val
 """
@@ -27,14 +31,19 @@ import numpy as np
 import pandas as pd
 import tensorflow as tf
 
+from src.config import LEGACY_TIER_HIGH, LEGACY_TIER_MODERATE
 from src.data_pipeline import CSV_PATH, IMG_SIZE
 
 TFLITE_PATH = os.path.join('models', 'cropguard_v1_production.tflite')
 REPORT_PATH = os.path.join('outputs', 'tier_report.json')
 
-# Must mirror TIER_THRESHOLDS in web/src/lib/confidenceTier.ts.
-HIGH_THRESHOLD = 0.85
-MODERATE_THRESHOLD = 0.50
+# The pre-calibration thresholds, chosen by intuition. The frontend now ships
+# the *calibrated* pair derived by src/calibration.py (config.TIER_HIGH /
+# TIER_MODERATE, applied to temperature-scaled probabilities); this script
+# deliberately keeps the old pair on raw softmax so outputs/tier_report.json
+# stays the before picture that calibration is measured against.
+HIGH_THRESHOLD = LEGACY_TIER_HIGH
+MODERATE_THRESHOLD = LEGACY_TIER_MODERATE
 
 SWEEP = [0.50, 0.60, 0.70, 0.75, 0.80, 0.85, 0.90, 0.95, 0.99]
 

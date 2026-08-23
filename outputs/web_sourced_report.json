@@ -1,0 +1,570 @@
+{
+  "n_photos": 20,
+  "accuracy": 0.4,
+  "top3_accuracy": 0.75,
+  "mean_confidence": 0.6856153011322021,
+  "clean_test_baseline": {
+    "accuracy": 0.9401,
+    "top3_accuracy": 0.9953
+  },
+  "domain_shift_drop": {
+    "accuracy": 0.5401,
+    "top3_accuracy": 0.24529999999999996
+  },
+  "tiers": {
+    "HIGH": {
+      "n": 4,
+      "coverage": 0.2,
+      "accuracy": 0.75
+    },
+    "MODERATE": {
+      "n": 13,
+      "coverage": 0.65,
+      "accuracy": 0.38461538461538464
+    },
+    "LOW": {
+      "n": 3,
+      "coverage": 0.15,
+      "accuracy": 0.0
+    }
+  },
+  "confident_and_wrong": [
+    {
+      "path": "web_sourced_test/Corn_(maize)___Common_rust_/00_Puccinia_sorghi_Schwein._1538032.jpg",
+      "true": "Corn_(maize)___Common_rust_",
+      "predicted": "Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot",
+      "confidence": 0.9093517661094666,
+      "tier": "HIGH",
+      "correct": false,
+      "in_top3": true,
+      "top3": [
+        {
+          "class": "Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot",
+          "p": 0.9093517661094666
+        },
+        {
+          "class": "Corn_(maize)___Northern_Leaf_Blight",
+          "p": 0.08729273080825806
+        },
+        {
+          "class": "Corn_(maize)___Common_rust_",
+          "p": 0.0033543428871780634
+        }
+      ]
+    }
+  ],
+  "per_class": {
+    "Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot": {
+      "n": 1,
+      "accuracy": 1.0,
+      "mean_confidence": 0.9946355223655701
+    },
+    "Corn_(maize)___Common_rust_": {
+      "n": 3,
+      "accuracy": 0.3333333333333333,
+      "mean_confidence": 0.7422531247138977
+    },
+    "Corn_(maize)___Northern_Leaf_Blight": {
+      "n": 2,
+      "accuracy": 1.0,
+      "mean_confidence": 0.8476206660270691
+    },
+    "Potato___Late_blight": {
+      "n": 3,
+      "accuracy": 0.6666666666666666,
+      "mean_confidence": 0.7197592258453369
+    },
+    "Potato___healthy": {
+      "n": 2,
+      "accuracy": 0.0,
+      "mean_confidence": 0.35517919063568115
+    },
+    "Tomato___Early_blight": {
+      "n": 1,
+      "accuracy": 0.0,
+      "mean_confidence": 0.6820913553237915
+    },
+    "Tomato___Late_blight": {
+      "n": 3,
+      "accuracy": 0.6666666666666666,
+      "mean_confidence": 0.7771933674812317
+    },
+    "Tomato___Leaf_Mold": {
+      "n": 1,
+      "accuracy": 0.0,
+      "mean_confidence": 0.6182428002357483
+    },
+    "Tomato___Septoria_leaf_spot": {
+      "n": 3,
+      "accuracy": 0.0,
+      "mean_confidence": 0.6547831296920776
+    },
+    "Tomato___healthy": {
+      "n": 1,
+      "accuracy": 0.0,
+      "mean_confidence": 0.32976996898651123
+    }
+  },
+  "per_photo": [
+    {
+      "path": "web_sourced_test/Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot/01_Gray_leaf_spot_Cercospora_zeae-maydis_5465607.png",
+      "true": "Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot",
+      "predicted": "Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot",
+      "confidence": 0.9946355223655701,
+      "tier": "HIGH",
+      "correct": true,
+      "in_top3": true,
+      "top3": [
+        {
+          "class": "Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot",
+          "p": 0.9946355223655701
+        },
+        {
+          "class": "Corn_(maize)___Common_rust_",
+          "p": 0.0033780597150325775
+        },
+        {
+          "class": "Corn_(maize)___Northern_Leaf_Blight",
+          "p": 0.001984159927815199
+        }
+      ]
+    },
+    {
+      "path": "web_sourced_test/Corn_(maize)___Common_rust_/00_Puccinia_sorghi_Schwein._1538032.jpg",
+      "true": "Corn_(maize)___Common_rust_",
+      "predicted": "Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot",
+      "confidence": 0.9093517661094666,
+      "tier": "HIGH",
+      "correct": false,
+      "in_top3": true,
+      "top3": [
+        {
+          "class": "Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot",
+          "p": 0.9093517661094666
+        },
+        {
+          "class": "Corn_(maize)___Northern_Leaf_Blight",
+          "p": 0.08729273080825806
+        },
+        {
+          "class": "Corn_(maize)___Common_rust_",
+          "p": 0.0033543428871780634
+        }
+      ]
+    },
+    {
+      "path": "web_sourced_test/Corn_(maize)___Common_rust_/02_Puccinia_sorghi_(15).jpg",
+      "true": "Corn_(maize)___Common_rust_",
+      "predicted": "Corn_(maize)___Common_rust_",
+      "confidence": 0.5176682472229004,
+      "tier": "MODERATE",
+      "correct": true,
+      "in_top3": true,
+      "top3": [
+        {
+          "class": "Corn_(maize)___Common_rust_",
+          "p": 0.5176682472229004
+        },
+        {
+          "class": "Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot",
+          "p": 0.2122817039489746
+        },
+        {
+          "class": "Potato___Early_blight",
+          "p": 0.1932343989610672
+        }
+      ]
+    },
+    {
+      "path": "web_sourced_test/Corn_(maize)___Common_rust_/03_Puccinia_sorghi_(07).jpg",
+      "true": "Corn_(maize)___Common_rust_",
+      "predicted": "Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot",
+      "confidence": 0.7997393012046814,
+      "tier": "MODERATE",
+      "correct": false,
+      "in_top3": true,
+      "top3": [
+        {
+          "class": "Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot",
+          "p": 0.7997393012046814
+        },
+        {
+          "class": "Corn_(maize)___Northern_Leaf_Blight",
+          "p": 0.1980290412902832
+        },
+        {
+          "class": "Corn_(maize)___Common_rust_",
+          "p": 0.0022159633226692677
+        }
+      ]
+    },
+    {
+      "path": "web_sourced_test/Corn_(maize)___Northern_Leaf_Blight/t02_Exserohilum_turcicum_a1__2_.jpg",
+      "true": "Corn_(maize)___Northern_Leaf_Blight",
+      "predicted": "Corn_(maize)___Northern_Leaf_Blight",
+      "confidence": 0.8618173599243164,
+      "tier": "HIGH",
+      "correct": true,
+      "in_top3": true,
+      "top3": [
+        {
+          "class": "Corn_(maize)___Northern_Leaf_Blight",
+          "p": 0.8618173599243164
+        },
+        {
+          "class": "Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot",
+          "p": 0.11954060941934586
+        },
+        {
+          "class": "Corn_(maize)___Common_rust_",
+          "p": 0.01724221557378769
+        }
+      ]
+    },
+    {
+      "path": "web_sourced_test/Corn_(maize)___Northern_Leaf_Blight/t03_Helmintosporioza_li\u015bci_kukurydzy.jpg",
+      "true": "Corn_(maize)___Northern_Leaf_Blight",
+      "predicted": "Corn_(maize)___Northern_Leaf_Blight",
+      "confidence": 0.8334239721298218,
+      "tier": "MODERATE",
+      "correct": true,
+      "in_top3": true,
+      "top3": [
+        {
+          "class": "Corn_(maize)___Northern_Leaf_Blight",
+          "p": 0.8334239721298218
+        },
+        {
+          "class": "Corn_(maize)___Common_rust_",
+          "p": 0.15546643733978271
+        },
+        {
+          "class": "Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot",
+          "p": 0.0033545801416039467
+        }
+      ]
+    },
+    {
+      "path": "web_sourced_test/Potato___Late_blight/00_Late_blight_on_potato_leaf_2.jpg",
+      "true": "Potato___Late_blight",
+      "predicted": "Tomato___Late_blight",
+      "confidence": 0.8414941430091858,
+      "tier": "MODERATE",
+      "correct": false,
+      "in_top3": true,
+      "top3": [
+        {
+          "class": "Tomato___Late_blight",
+          "p": 0.8414941430091858
+        },
+        {
+          "class": "Potato___Late_blight",
+          "p": 0.15056012570858002
+        },
+        {
+          "class": "Potato___Early_blight",
+          "p": 0.004617378581315279
+        }
+      ]
+    },
+    {
+      "path": "web_sourced_test/Potato___Late_blight/01_Potato_Late_Blight.JPG",
+      "true": "Potato___Late_blight",
+      "predicted": "Potato___Late_blight",
+      "confidence": 0.6013168096542358,
+      "tier": "MODERATE",
+      "correct": true,
+      "in_top3": true,
+      "top3": [
+        {
+          "class": "Potato___Late_blight",
+          "p": 0.6013168096542358
+        },
+        {
+          "class": "Potato___Early_blight",
+          "p": 0.2884379029273987
+        },
+        {
+          "class": "Tomato___Late_blight",
+          "p": 0.06007915735244751
+        }
+      ]
+    },
+    {
+      "path": "web_sourced_test/Potato___Late_blight/t02_Phytophthora_infestans_on_potato_leaf_2.jpg",
+      "true": "Potato___Late_blight",
+      "predicted": "Potato___Late_blight",
+      "confidence": 0.7164666056632996,
+      "tier": "MODERATE",
+      "correct": true,
+      "in_top3": true,
+      "top3": [
+        {
+          "class": "Potato___Late_blight",
+          "p": 0.7164666056632996
+        },
+        {
+          "class": "Tomato___Late_blight",
+          "p": 0.191391721367836
+        },
+        {
+          "class": "Potato___Early_blight",
+          "p": 0.04368026182055473
+        }
+      ]
+    },
+    {
+      "path": "web_sourced_test/Potato___healthy/00_Starr-110731-8128-Solanum_tuberosum-leaves-Hawea_Pl_Olinda-Maui__25102276025_.jp.jpg",
+      "true": "Potato___healthy",
+      "predicted": "Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot",
+      "confidence": 0.31723836064338684,
+      "tier": "LOW",
+      "correct": false,
+      "in_top3": false,
+      "top3": [
+        {
+          "class": "Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot",
+          "p": 0.31723836064338684
+        },
+        {
+          "class": "Corn_(maize)___Common_rust_",
+          "p": 0.2984464466571808
+        },
+        {
+          "class": "Tomato___Late_blight",
+          "p": 0.18315672874450684
+        }
+      ]
+    },
+    {
+      "path": "web_sourced_test/Potato___healthy/01_Russain_blue_potato_leaves.jpg",
+      "true": "Potato___healthy",
+      "predicted": "Tomato___Early_blight",
+      "confidence": 0.39312005043029785,
+      "tier": "LOW",
+      "correct": false,
+      "in_top3": false,
+      "top3": [
+        {
+          "class": "Tomato___Early_blight",
+          "p": 0.39312005043029785
+        },
+        {
+          "class": "Potato___Early_blight",
+          "p": 0.3289647698402405
+        },
+        {
+          "class": "Tomato___Late_blight",
+          "p": 0.10113520920276642
+        }
+      ]
+    },
+    {
+      "path": "web_sourced_test/Tomato___Early_blight/00_Alternaria_solani_-_leaf_lesions.jpg",
+      "true": "Tomato___Early_blight",
+      "predicted": "Tomato___Late_blight",
+      "confidence": 0.6820913553237915,
+      "tier": "MODERATE",
+      "correct": false,
+      "in_top3": true,
+      "top3": [
+        {
+          "class": "Tomato___Late_blight",
+          "p": 0.6820913553237915
+        },
+        {
+          "class": "Tomato___Early_blight",
+          "p": 0.29253846406936646
+        },
+        {
+          "class": "Tomato___Septoria_leaf_spot",
+          "p": 0.011331371031701565
+        }
+      ]
+    },
+    {
+      "path": "web_sourced_test/Tomato___Late_blight/00_Tomato_late_blight_leaf_curl_2_(5816171413).jpg",
+      "true": "Tomato___Late_blight",
+      "predicted": "Tomato___Late_blight",
+      "confidence": 0.9479898810386658,
+      "tier": "HIGH",
+      "correct": true,
+      "in_top3": true,
+      "top3": [
+        {
+          "class": "Tomato___Late_blight",
+          "p": 0.9479898810386658
+        },
+        {
+          "class": "Tomato___Early_blight",
+          "p": 0.031102491542696953
+        },
+        {
+          "class": "Corn_(maize)___Northern_Leaf_Blight",
+          "p": 0.00951529573649168
+        }
+      ]
+    },
+    {
+      "path": "web_sourced_test/Tomato___Late_blight/01_Tomato_late_blight_leaf_sporulating_lesions_1_(5816170621).jpg",
+      "true": "Tomato___Late_blight",
+      "predicted": "Tomato___Late_blight",
+      "confidence": 0.5759877562522888,
+      "tier": "MODERATE",
+      "correct": true,
+      "in_top3": true,
+      "top3": [
+        {
+          "class": "Tomato___Late_blight",
+          "p": 0.5759877562522888
+        },
+        {
+          "class": "Potato___Late_blight",
+          "p": 0.27154678106307983
+        },
+        {
+          "class": "Potato___Early_blight",
+          "p": 0.062200844287872314
+        }
+      ]
+    },
+    {
+      "path": "web_sourced_test/Tomato___Late_blight/02_Late_blight_on_tomato_leaf_(7871756748).jpg",
+      "true": "Tomato___Late_blight",
+      "predicted": "Corn_(maize)___Common_rust_",
+      "confidence": 0.8076025247573853,
+      "tier": "MODERATE",
+      "correct": false,
+      "in_top3": true,
+      "top3": [
+        {
+          "class": "Corn_(maize)___Common_rust_",
+          "p": 0.8076025247573853
+        },
+        {
+          "class": "Tomato___Late_blight",
+          "p": 0.11499916762113571
+        },
+        {
+          "class": "Corn_(maize)___Northern_Leaf_Blight",
+          "p": 0.02620834670960903
+        }
+      ]
+    },
+    {
+      "path": "web_sourced_test/Tomato___Leaf_Mold/t02_TomateBlattUnterseiteSamtfleckenCladosporiumfulvum.jpg",
+      "true": "Tomato___Leaf_Mold",
+      "predicted": "Tomato___Early_blight",
+      "confidence": 0.6182428002357483,
+      "tier": "MODERATE",
+      "correct": false,
+      "in_top3": false,
+      "top3": [
+        {
+          "class": "Tomato___Early_blight",
+          "p": 0.6182428002357483
+        },
+        {
+          "class": "Tomato___Target_Spot",
+          "p": 0.2928887605667114
+        },
+        {
+          "class": "Tomato___Late_blight",
+          "p": 0.0826123058795929
+        }
+      ]
+    },
+    {
+      "path": "web_sourced_test/Tomato___Septoria_leaf_spot/00_Septoria_leaf_spot_symptoms_on_tomato_leaf_(Septoria_lycopersici_on_Solanum_lycopersicum_leaf).jpg",
+      "true": "Tomato___Septoria_leaf_spot",
+      "predicted": "Tomato___Bacterial_spot",
+      "confidence": 0.7808189988136292,
+      "tier": "MODERATE",
+      "correct": false,
+      "in_top3": true,
+      "top3": [
+        {
+          "class": "Tomato___Bacterial_spot",
+          "p": 0.7808189988136292
+        },
+        {
+          "class": "Tomato___Late_blight",
+          "p": 0.08339297026395798
+        },
+        {
+          "class": "Tomato___Septoria_leaf_spot",
+          "p": 0.08175064623355865
+        }
+      ]
+    },
+    {
+      "path": "web_sourced_test/Tomato___Septoria_leaf_spot/01_Septoria_lycopersici_malagutii_leaf_spot_on_tomato_leaf.jpg",
+      "true": "Tomato___Septoria_leaf_spot",
+      "predicted": "Tomato___Early_blight",
+      "confidence": 0.6289033889770508,
+      "tier": "MODERATE",
+      "correct": false,
+      "in_top3": true,
+      "top3": [
+        {
+          "class": "Tomato___Early_blight",
+          "p": 0.6289033889770508
+        },
+        {
+          "class": "Tomato___Septoria_leaf_spot",
+          "p": 0.2046370953321457
+        },
+        {
+          "class": "Corn_(maize)___Common_rust_",
+          "p": 0.042279742658138275
+        }
+      ]
+    },
+    {
+      "path": "web_sourced_test/Tomato___Septoria_leaf_spot/02_Tomato_septoria_leaf_spot_3029.jpg",
+      "true": "Tomato___Septoria_leaf_spot",
+      "predicted": "Tomato___Late_blight",
+      "confidence": 0.5546270608901978,
+      "tier": "MODERATE",
+      "correct": false,
+      "in_top3": false,
+      "top3": [
+        {
+          "class": "Tomato___Late_blight",
+          "p": 0.5546270608901978
+        },
+        {
+          "class": "Potato___Early_blight",
+          "p": 0.29412421584129333
+        },
+        {
+          "class": "Corn_(maize)___Common_rust_",
+          "p": 0.06918255239725113
+        }
+      ]
+    },
+    {
+      "path": "web_sourced_test/Tomato___healthy/00_Healthy_tomato_leaves__7871755330_.jpg",
+      "true": "Tomato___healthy",
+      "predicted": "Tomato___Early_blight",
+      "confidence": 0.32976996898651123,
+      "tier": "LOW",
+      "correct": false,
+      "in_top3": false,
+      "top3": [
+        {
+          "class": "Tomato___Early_blight",
+          "p": 0.32976996898651123
+        },
+        {
+          "class": "Tomato___Septoria_leaf_spot",
+          "p": 0.22779466211795807
+        },
+        {
+          "class": "Tomato___Late_blight",
+          "p": 0.15287208557128906
+        }
+      ]
+    }
+  ]
+}
