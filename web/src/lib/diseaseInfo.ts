@@ -18,7 +18,7 @@ export const DISEASE_INFO: Record<ClassName, DiseaseInfo> = {
       "Plant resistant or tolerant corn hybrids.",
     ],
     treatmentCategory: "Foliar fungicide application. Timing is critical, usually applied at the tasseling to early silking stages if disease pressure is high.",
-    referenceUrl: "https://extension.psu.edu/corn-disease-gray-leaf-spot",
+    referenceUrl: "https://cropprotectionnetwork.org/encyclopedia/gray-leaf-spot-of-corn",
   },
   Corn_Common_rust: {
     displayName: "Corn Common Rust",
@@ -38,7 +38,7 @@ export const DISEASE_INFO: Record<ClassName, DiseaseInfo> = {
       "Manage crop residue through tillage or rotation to non-host crops.",
     ],
     treatmentCategory: "Foliar fungicides. Most effective when applied at or shortly after tasseling when the disease is actively spreading to the upper canopy.",
-    referenceUrl: "https://crop-protection-network.s3.amazonaws.com/publications/cpn-2002-northern-corn-leaf-blight.pdf",
+    referenceUrl: "https://cropprotectionnetwork.org/encyclopedia/northern-corn-leaf-blight-of-corn",
   },
   Corn_healthy: {
     displayName: "Healthy Corn",
@@ -71,7 +71,7 @@ export const DISEASE_INFO: Record<ClassName, DiseaseInfo> = {
       "Monitor weather-based blight forecasting systems to time preventative sprays.",
     ],
     treatmentCategory: "Aggressive, frequent fungicide applications (protectant and systemic depending on severity). Infected plants should be immediately removed and destroyed to prevent spread.",
-    referenceUrl: "https://extension.psu.edu/potato-late-blight",
+    referenceUrl: "https://extension.umn.edu/disease-management/late-blight",
   },
   Potato_healthy: {
     displayName: "Healthy Potato",
@@ -82,7 +82,7 @@ export const DISEASE_INFO: Record<ClassName, DiseaseInfo> = {
       "Harvest after vines have naturally died back and tuber skins are thick.",
     ],
     treatmentCategory: "Continue monitoring for pests like the Colorado potato beetle and ensure soil drains well to prevent tuber rot.",
-    referenceUrl: "https://extension.unh.edu/resource/growing-potatoes-fact-sheet",
+    referenceUrl: "https://extension.umn.edu/vegetables/growing-potatoes",
   },
   Tomato_Bacterial_spot: {
     displayName: "Tomato Bacterial Spot",
@@ -105,7 +105,7 @@ export const DISEASE_INFO: Record<ClassName, DiseaseInfo> = {
       "Use drip irrigation or water at the base to keep foliage dry.",
     ],
     treatmentCategory: "Remove and destroy severely infected lower leaves. Apply protectant fungicides (such as copper-based or chlorothalonil products) preventatively or at the very first sign of disease.",
-    referenceUrl: "https://extension.colostate.edu/topic-areas/yard-garden/early-blight-of-potato-and-tomato-2-926/",
+    referenceUrl: "https://hort.extension.wisc.edu/articles/early-blight/",
   },
   Tomato_Late_blight: {
     displayName: "Tomato Late Blight",
@@ -138,7 +138,7 @@ export const DISEASE_INFO: Record<ClassName, DiseaseInfo> = {
       "Control solanaceous weeds (like horsenettle or nightshade) near the garden.",
     ],
     treatmentCategory: "Remove affected lower leaves immediately. Apply protectant fungicides preventatively on a 7-10 day schedule during wet weather.",
-    referenceUrl: "https://extension.psu.edu/septoria-leaf-spot-on-tomatoes",
+    referenceUrl: "https://hort.extension.wisc.edu/articles/septoria-leaf-spot/",
   },
   Tomato_Spider_mites: {
     displayName: "Tomato Two-Spotted Spider Mites",
@@ -193,6 +193,6 @@ export const DISEASE_INFO: Record<ClassName, DiseaseInfo> = {
       "Water deeply and consistently at the soil level to prevent blossom end rot and foliar diseases.",
     ],
     treatmentCategory: "Keep up the good work. Apply a balanced fertilizer according to soil test recommendations once fruits begin to set.",
-    referenceUrl: "https://extension.unh.edu/resource/growing-tomatoes-fact-sheet",
+    referenceUrl: "https://extension.umn.edu/vegetables/growing-tomatoes",
   }
 };

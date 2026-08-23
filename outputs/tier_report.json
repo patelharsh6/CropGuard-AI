@@ -1,0 +1,293 @@
+{
+  "n_images": 3625,
+  "thresholds": {
+    "HIGH": 0.85,
+    "MODERATE": 0.5
+  },
+  "overall_accuracy": 0.9401379310344827,
+  "overall_top3_accuracy": 0.9953103448275862,
+  "mean_confidence": 0.9222654700279236,
+  "tiers": {
+    "HIGH": {
+      "n": 2995,
+      "coverage": 0.8262068965517242,
+      "accuracy": 0.9859766277128548,
+      "top3_accuracy": 0.9989983305509182,
+      "mean_confidence": 0.977766752243042
+    },
+    "MODERATE": {
+      "n": 539,
+      "coverage": 0.14868965517241378,
+      "accuracy": 0.7680890538033395,
+      "top3_accuracy": 0.9851576994434137,
+      "mean_confidence": 0.6966516375541687
+    },
+    "LOW": {
+      "n": 91,
+      "coverage": 0.02510344827586207,
+      "accuracy": 0.45054945054945056,
+      "top3_accuracy": 0.9340659340659341,
+      "mean_confidence": 0.43193185329437256
+    }
+  },
+  "high_tier_errors": [
+    {
+      "true": "Potato___Late_blight",
+      "predicted": "Potato___Early_blight",
+      "confidence": 0.9863857626914978
+    },
+    {
+      "true": "Tomato___Tomato_Yellow_Leaf_Curl_Virus",
+      "predicted": "Tomato___Bacterial_spot",
+      "confidence": 0.9834690093994141
+    },
+    {
+      "true": "Tomato___Early_blight",
+      "predicted": "Tomato___Late_blight",
+      "confidence": 0.9796141982078552
+    },
+    {
+      "true": "Tomato___healthy",
+      "predicted": "Corn_(maize)___healthy",
+      "confidence": 0.976823091506958
+    },
+    {
+      "true": "Tomato___Tomato_Yellow_Leaf_Curl_Virus",
+      "predicted": "Tomato___Spider_mites Two-spotted_spider_mite",
+      "confidence": 0.9607892632484436
+    },
+    {
+      "true": "Tomato___Spider_mites Two-spotted_spider_mite",
+      "predicted": "Tomato___Target_Spot",
+      "confidence": 0.9564861059188843
+    },
+    {
+      "true": "Corn_(maize)___Northern_Leaf_Blight",
+      "predicted": "Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot",
+      "confidence": 0.9547132253646851
+    },
+    {
+      "true": "Corn_(maize)___Northern_Leaf_Blight",
+      "predicted": "Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot",
+      "confidence": 0.9482563734054565
+    },
+    {
+      "true": "Tomato___Early_blight",
+      "predicted": "Tomato___Late_blight",
+      "confidence": 0.9439525604248047
+    },
+    {
+      "true": "Potato___healthy",
+      "predicted": "Potato___Late_blight",
+      "confidence": 0.9424412250518799
+    },
+    {
+      "true": "Tomato___Septoria_leaf_spot",
+      "predicted": "Potato___Early_blight",
+      "confidence": 0.9360917210578918
+    },
+    {
+      "true": "Tomato___healthy",
+      "predicted": "Tomato___Target_Spot",
+      "confidence": 0.9311472773551941
+    },
+    {
+      "true": "Tomato___Septoria_leaf_spot",
+      "predicted": "Tomato___Target_Spot",
+      "confidence": 0.9301443099975586
+    },
+    {
+      "true": "Corn_(maize)___Northern_Leaf_Blight",
+      "predicted": "Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot",
+      "confidence": 0.9259597063064575
+    },
+    {
+      "true": "Potato___Late_blight",
+      "predicted": "Potato___Early_blight",
+      "confidence": 0.925855278968811
+    },
+    {
+      "true": "Tomato___Leaf_Mold",
+      "predicted": "Tomato___Early_blight",
+      "confidence": 0.9248047471046448
+    },
+    {
+      "true": "Tomato___Tomato_Yellow_Leaf_Curl_Virus",
+      "predicted": "Tomato___Bacterial_spot",
+      "confidence": 0.924310028553009
+    },
+    {
+      "true": "Tomato___Late_blight",
+      "predicted": "Potato___Late_blight",
+      "confidence": 0.9215462803840637
+    },
+    {
+      "true": "Tomato___Tomato_Yellow_Leaf_Curl_Virus",
+      "predicted": "Tomato___Bacterial_spot",
+      "confidence": 0.920366644859314
+    },
+    {
+      "true": "Tomato___Septoria_leaf_spot",
+      "predicted": "Tomato___Target_Spot",
+      "confidence": 0.9157541990280151
+    },
+    {
+      "true": "Tomato___Septoria_leaf_spot",
+      "predicted": "Tomato___Leaf_Mold",
+      "confidence": 0.9143149852752686
+    },
+    {
+      "true": "Tomato___Septoria_leaf_spot",
+      "predicted": "Tomato___Bacterial_spot",
+      "confidence": 0.9137901067733765
+    },
+    {
+      "true": "Tomato___healthy",
+      "predicted": "Tomato___Target_Spot",
+      "confidence": 0.9106910228729248
+    },
+    {
+      "true": "Tomato___Early_blight",
+      "predicted": "Tomato___Target_Spot",
+      "confidence": 0.9077934622764587
+    },
+    {
+      "true": "Tomato___healthy",
+      "predicted": "Tomato___Target_Spot",
+      "confidence": 0.9050390720367432
+    },
+    {
+      "true": "Tomato___Early_blight",
+      "predicted": "Tomato___Target_Spot",
+      "confidence": 0.9039232730865479
+    },
+    {
+      "true": "Tomato___Bacterial_spot",
+      "predicted": "Tomato___Septoria_leaf_spot",
+      "confidence": 0.9028298854827881
+    },
+    {
+      "true": "Tomato___Late_blight",
+      "predicted": "Tomato___Early_blight",
+      "confidence": 0.8998925685882568
+    },
+    {
+      "true": "Tomato___Septoria_leaf_spot",
+      "predicted": "Tomato___Leaf_Mold",
+      "confidence": 0.8916656970977783
+    },
+    {
+      "true": "Potato___Late_blight",
+      "predicted": "Tomato___Late_blight",
+      "confidence": 0.8914996385574341
+    },
+    {
+      "true": "Tomato___Target_Spot",
+      "predicted": "Tomato___Spider_mites Two-spotted_spider_mite",
+      "confidence": 0.8839300870895386
+    },
+    {
+      "true": "Tomato___Bacterial_spot",
+      "predicted": "Tomato___Late_blight",
+      "confidence": 0.8747329115867615
+    },
+    {
+      "true": "Tomato___Tomato_Yellow_Leaf_Curl_Virus",
+      "predicted": "Tomato___Leaf_Mold",
+      "confidence": 0.8746458888053894
+    },
+    {
+      "true": "Tomato___Early_blight",
+      "predicted": "Potato___Early_blight",
+      "confidence": 0.8721566200256348
+    },
+    {
+      "true": "Tomato___Septoria_leaf_spot",
+      "predicted": "Tomato___Bacterial_spot",
+      "confidence": 0.86839759349823
+    },
+    {
+      "true": "Tomato___Septoria_leaf_spot",
+      "predicted": "Tomato___Bacterial_spot",
+      "confidence": 0.8595377802848816
+    },
+    {
+      "true": "Tomato___Target_Spot",
+      "predicted": "Tomato___healthy",
+      "confidence": 0.8586857914924622
+    },
+    {
+      "true": "Tomato___Septoria_leaf_spot",
+      "predicted": "Tomato___Bacterial_spot",
+      "confidence": 0.8586720824241638
+    },
+    {
+      "true": "Tomato___Spider_mites Two-spotted_spider_mite",
+      "predicted": "Tomato___Target_Spot",
+      "confidence": 0.8560595512390137
+    },
+    {
+      "true": "Tomato___Leaf_Mold",
+      "predicted": "Tomato___Target_Spot",
+      "confidence": 0.8547163009643555
+    },
+    {
+      "true": "Tomato___Target_Spot",
+      "predicted": "Tomato___Spider_mites Two-spotted_spider_mite",
+      "confidence": 0.8527551889419556
+    },
+    {
+      "true": "Tomato___Early_blight",
+      "predicted": "Tomato___Target_Spot",
+      "confidence": 0.8519946336746216
+    }
+  ],
+  "threshold_sweep": [
+    {
+      "threshold": 0.5,
+      "coverage": 0.9748965517241379,
+      "accuracy": 0.9527447651386531
+    },
+    {
+      "threshold": 0.6,
+      "coverage": 0.9420689655172414,
+      "accuracy": 0.9645680819912152
+    },
+    {
+      "threshold": 0.7,
+      "coverage": 0.9045517241379311,
+      "accuracy": 0.9734675205855444
+    },
+    {
+      "threshold": 0.75,
+      "coverage": 0.8855172413793103,
+      "accuracy": 0.9769470404984424
+    },
+    {
+      "threshold": 0.8,
+      "coverage": 0.857103448275862,
+      "accuracy": 0.9810106211779852
+    },
+    {
+      "threshold": 0.85,
+      "coverage": 0.8262068965517242,
+      "accuracy": 0.9859766277128548
+    },
+    {
+      "threshold": 0.9,
+      "coverage": 0.774896551724138,
+      "accuracy": 0.9903880384478462
+    },
+    {
+      "threshold": 0.95,
+      "coverage": 0.6882758620689655,
+      "accuracy": 0.9971943887775551
+    },
+    {
+      "threshold": 0.99,
+      "coverage": 0.496,
+      "accuracy": 1.0
+    }
+  ],
+  "split": "test"
+}
