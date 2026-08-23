@@ -1,0 +1,278 @@
+{
+  "accepted": [
+    {
+      "file": "Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot/01_Gray_leaf_spot_Cercospora_zeae-maydis_5465607.png",
+      "class": "Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot",
+      "setting": "field",
+      "label_confidence": "high",
+      "review_note": "textbook vein-bounded rectangular lesions",
+      "commons_title": "File:Gray leaf spot Cercospora zeae-maydis 5465607.png",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Gray_leaf_spot_Cercospora_zeae-maydis_5465607.png",
+      "license": "CC BY 3.0 us",
+      "artist": "Daren Mueller, Iowa State University, Bugwood.org",
+      "source_caption": "Synptômes foliaires de la cercopsoriose du maïs (Cercospora zeae-maydis)"
+    },
+    {
+      "file": "Corn_(maize)___Common_rust_/00_Puccinia_sorghi_Schwein._1538032.jpg",
+      "class": "Corn_(maize)___Common_rust_",
+      "setting": "field",
+      "label_confidence": "high",
+      "review_note": "aged slide film, strong colour cast",
+      "commons_title": "File:Puccinia sorghi Schwein. 1538032.jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Puccinia_sorghi_Schwein._1538032.jpg",
+      "license": "CC BY 3.0 us",
+      "artist": "University of Georgia Plant Pathology Archive from United States University of Georgia",
+      "source_caption": "Common corn rust (Symptoms) Puccinia sorghi Schwein. Image location: United States"
+    },
+    {
+      "file": "Corn_(maize)___Common_rust_/02_Puccinia_sorghi_(15).jpg",
+      "class": "Corn_(maize)___Common_rust_",
+      "setting": "macro",
+      "label_confidence": "high",
+      "review_note": "extreme macro, no leaf outline; burned-in ID number",
+      "commons_title": "File:Puccinia sorghi (15).jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Puccinia_sorghi_(15).jpg",
+      "license": "CC BY 3.0 us",
+      "artist": "Connie Tande, SDSU Plant Science Dept., Bugwood.org",
+      "source_caption": "Puccinia sorghi teleuto sori"
+    },
+    {
+      "file": "Corn_(maize)___Common_rust_/03_Puccinia_sorghi_(07).jpg",
+      "class": "Corn_(maize)___Common_rust_",
+      "setting": "studio",
+      "label_confidence": "high",
+      "review_note": "detached leaf on black; burned-in ID number",
+      "commons_title": "File:Puccinia sorghi (07).jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Puccinia_sorghi_(07).jpg",
+      "license": "CC BY 3.0 us",
+      "artist": "University of Georgia Plant Pathology , University of Georgia, Bugwood.org",
+      "source_caption": "Puccinia sorghi"
+    },
+    {
+      "file": "Corn_(maize)___Northern_Leaf_Blight/t02_Exserohilum_turcicum_a1__2_.jpg",
+      "class": "Corn_(maize)___Northern_Leaf_Blight",
+      "setting": "field",
+      "label_confidence": "high",
+      "review_note": "single blighted leaf dominant in frame",
+      "commons_title": "File:Exserohilum turcicum a1 (2).jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Exserohilum_turcicum_a1_(2).jpg",
+      "license": "CC BY-SA 4.0",
+      "artist": "Jerzy Opioła",
+      "source_caption": "Exserohilum turcicum on leaf Zea mays. Location: Poland, Trzciana, województwo małopolskie"
+    },
+    {
+      "file": "Corn_(maize)___Northern_Leaf_Blight/t03_Helmintosporioza_liści_kukurydzy.jpg",
+      "class": "Corn_(maize)___Northern_Leaf_Blight",
+      "setting": "field",
+      "label_confidence": "moderate",
+      "review_note": "atypical early symptoms plus insect feeding holes",
+      "commons_title": "File:Helmintosporioza liści kukurydzy.jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Helmintosporioza_li%C5%9Bci_kukurydzy.jpg",
+      "license": "CC BY-SA 4.0",
+      "artist": "Jerzy Opioła",
+      "source_caption": "Helmintosporioza liści kukurydzy (Exserohilum turcicum)"
+    },
+    {
+      "file": "Potato___Late_blight/00_Late_blight_on_potato_leaf_2.jpg",
+      "class": "Potato___Late_blight",
+      "setting": "field",
+      "label_confidence": "high",
+      "review_note": "classic greasy lesion on central leaflet",
+      "commons_title": "File:Late blight on potato leaf 2.jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Late_blight_on_potato_leaf_2.jpg",
+      "license": "CC BY 3.0 us",
+      "artist": "Howard F. Schwartz, Colorado State University, United States",
+      "source_caption": "A potato leaflet showing late blight infection caused by Phytophthora infestans on a potato field at Peckham."
+    },
+    {
+      "file": "Potato___Late_blight/01_Potato_Late_Blight.JPG",
+      "class": "Potato___Late_blight",
+      "setting": "field",
+      "label_confidence": "high",
+      "review_note": "lesion with white sporulation ring",
+      "commons_title": "File:Potato Late Blight.JPG",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Potato_Late_Blight.JPG",
+      "license": "CC BY-SA 4.0",
+      "artist": "Björn Andersson (SLU)",
+      "source_caption": "Potato leaf infected by Phytophthora infestans"
+    },
+    {
+      "file": "Potato___Late_blight/t02_Phytophthora_infestans_on_potato_leaf_2.jpg",
+      "class": "Potato___Late_blight",
+      "setting": "studio",
+      "label_confidence": "high",
+      "review_note": "two detached leaflets on black",
+      "commons_title": "File:Phytophthora infestans on potato leaf 2.jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Phytophthora_infestans_on_potato_leaf_2.jpg",
+      "license": "CC BY 3.0 us",
+      "artist": "Mary Ann Hansen, Virginia Polytechnic Institute and State University, United States",
+      "source_caption": "Symptoms of Phytophthora infestans (late blight) on potato leaf"
+    },
+    {
+      "file": "Potato___healthy/01_Russain_blue_potato_leaves.jpg",
+      "class": "Potato___healthy",
+      "setting": "field",
+      "label_confidence": "high",
+      "review_note": "blue-green cultivar, shallow depth of field",
+      "commons_title": "File:Russain blue potato leaves.jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Russain_blue_potato_leaves.jpg",
+      "license": "CC BY 4.0",
+      "artist": "Samsmachado",
+      "source_caption": "Leaves of the Russian blue potato plant (Winnipeg, July 2021)"
+    },
+    {
+      "file": "Potato___healthy/00_Starr-110731-8128-Solanum_tuberosum-leaves-Hawea_Pl_Olinda-Maui__25102276025_.jp.jpg",
+      "class": "Potato___healthy",
+      "setting": "field",
+      "label_confidence": "high",
+      "review_note": "harsh dappled sunlight over mulch",
+      "commons_title": "File:Starr-110731-8128-Solanum tuberosum-leaves-Hawea Pl Olinda-Maui (25102276025).jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Starr-110731-8128-Solanum_tuberosum-leaves-Hawea_Pl_Olinda-Maui_(25102276025).jpg",
+      "license": "CC BY 3.0 us",
+      "artist": "Forest and Kim Starr",
+      "source_caption": "Solanum tuberosum (Potato) Leaves at Hawea Pl Olinda, Maui, Hawaii. July 31, 2011 #110731-8128 Image Use Policy"
+    },
+    {
+      "file": "Tomato___Early_blight/00_Alternaria_solani_-_leaf_lesions.jpg",
+      "class": "Tomato___Early_blight",
+      "setting": "semi-studio",
+      "label_confidence": "high",
+      "review_note": "concentric target lesion; burned-in ID number",
+      "commons_title": "File:Alternaria solani - leaf lesions.jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Alternaria_solani_-_leaf_lesions.jpg",
+      "license": "CC BY 3.0 us",
+      "artist": "Clemson University - USDA Cooperative Extension Slide Series",
+      "source_caption": "A tomato leaf showing typical target shaped lesions of Alternaria solani"
+    },
+    {
+      "file": "Tomato___Late_blight/00_Tomato_late_blight_leaf_curl_2_(5816171413).jpg",
+      "class": "Tomato___Late_blight",
+      "setting": "field",
+      "label_confidence": "high",
+      "review_note": "necrotic curling leaflets in a garden",
+      "commons_title": "File:Tomato late blight leaf curl 2 (5816171413).jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Tomato_late_blight_leaf_curl_2_(5816171413).jpg",
+      "license": "CC BY-SA 2.0",
+      "artist": "Scot Nelson from Honolulu, Hawaii, USA",
+      "source_caption": "Late blight of tomato (Lycopersicon esculentum) in a garden near Hilo, Hawaii, caused by Phyophthora infestans"
+    },
+    {
+      "file": "Tomato___Late_blight/01_Tomato_late_blight_leaf_sporulating_lesions_1_(5816170621).jpg",
+      "class": "Tomato___Late_blight",
+      "setting": "field",
+      "label_confidence": "high",
+      "review_note": "sporulating lesions, shallow depth of field",
+      "commons_title": "File:Tomato late blight leaf sporulating lesions 1 (5816170621).jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Tomato_late_blight_leaf_sporulating_lesions_1_(5816170621).jpg",
+      "license": "CC0",
+      "artist": "Scot Nelson from Honolulu, Hawaii, USA",
+      "source_caption": "Late blight of tomato (Lycopersicon esculentum) in a garden near Hilo, Hawaii, caused by Phyophthora infestans"
+    },
+    {
+      "file": "Tomato___Late_blight/02_Late_blight_on_tomato_leaf_(7871756748).jpg",
+      "class": "Tomato___Late_blight",
+      "setting": "field",
+      "label_confidence": "high",
+      "review_note": "early lesion, leaflet fills frame",
+      "commons_title": "File:Late blight on tomato leaf (7871756748).jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Late_blight_on_tomato_leaf_(7871756748).jpg",
+      "license": "CC BY 2.0",
+      "artist": "Dwight Sipler from Stow, MA, USA",
+      "source_caption": "Late blight on tomato leaf"
+    },
+    {
+      "file": "Tomato___Leaf_Mold/t02_TomateBlattUnterseiteSamtfleckenCladosporiumfulvum.jpg",
+      "class": "Tomato___Leaf_Mold",
+      "setting": "indoor-detached",
+      "label_confidence": "high",
+      "review_note": "leaf UNDERSIDE with olive velvety patches, on a countertop",
+      "commons_title": "File:TomateBlattUnterseiteSamtfleckenCladosporiumfulvum.jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:TomateBlattUnterseiteSamtfleckenCladosporiumfulvum.jpg",
+      "license": "CC BY-SA 3.0",
+      "artist": "Goldlocki",
+      "source_caption": "Tomatenblatt Unterseite Samtflecken Passalora fulva"
+    },
+    {
+      "file": "Tomato___Septoria_leaf_spot/00_Septoria_leaf_spot_symptoms_on_tomato_leaf_(Septoria_lycopersici_on_Solanum_lycopersicum_leaf).jpg",
+      "class": "Tomato___Septoria_leaf_spot",
+      "setting": "studio",
+      "label_confidence": "high",
+      "review_note": "whole compound leaf on white with a ruler",
+      "commons_title": "File:Septoria leaf spot symptoms on tomato leaf (Septoria lycopersici on Solanum lycopersicum leaf).jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Septoria_leaf_spot_symptoms_on_tomato_leaf_(Septoria_lycopersici_on_Solanum_lycopersicum_leaf).jpg",
+      "license": "CC BY-SA 4.0",
+      "artist": "MerielGJones",
+      "source_caption": "The disease symptoms of tomato leaf spot, caused by Septoria lycopersici, on a tomato leaf (Solanum lycopersicum). Scale on orange bar on RHS is in mm and cm. Taken September 2021 on variety Sungold grown outdoors in domestic garden."
+    },
+    {
+      "file": "Tomato___Septoria_leaf_spot/01_Septoria_lycopersici_malagutii_leaf_spot_on_tomato_leaf.jpg",
+      "class": "Tomato___Septoria_leaf_spot",
+      "setting": "field",
+      "label_confidence": "high",
+      "review_note": "hand-held over soil - the ideal domain-shift image",
+      "commons_title": "File:Septoria lycopersici malagutii leaf spot on tomato leaf.jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Septoria_lycopersici_malagutii_leaf_spot_on_tomato_leaf.jpg",
+      "license": "CC BY 3.0 us",
+      "artist": "Dr Parthasarathy Seethapathy, Tamil Nadu Agricultural University, Bugwood.org",
+      "source_caption": "Septoria leaf spot of tomato"
+    },
+    {
+      "file": "Tomato___Septoria_leaf_spot/02_Tomato_septoria_leaf_spot_3029.jpg",
+      "class": "Tomato___Septoria_leaf_spot",
+      "setting": "field",
+      "label_confidence": "high",
+      "review_note": "in-canopy, multiple leaflets",
+      "commons_title": "File:Tomato septoria leaf spot 3029.jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Tomato_septoria_leaf_spot_3029.jpg",
+      "license": "CC0",
+      "artist": "Wolan268",
+      "source_caption": "Tomato leaves with septoria leaf spot fungus"
+    },
+    {
+      "file": "Tomato___healthy/00_Healthy_tomato_leaves__7871755330_.jpg",
+      "class": "Tomato___healthy",
+      "setting": "field",
+      "label_confidence": "high",
+      "review_note": "clean foliage in situ",
+      "commons_title": "File:Healthy tomato leaves (7871755330).jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Healthy_tomato_leaves_(7871755330).jpg",
+      "license": "CC BY 2.0",
+      "artist": "Dwight Sipler from Stow, MA, USA",
+      "source_caption": "Wish they all looked like this."
+    }
+  ],
+  "ood": [
+    {
+      "file": "_ood/00_Northern_corn_leaf_blight.JPG",
+      "reason": "whole canopy, many plants",
+      "source_class_folder": "Corn_(maize)___Northern_Leaf_Blight",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Northern_corn_leaf_blight.JPG",
+      "license": "CC BY-SA 4.0",
+      "artist": "Chroanch"
+    },
+    {
+      "file": "_ood/00_A_young_corn_plant.jpg",
+      "reason": "whole young plant surrounded by weeds",
+      "source_class_folder": "Corn_(maize)___healthy",
+      "page_url": "https://commons.wikimedia.org/wiki/File:A_young_corn_plant.jpg",
+      "license": "CC BY-SA 4.0",
+      "artist": "Dadjosm"
+    },
+    {
+      "file": "_ood/t03_Passalora_fulva_a1__1_.jpg",
+      "reason": "whole plant with fruit",
+      "source_class_folder": "Tomato___Leaf_Mold",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Passalora_fulva_a1_(1).jpg",
+      "license": "CC BY-SA 4.0",
+      "artist": "Jerzy Opioła"
+    },
+    {
+      "file": "_ood/00_A_micro_photo_of_a_potato_plant_leaf.jpg",
+      "reason": "extreme macro of trichomes, no leaf shape",
+      "source_class_folder": "Potato___healthy",
+      "page_url": "https://commons.wikimedia.org/wiki/File:A_micro_photo_of_a_potato_plant_leaf.jpg",
+      "license": "CC BY 4.0",
+      "artist": "Retro Lenses"
+    }
+  ]
+}

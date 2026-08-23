@@ -3,6 +3,7 @@ import { useState, useEffect, useRef } from 'react';
 import { loadLiteRt, loadAndCompile, Tensor } from '@litertjs/core';
 import { INPUT_H, INPUT_W, CLASS_NAMES, ClassName } from './constants';
 import { preprocessImage } from './preprocess';
+import { calibrateProbabilities } from './calibration';
 
 const WASM_PATH = '/litert_wasm/';
 const MODEL_URL = '/cropguard_v1_production.tflite';
@@ -14,10 +15,14 @@ let liteRtInitPromise: Promise<unknown> | null = null;
 export interface InferenceResult {
   bestClass: ClassName;
   bestIndex: number;
+  /** Calibrated top-1 probability — this is what the tier thresholds expect. */
   bestConfidence: number;
   preprocMs: string;
   inferMs: string;
+  /** Temperature-scaled probabilities (see calibration.ts). */
   probabilities: number[];
+  /** Raw model softmax, before temperature scaling — kept for the debug panel. */
+  rawProbabilities: number[];
 }
 
 export function useCropGuardModel() {
@@ -89,7 +94,11 @@ export function useCropGuardModel() {
     // 3. Read output
     // For 'wasm' accelerator, output is already on the wasm backend — no moveTo needed.
     const probsArray = results[0].toTypedArray() as Float32Array;
-    const probabilities = Array.from(probsArray);
+    const rawProbabilities = Array.from(probsArray);
+
+    // Temperature scaling, measured on the validation split. Monotone, so the
+    // argmax below is unaffected — only the confidence value and hence the tier.
+    const probabilities = calibrateProbabilities(rawProbabilities);
 
     // 4. Cleanup tensors to avoid Wasm heap leaks
     inputTensor.delete();
@@ -113,6 +122,7 @@ export function useCropGuardModel() {
       preprocMs,
       inferMs,
       probabilities,
+      rawProbabilities,
     };
   };
 
