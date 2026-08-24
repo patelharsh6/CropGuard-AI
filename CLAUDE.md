@@ -17,17 +17,24 @@ in the browser via LiteRT.js (WebAssembly/XNNPACK). Scope: 17 classes across Tom
 - `app/` — **legacy** vanilla-HTML/JS test harness for LiteRT (`npx serve`). The README's
   "cd app && npm run dev" instructions are stale; new frontend work goes in `web/`.
 - `docs/ARCHITECTURE.md`, `docs/quantization_findings.md`, `docs/DOMAIN_SHIFT.md`,
-  `docs/CALIBRATION.md`, `docs/EXPLAINABILITY.md` — design rationale, the INT8 failure
-  investigation, the robustness/domain-shift results, the calibration analysis that
-  produced the shipped confidence thresholds, and the Grad-CAM / background-leakage
-  analysis. Read `quantization_findings.md` before touching `src/quantize.py`,
-  `CALIBRATION.md` before touching any threshold or `web/src/lib/calibration.ts`, and
-  `EXPLAINABILITY.md` before touching `src/explain.py` (in particular: at the final
-  conv layer Grad-CAM here is *provably* plain CAM, which is why a second 14×14 map
-  exists — don't delete it as redundant).
-- `real_world_test/` — hand-taken, hand-labelled field photos for `src.eval_real_world`. **Empty on
-  purpose**: never populate it with stock or internet images (unverified labels, and some are
-  PlantVillage images, which would leak the training distribution). See its README.
+  `docs/CALIBRATION.md`, `docs/EXPLAINABILITY.md`, `docs/OOD.md` — design rationale,
+  the INT8 failure investigation, the robustness/domain-shift results, the calibration
+  analysis that produced the shipped confidence thresholds, the Grad-CAM /
+  background-leakage analysis, and the OOD gate. Read `quantization_findings.md`
+  before touching `src/quantize.py`, `CALIBRATION.md` before touching any threshold or
+  `web/src/lib/calibration.ts`, `EXPLAINABILITY.md` before touching `src/explain.py`
+  (in particular: at the final conv layer Grad-CAM here is *provably* plain CAM, which
+  is why a second 14×14 map exists — don't delete it as redundant), and `OOD.md`
+  before touching `src/ood.py` or the gate threshold (in particular: the threshold is
+  set on the 37 *field* photos, not on the clean val split — the textbook choice
+  rejects ~95% of real leaf photos).
+- `real_world_test/` — hand-taken, hand-labelled field photos for `src.eval_real_world`.
+  The **class folders** must never be populated with stock or internet images (unverified
+  labels, and some are PlantVillage images, which would leak the training distribution).
+  Its `_ood/` subfolder is the exception and holds 97 curated Commons *negatives* for
+  Phase 4 — "not a single crop leaf" is a label anyone can verify by looking, and a
+  negative cannot leak the training distribution. `_ood/provenance.json` carries the
+  per-image licence, attribution and review decision. See its README.
 - `web_sourced_test/` — 20 hand-vetted Wikimedia Commons photos used as a Phase 1 stopgap (0.40
   top-1). Built by `scripts/harvest_commons.py`; `provenance.json` carries the per-image licence
   and attribution and must not be deleted. Keep it separate from `real_world_test/` — its labels
@@ -50,6 +57,12 @@ python -m src.calibration     # ECE/MCE, temperature scaling, derived thresholds
 python -m src.explain         # Grad-CAM panels -> outputs/gradcam/, leakage metrics ->
                               # outputs/gradcam_report.json (~9 min; needs the
                               # outputs/cache/*.npy written by src.calibration)
+python -m src.ood             # MSP/energy/Mahalanobis/cosine OOD comparison ->
+                              # outputs/ood_report.json + plots; writes models/ood_gate.json
+python -m src.export_ood_model   # 3-output .tflite (probs/logits/embedding) for the gate,
+                              # verified against the production artifact
+python scripts/harvest_ood.py --out D --per-category 9   # harvest OOD candidates (Commons)
+python scripts/curate_ood.py --staging D                 # vet -> real_world_test/_ood/
 python -m src.eval_domain_shift  # synthetic corruption stress test -> outputs/domain_shift_report.json
 python -m src.eval_real_world    # scores real_world_test/
 python -m src.eval_real_world --calibrated   # ...the way the shipped UI now gates it
@@ -79,12 +92,23 @@ Four things must stay in sync between Python and `web/src/lib/`:
 2. **Preprocessing.** `web/src/lib/preprocess.ts` reproduces `tf.image.resize(bilinear)` + `/255.0`
    using a 224×224 canvas with `imageSmoothingQuality = 'medium'`. This was verified numerically
    against the Python pipeline — do not "optimize" it.
-3. **Model artifact.** `models/cropguard_v1_production.tflite` is copied to
+3. **Model artifacts.** `models/cropguard_v1_production.tflite` is copied to
    `web/public/` (and `app/public/`); regenerating the model means recopying all copies.
+   The web app actually **loads `cropguard_v1_gate.tflite`** — same weights and
+   quantization, re-exported with logits and the 576-d embedding as extra outputs
+   (verified bit-identical on probabilities). Retraining means re-running
+   `src.quantize`, then `src.ood`, then `src.export_ood_model`, in that order: the
+   gate's class means and threshold are functions of the weights.
 4. **Accelerator.** The model is dynamic-range quantized (float32 activations) and is loaded with
    `{ accelerator: 'wasm' }` (XNNPACK). Full INT8 was abandoned — see the docs — so don't switch
    the converter to full-integer quantization expecting it to work.
-5. **Calibration constants.** `TEMPERATURE`, `TIER_HIGH`, `TIER_MODERATE` live in three places:
+5. **OOD gate parameters.** `models/ood_gate.json` (copied to `web/public/`) holds 17
+   unit class-mean embeddings in `CLASS_NAMES` order plus the threshold, all derived by
+   `src/ood.py`. Reordering the classes without re-running it silently scores every
+   image against the wrong means. The browser resolves the model's three outputs by
+   shape at runtime (`resolveSlots` in `useCropGuardModel.ts`), so TFLite output
+   ordering is not part of the contract.
+6. **Calibration constants.** `TEMPERATURE`, `TIER_HIGH`, `TIER_MODERATE` live in three places:
    `src/config.py`, `web/src/lib/calibration.ts`, `web/src/lib/confidenceTier.ts`. They are
    *derived* by `src/calibration.py`, so editing a value by hand makes the shipped UI disagree
    with the measurement documented in `docs/CALIBRATION.md` — re-run the script instead. The
@@ -100,6 +124,10 @@ Four things must stay in sync between Python and `web/src/lib/`:
 - `web/next.config.ts` sets `logging.browserConsole: false` because the Emscripten runtime writes
   via low-level `_fd_write`, which Turbopack otherwise floods the terminal with. `allowedDevOrigins`
   holds a hardcoded LAN IP for phone testing — update it for a different network.
+- `web/src/lib/oodGate.ts` runs **before** the tier system: it scores the embedding
+  against the class means and, below threshold, `page.tsx` shows a "not a leaf" panel
+  instead of any diagnosis. A failed `/ood_gate.json` fetch yields `ood: null`, which
+  means *unknown* — the UI warns and falls back to tiers rather than assuming a leaf.
 - `web/src/lib/confidenceTier.ts` gates the UI: HIGH ≥ 0.945, MODERATE ≥ 0.595, else LOW (show
   top-3 instead of a single diagnosis). `diseaseInfo.ts` maps each class to advice text. Those
   thresholds apply to **calibrated** probabilities — `web/src/lib/calibration.ts` applies

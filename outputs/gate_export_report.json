@@ -1,0 +1,57 @@
+{
+  "gate_model": "models\\cropguard_v1_gate.tflite",
+  "size_bytes": 1140736,
+  "production_model": "models\\cropguard_v1_production.tflite",
+  "quantization": "dynamic range (tf.lite.Optimize.DEFAULT)",
+  "n_verify_clean": 200,
+  "tolerances": {
+    "prob": 0.002,
+    "energy": 0.05
+  },
+  "per_group": {
+    "ood": {
+      "n": 101,
+      "prob_max_abs_diff": 0.0,
+      "logit_softmax_max_diff": 1.4081924937237034e-07,
+      "argmax_agreement": 1.0,
+      "energy_mean": 2.37173018000142,
+      "energy_std": 2.149072074692022,
+      "gate_score_max_abs_diff": 0.06102951451755034,
+      "gate_decision_flips": 2,
+      "gate_accept_rate_quantized": 0.0594059405940594
+    },
+    "shifted": {
+      "n": 37,
+      "prob_max_abs_diff": 0.0,
+      "logit_softmax_max_diff": 1.0513107473464345e-07,
+      "argmax_agreement": 1.0,
+      "energy_mean": 3.844754153439211,
+      "energy_std": 3.202542349322682,
+      "gate_score_max_abs_diff": 0.028294565729950594,
+      "gate_decision_flips": 3,
+      "gate_accept_rate_quantized": 0.918918918918919
+    },
+    "test": {
+      "n": 200,
+      "prob_max_abs_diff": 0.0,
+      "logit_softmax_max_diff": 1.397705146066741e-07,
+      "argmax_agreement": 1.0,
+      "energy_mean": 7.813647386711557,
+      "energy_std": 3.6974953554801573,
+      "gate_score_max_abs_diff": 0.048210504641735596,
+      "gate_decision_flips": 0,
+      "gate_accept_rate_quantized": 1.0
+    }
+  },
+  "worst_prob_abs_diff": 0.0,
+  "worst_logit_softmax_abs_diff": 1.4081924937237034e-07,
+  "argmax_agreement_overall": 1.0,
+  "passed": true,
+  "gate_decision": {
+    "detector": "class_mean_cosine",
+    "threshold": 0.5981325258907545,
+    "max_abs_score_diff": 0.06102951451755034,
+    "total_flips": 5,
+    "n": 338
+  }
+}

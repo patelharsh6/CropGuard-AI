@@ -21,8 +21,11 @@ gates what it shows on that confidence (see §6).
 - Whole-plant, field, or multi-leaf photos. Measured failure: a whole-plant garden
   photo returned **79.7% confidence on `Corn_healthy`** — a wrong class, above the
   MODERATE gate.
-- Non-plant images (faces, soil, sky, text). There is currently **no
-  out-of-distribution rejection**; the classifier is closed-set.
+- Non-plant images (faces, soil, sky, text). The classifier itself is closed-set and
+  will name a disease for any of them; a **pre-classification OOD gate** now rejects
+  them in the UI before a diagnosis is shown (§8.1, `docs/OOD.md`). The gate is not
+  part of the classifier — anyone calling the model directly gets the closed-set
+  behaviour.
 - Fruit, stem, root, or tuber symptoms — training data is leaves only.
 - Nutrient deficiency, herbicide damage, or abiotic stress — no such class exists,
   so these are forced into a disease class.
@@ -300,8 +303,14 @@ Full write-up: `docs/quantization_findings.md`.
 
 ## 8. Known failure modes
 
-1. **Out-of-distribution inputs are confidently misclassified.** Whole-plant photo →
-   79.7% on `Corn_healthy`. No OOD gate exists.
+1. **Out-of-distribution inputs are confidently misclassified — gated in the UI, not
+   fixed in the model.** Whole-plant photo → 79.7% on `Corn_healthy`; across a
+   101-image negative set, 9.9% reached the HIGH tier and 62.4% got a diagnosis shown,
+   with a maximum calibrated confidence of 0.9998. A class-mean-cosine gate on the
+   576-d embedding (threshold 0.5981, AUROC 0.9711 against field leaf photos) cuts
+   those to **2.0% / 5.9%** while accepting 90% of real field leaves. Residual: it
+   detects "leaf", not "my crop" — oak-leaf close-ups pass. Its threshold is a
+   percentile of 37 field photos. See `docs/OOD.md`.
 2. **Confident-and-wrong survives the tier gate.** 0.52% of test images after
    calibration (1.16% before); separately, a stock photo of unverified provenance scored
    93.65%. Tiering catches model *uncertainty*, not confident errors on input that merely
@@ -314,7 +323,8 @@ Full write-up: `docs/quantization_findings.md`.
    confident *and* wrong after calibration (23.5% before). Tiering degraded gracefully on
    two test distributions and failed on a third; calibration narrowed that failure but
    did not close it, so it cannot be relied on to prevent a false-confident diagnosis.
-   The Phase 4 OOD gate targets the remainder.
+   The OOD gate (§8.1) removes the non-leaf part of the remainder; the part that is a
+   real leaf of the wrong class is untouched by either mechanism.
 5. **Brown-lesion tomato diseases are systematically confused** with each other — and
    that is where the one surviving confident error on the 17-class set sits. No
    confidence threshold can fix a discrimination failure.

@@ -6,6 +6,7 @@ import { CLASS_NAMES } from '@/lib/constants';
 import { DISEASE_INFO } from '@/lib/diseaseInfo';
 import { getTier, getTopN, ConfidenceTier, TopPrediction } from '@/lib/confidenceTier';
 import { TEMPERATURE } from '@/lib/calibration';
+import { OodVerdict } from '@/lib/oodGate';
 
 // ─── Sub-components ────────────────────────────────────────────────────────────
 
@@ -70,8 +71,76 @@ function Top3List({ predictions, labelAs }: { predictions: TopPrediction[]; labe
   );
 }
 
+/**
+ * Shown INSTEAD of any diagnosis when the OOD gate rejects the image.
+ *
+ * The gate answers a question the confidence tiers cannot: a closed-set softmax
+ * over 17 leaf classes is forced to name a disease for a photo of a chair, and it
+ * does so confidently — one whole-plant photo scored 0.983. So this panel replaces
+ * the diagnosis rather than annotating it, and the model's output stays available
+ * only behind an explicit disclosure. See lib/oodGate.ts and docs/OOD.md.
+ */
+function OodPanel({ result, ood }: { result: InferenceResult; ood: OodVerdict }) {
+  const [showAnyway, setShowAnyway] = useState(false);
+  return (
+    <div className="mt-4 space-y-4">
+      <div className="bg-[#111f11] border border-orange-800 rounded p-4">
+        <div className="flex items-start gap-2 mb-4 bg-orange-900/20 border border-orange-800/50 rounded px-3 py-2">
+          <span className="text-orange-400 mt-0.5 shrink-0">⃠</span>
+          <p className="text-orange-200 text-xs leading-relaxed">
+            <span className="font-semibold">This doesn&apos;t look like a single crop leaf.</span>{' '}
+            No diagnosis is shown, because this model only knows tomato, potato and
+            corn leaves — on anything else it still returns a disease name, and that
+            name means nothing.
+          </p>
+        </div>
+
+        <h2 className="text-lg font-bold text-gray-300 mb-1">Not a leaf photo</h2>
+        <p className="text-gray-500 text-sm mb-4">
+          Leaf-likeness {ood.score.toFixed(3)} (accepts at ≥ {ood.threshold.toFixed(3)})
+        </p>
+
+        <div className="mt-2 bg-[#1a2b1a] border border-[#2d5a2d] rounded p-3">
+          <p className="text-xs font-semibold text-[#81c784] mb-2">💡 What to photograph:</p>
+          <ul className="text-xs text-gray-400 space-y-1 list-disc list-inside">
+            <li>One leaf, filling most of the frame — not the whole plant</li>
+            <li>Tomato, potato or corn only; other species aren&apos;t covered</li>
+            <li>A leaf, not fruit, flowers, soil or packaging</li>
+            <li>Bright, even light with the lesion in focus</li>
+          </ul>
+        </div>
+
+        <button
+          onClick={() => setShowAnyway(v => !v)}
+          className="mt-4 text-xs text-gray-500 hover:text-gray-300 transition-colors"
+        >
+          {showAnyway ? '▲ Hide' : '▼ Show'} what the model returned anyway (not a diagnosis)
+        </button>
+        {showAnyway && (
+          <div className="mt-2">
+            <p className="text-xs text-orange-300/80 mb-2">
+              For debugging only. The gate rejected this image, so this label is not
+              evidence about the plant.
+            </p>
+            <Top3List predictions={getTopN(result.probabilities, 3)} labelAs="Model output (rejected)" />
+            <RawOutputTable result={result} />
+          </div>
+        )}
+
+        <div className="text-gray-600 text-xs mt-3">
+          Preprocessing: {result.preprocMs} ms | Inference: {result.inferMs} ms
+        </div>
+      </div>
+    </div>
+  );
+}
+
 /** Result panel — renders differently based on confidence tier. */
 function ResultPanel({ result }: { result: InferenceResult }) {
+  // The OOD gate runs before the tier system: if the input isn't a leaf, no
+  // confidence value about which leaf disease it has is meaningful.
+  if (result.ood?.isOod) return <OodPanel result={result} ood={result.ood} />;
+
   const tier: ConfidenceTier = getTier(result.bestConfidence);
   const top3 = getTopN(result.probabilities, 3);
 
@@ -278,7 +347,7 @@ function ResultPanel({ result }: { result: InferenceResult }) {
 // ─── Main page ─────────────────────────────────────────────────────────────────
 
 export default function Home() {
-  const { isModelReady, status, error, infer } = useCropGuardModel();
+  const { isModelReady, status, error, gateError, infer } = useCropGuardModel();
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
   const [isInferring, setIsInferring] = useState(false);
   const [result, setResult] = useState<InferenceResult | null>(null);
@@ -390,6 +459,13 @@ export default function Home() {
           {!isDragOver && <p className="text-xs text-gray-600 mt-1">JPG · PNG · WebP</p>}
         </div>
       </div>
+
+      {gateError && (
+        <div className="mb-4 bg-[#1a0f0f] border border-yellow-700 text-yellow-300 p-3 rounded text-sm">
+          ⚠️ OOD gate unavailable ({gateError}) — non-leaf photos will not be
+          rejected, so treat any diagnosis with extra caution.
+        </div>
+      )}
 
       {dropError && (
         <div className="mb-4 bg-[#1a0f0f] border border-yellow-700 text-yellow-300 p-3 rounded text-sm">

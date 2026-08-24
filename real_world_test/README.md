@@ -1,6 +1,9 @@
 # Real-world test set (Phase 1)
 
-**Status: empty — waiting on photos. This is the project's biggest open credibility gap.**
+**Status: 17 photos, one per class — still the project's biggest open credibility gap.**
+More photos here now improve *two* results, not one: the field accuracy number, and
+the OOD gate's threshold, which is a percentile of these 37 field images
+(`docs/OOD.md` §8).
 
 > 👉 **Adding photos? Read [`HOW_TO_ADD_PHOTOS.md`](HOW_TO_ADD_PHOTOS.md)** — step-by-step
 > folder routing, what counts as a usable image, and a validator that checks your work.
@@ -53,9 +56,12 @@ real_world_test/Tomato_Early_blight/IMG_0001.jpg        # sanitized name from co
 `.jpg`, `.jpeg`, `.png`, `.webp` and `.bmp` are read. Empty class folders are fine and
 are simply skipped.
 
-`_ood/` is ignored by `eval_real_world.py`. It is the negative set for Phase 4 (faces,
-furniture, sky, text, whole plants, blank walls) — anything that is *not* a single crop
-leaf.
+`_ood/` is ignored by `eval_real_world.py`. It is the Phase 4 negative set — anything
+that is *not* a single crop leaf — and it is **populated** (97 curated Wikimedia
+Commons photos across 14 categories; see `_ood/README.md`). The "take them yourself"
+rule above does not apply there: "not a leaf" is a label anyone can verify by looking,
+and a negative cannot leak the training distribution into a leaf test. It is scored by
+`python -m src.ood`, not by `eval_real_world.py`.
 
 ## Then run
 

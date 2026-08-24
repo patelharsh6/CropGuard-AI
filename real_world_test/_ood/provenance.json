@@ -1,0 +1,1577 @@
+{
+  "purpose": "Phase 4 OOD negative set — images that are NOT a single crop leaf. Scored by src/ood.py; see docs/OOD.md.",
+  "source": "Wikimedia Commons via scripts/harvest_ood.py",
+  "curation": "every candidate viewed as a contact sheet before acceptance; rejections and their reasons are listed below. Images are downscaled to a 640 px long edge (the pipeline resizes to 224) because this directory is committed.",
+  "counts": {
+    "accepted": 97,
+    "rejected": 19,
+    "by_category": {
+      "face": 6,
+      "hand": 6,
+      "text": 6,
+      "furniture": 6,
+      "sky": 7,
+      "wall": 5,
+      "animal": 8,
+      "vehicle_street": 6,
+      "device": 7,
+      "soil_ground": 6,
+      "whole_plant_crop": 12,
+      "other_foliage": 6,
+      "flower": 7,
+      "fruit_veg": 9
+    }
+  },
+  "accepted": [
+    {
+      "file": "face/00_Elderly_Gambian_woman_face_portrait.jpg",
+      "category": "face",
+      "original_category": "face",
+      "commons_title": "File:Elderly Gambian woman face portrait.jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Elderly_Gambian_woman_face_portrait.jpg",
+      "license": "CC BY-SA 2.0",
+      "artist": "Ferdinand Reus",
+      "source_caption": "Elderly Gambian woman's face surrounded by yellow and orange hijab. January 2008, The Gambia.",
+      "size": [
+        577,
+        640
+      ]
+    },
+    {
+      "file": "face/01_Boy_Face_from_Venezuela.jpg",
+      "category": "face",
+      "original_category": "face",
+      "commons_title": "File:Boy Face from Venezuela.jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Boy_Face_from_Venezuela.jpg",
+      "license": "CC0",
+      "artist": "Wilfredor",
+      "source_caption": "A 9-year-old boy's face, Margarita Island, Venezuela.[1]",
+      "size": [
+        640,
+        514
+      ]
+    },
+    {
+      "file": "face/02_Laughing_boy_at_golden_hour.jpg",
+      "category": "face",
+      "original_category": "face",
+      "commons_title": "File:Laughing boy at golden hour.jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Laughing_boy_at_golden_hour.jpg",
+      "license": "CC BY-SA 4.0",
+      "artist": "Basile Morin",
+      "source_caption": "Laughing boy at golden hour, in Don Det (Si Phan Don), Laos",
+      "size": [
+        480,
+        640
+      ]
+    },
+    {
+      "file": "face/03_Oscar_Wilde_portrait_by_Napoleon_Sarony_-_albumen.jpg",
+      "category": "face",
+      "original_category": "face",
+      "commons_title": "File:Oscar Wilde portrait by Napoleon Sarony - albumen.jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Oscar_Wilde_portrait_by_Napoleon_Sarony_-_albumen.jpg",
+      "license": "Public domain",
+      "artist": "Napoleon Sarony",
+      "source_caption": "Three quarter length portrait of Oscar Wilde(en) by Napoleon Sarony(en). 1 photographic print on card mount : albumen.",
+      "size": [
+        385,
+        640
+      ]
+    },
+    {
+      "file": "face/04_Face_of_SpooSpa.jpg",
+      "category": "face",
+      "original_category": "face",
+      "commons_title": "File:Face of SpooSpa.jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Face_of_SpooSpa.jpg",
+      "license": "CC BY-SA 2.0",
+      "artist": "SpooSpa",
+      "source_caption": "A woman with a neutral expression",
+      "size": [
+        480,
+        640
+      ]
+    },
+    {
+      "file": "face/05_Grand_Rounds_Scenic_Byway_-_Closeup_of_Hiawatha_and_Minnehaha_Statue_-_NARA_-_77.jpg",
+      "category": "face",
+      "original_category": "face",
+      "commons_title": "File:Grand Rounds Scenic Byway - Closeup of Hiawatha and Minnehaha Statue - NARA - 7718730.jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Grand_Rounds_Scenic_Byway_-_Closeup_of_Hiawatha_and_Minnehaha_Statue_-_NARA_-_7718730.jpg",
+      "license": "Public domain",
+      "artist": "A. E. Crane, U.S. Department of Transportation",
+      "source_caption": "Scope and content: The original finding aid described this photograph as: Original Caption: A closeup of the statue shows the expressions on Hiawatha and Minnehaha's faces. Location: Location: Minnehaha Park, Minneapolis, Minnesota (44.915° N 93.209° W) Status: Public domain. Photo by A. E. Crane",
+      "size": [
+        640,
+        426
+      ]
+    },
+    {
+      "file": "hand/00_Human_hand_polydactyly.jpg",
+      "category": "hand",
+      "original_category": "hand",
+      "commons_title": "File:Human hand polydactyly.jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Human_hand_polydactyly.jpg",
+      "license": "CC BY-SA 4.0",
+      "artist": "RamaGaspar",
+      "source_caption": "Human hand polydactyly in a jeepney in Pulilan-Calumpit road",
+      "size": [
+        640,
+        480
+      ]
+    },
+    {
+      "file": "hand/01_Sole_of_foot_of_an_infant_held_between_the_middle_finger_and_the_ring_finger_of_.jpg",
+      "category": "hand",
+      "original_category": "hand",
+      "commons_title": "File:Sole of foot of an infant held between the middle finger and the ring finger of an adult hand for size comparison.jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Sole_of_foot_of_an_infant_held_between_the_middle_finger_and_the_ring_finger_of_an_adult_hand_for_size_comparison.jpg",
+      "license": "CC BY-SA 4.0",
+      "artist": "Basile Morin",
+      "source_caption": "Sole of foot of a one month old infant, held between the middle finger and the ring finger of an adult hand, for size comparison, on a white bed sheet, in Don Det, Si Phan Don, Laos.",
+      "size": [
+        640,
+        426
+      ]
+    },
+    {
+      "file": "hand/02_Hand_skin_close_up.jpg",
+      "category": "hand",
+      "original_category": "hand",
+      "commons_title": "File:Hand skin close up.jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Hand_skin_close_up.jpg",
+      "license": "CC BY-SA 4.0",
+      "artist": "Genusfotografen (Tomas Gunnarsson) / Wikimedia",
+      "source_caption": "close up of the skin on the back of a hand",
+      "size": [
+        570,
+        640
+      ]
+    },
+    {
+      "file": "hand/03_Proses_Nembok__Salah_Satu_Tahapan_Membatik_Tulis.jpg",
+      "category": "hand",
+      "original_category": "hand",
+      "commons_title": "File:Proses Nembok, Salah Satu Tahapan Membatik Tulis.jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Proses_Nembok,_Salah_Satu_Tahapan_Membatik_Tulis.jpg",
+      "license": "CC BY-SA 4.0",
+      "artist": "Ardyansa Nugraha",
+      "source_caption": "Processing \"nembok\", traditional way to make batik tulis (handmade batik).",
+      "size": [
+        640,
+        400
+      ]
+    },
+    {
+      "file": "hand/04_Pomegranate_in_hand_of_Jesus__Granada__Spain.jpg",
+      "category": "hand",
+      "original_category": "hand",
+      "commons_title": "File:Pomegranate in hand of Jesus, Granada, Spain.jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Pomegranate_in_hand_of_Jesus,_Granada,_Spain.jpg",
+      "license": "CC BY-SA 4.0",
+      "artist": "Jebulon",
+      "source_caption": "detail of a jewel of pomegranate, in the hand of a statue of Jesus as child, Granada, Spain.",
+      "size": [
+        471,
+        640
+      ]
+    },
+    {
+      "file": "hand/06_Palm_m125_PDA_in_hand.jpg",
+      "category": "hand",
+      "original_category": "hand",
+      "commons_title": "File:Palm m125 PDA in hand.jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Palm_m125_PDA_in_hand.jpg",
+      "license": "CC BY-SA 4.0",
+      "artist": "Siarhei Besarab",
+      "source_caption": "A Palm m125 personal digital assistant (PDA) with the Palm OS interface",
+      "size": [
+        640,
+        480
+      ]
+    },
+    {
+      "file": "text/07_Hand-book_of_physiology__1892___14578852937_.jpg",
+      "category": "text",
+      "original_category": "hand",
+      "commons_title": "File:Hand-book of physiology (1892) (14578852937).jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Hand-book_of_physiology_(1892)_(14578852937).jpg",
+      "license": "No restrictions",
+      "artist": "Internet Archive Book Images",
+      "source_caption": "Identifier: handbookofphysio00bake (find matches) Title: Hand-book of physiology Year: 1892 (1890s) Authors: Baker, W. Morrant, (William Morrant), 1839-1896 Harris, Vincent Dormer Kirkes, William Senhouse, 1823-1864. Hand-book of physiology. 13th ed Subjects: Physiology Human physiology Publisher: London : John Murray Contributing Library: Francis A. Countway Library of Medicine Digitizing Sponsor: Open Knowledge Commons and Harvard Medical School View Book Page: Book Viewer About This Book: Catalog Entry View All Images: All Images From Book Click here to view book online to see this illustration in context in a browseable online version of this book. Text Appearing Before Image: s, or Sweat Glands; (b) SebaceousGlands. (a) Sudoriferous, or Sweat Glands.—Each of these glands con-sists of a small lobular mass, formed of a coil of tubular gland-duct, surrounded by blood-vessels and embedded in the sub-cutaneous adipose tissue (fig. 298, C). From this mass, the ductascends, for a short distance in a spiral manner through thedeeper part of the cutis, then passing straight, and then some-times again becoming spiral, it passes through the epidermis andopens by an oblique valve-like aperture. In the parts where theepidermis is thin, the ducts themselves are thinner and morenearly straight in their course (fig. 298). The duct, which main-tains nearly the same diameter throughout, is lined with a layerof columnar epithelium (fig. 299) continuous with the epidermis ; 448 EXCRETION. (CH. while the part which passes through the epidermis is a merepassage through the epidermal cells not being bounded by anyspecial lining; but the cells which immediately form the boundary Text Appearing After Image: of the canal in this part aresomewhat differently arrangedfrom those of the adjacentcuticle. The coils or terminalportions of the gland are linedwith at least two layers of short colum-nar cells with very distinct nuclei (fig.299), and possess a large lumen dis-tinctly bounded by a special lining ofcuticle. The sudoriferous glands are abun-dantly distributed over the whole sur-face of the body; but are especiallynumerous, as well as very large, in theskin of the palm of the hand and ofthe sole of the foot. The glands by which the peculiar odorousmatter of the axillae is secreted form a nearly complete layerunder the cutis, and are like the ordinary sudoriferous glands,except in being larger and having very short ducts. The peculiar bitter yellow substance secreted by the skin of Fig. 298.—Vertical section of skin.A. Sebaceous gland openinginto hair follicle. B. Muscu-lar fibres. C. Sudoriferous orsweat-gland. D. Subcutaneousfat. E. Fundus of hair-follicle,with hair-papillee. (Klein. Note About Images Please note that these images are extracted from scanned page images that may have been digitally enhanced for readability - coloration and appearance of these illustrations may not perfectly resemble the original work.",
+      "size": [
+        457,
+        640
+      ]
+    },
+    {
+      "file": "furniture/00_Antique_Wooden_Chair_from_Bharat.jpg",
+      "category": "furniture",
+      "original_category": "furniture",
+      "commons_title": "File:Antique Wooden Chair from Bharat.jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Antique_Wooden_Chair_from_Bharat.jpg",
+      "license": "CC0",
+      "artist": "Amitbalani",
+      "source_caption": "Antique chair made of pure wood, handcrafted in Bharat",
+      "size": [
+        480,
+        640
+      ]
+    },
+    {
+      "file": "furniture/01_Wooden_chair_and_wooden_bed_at_Bliss_Apartment_booth_20241013.jpg",
+      "category": "furniture",
+      "original_category": "furniture",
+      "commons_title": "File:Wooden chair and wooden bed at Bliss Apartment booth 20241013.jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Wooden_chair_and_wooden_bed_at_Bliss_Apartment_booth_20241013.jpg",
+      "license": "CC BY-SA 4.0",
+      "artist": "Solomon203",
+      "source_caption": "​2024 AGA成人動漫電玩展，6Party十八禁遊戲《極樂宿舍》攤位木椅與木床。",
+      "size": [
+        640,
+        426
+      ]
+    },
+    {
+      "file": "furniture/02_Interior_of_Willistead_Manor__two_chairs_by_window___Windsor__Ontario__2025-06-0.jpg",
+      "category": "furniture",
+      "original_category": "furniture",
+      "commons_title": "File:Interior of Willistead Manor (two chairs by window), Windsor, Ontario, 2025-06-07.jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Interior_of_Willistead_Manor_(two_chairs_by_window),_Windsor,_Ontario,_2025-06-07.jpg",
+      "license": "CC BY-SA 4.0",
+      "artist": "Crisco 1492",
+      "source_caption": "Interior of Willistead Manor (two chairs by window), Windsor, Ontario, Canada, 2025-06-07. HDR assembled in Lightroom",
+      "size": [
+        640,
+        458
+      ]
+    },
+    {
+      "file": "furniture/03_Roerich_state_museum_and_reserch_institute._Wooden_chair_between_floors.jpg",
+      "category": "furniture",
+      "original_category": "furniture",
+      "commons_title": "File:Roerich state museum and reserch institute. Wooden chair between floors.jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Roerich_state_museum_and_reserch_institute._Wooden_chair_between_floors.jpg",
+      "license": "CC BY-SA 4.0",
+      "artist": "Vaija",
+      "source_caption": "Государственный музей-институт семьи Рерихов. Деревянное сиденье между этажами",
+      "size": [
+        640,
+        360
+      ]
+    },
+    {
+      "file": "furniture/04_Girl_on_a_wooden_chair.jpg",
+      "category": "furniture",
+      "original_category": "furniture",
+      "commons_title": "File:Girl on a wooden chair.jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Girl_on_a_wooden_chair.jpg",
+      "license": "CC BY-SA 4.0",
+      "artist": "Dmitry Makeev",
+      "source_caption": "Girl on a wooden chair.",
+      "size": [
+        571,
+        640
+      ]
+    },
+    {
+      "file": "furniture/06_Barack_Obama_thinking__first_day_in_the_Oval_Office.jpg",
+      "category": "furniture",
+      "original_category": "furniture",
+      "commons_title": "File:Barack Obama thinking, first day in the Oval Office.jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Barack_Obama_thinking,_first_day_in_the_Oval_Office.jpg",
+      "license": "Public domain",
+      "artist": "Pete Souza",
+      "source_caption": "President Barack Obama in the Oval Office on his first day in office 1/21/09. Official White House Photo by Pete Souza.",
+      "size": [
+        640,
+        426
+      ]
+    },
+    {
+      "file": "sky/00_Cirrus_uncinus_clouds_in_the_morning_sky.jpg",
+      "category": "sky",
+      "original_category": "sky",
+      "commons_title": "File:Cirrus uncinus clouds in the morning sky.jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Cirrus_uncinus_clouds_in_the_morning_sky.jpg",
+      "license": "CC BY-SA 4.0",
+      "artist": "ADARSHluck",
+      "source_caption": "Cirrus uncinus clouds, also known as mares' tails, in the morning sky as seen from Nandli, near IIT Mandi, Himachal Pradesh, India, Jan 2021.",
+      "size": [
+        640,
+        428
+      ]
+    },
+    {
+      "file": "sky/01_Colorful_clouds_and_blue_sky_with_water_reflection_of_an_island_hosting_trees_at.jpg",
+      "category": "sky",
+      "original_category": "sky",
+      "commons_title": "File:Colorful clouds and blue sky with water reflection of an island hosting trees at sunrise in Si Phan Don, Laos.jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Colorful_clouds_and_blue_sky_with_water_reflection_of_an_island_hosting_trees_at_sunrise_in_Si_Phan_Don,_Laos.jpg",
+      "license": "CC BY-SA 4.0",
+      "artist": "Basile Morin",
+      "source_caption": "Colorful clouds and blue sky with water reflection of an island hosting a Samanea saman (rain tree) and other trees, at sunrise, in Don Det, Si Phan Don, Laos.",
+      "size": [
+        640,
+        400
+      ]
+    },
+    {
+      "file": "sky/02_Vat_Pa_Phai_temple_with_a_Buddhist_monk__orange_marigold__clouds_and_blue_sky__i.jpg",
+      "category": "sky",
+      "original_category": "sky",
+      "commons_title": "File:Vat Pa Phai temple with a Buddhist monk, orange marigold, clouds and blue sky, in Luang Prabang.jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Vat_Pa_Phai_temple_with_a_Buddhist_monk,_orange_marigold,_clouds_and_blue_sky,_in_Luang_Prabang.jpg",
+      "license": "CC BY-SA 4.0",
+      "artist": "Basile Morin",
+      "source_caption": "Front view of the Vat Pa Phai temple, with a young Buddhist monk walking in front, orange marigold flowers in the foreground, clouds and blue sky, in Luang Prabang (UNESCO World heritage), Laos. The long and thin white cloud over the temple, in perfect alignment, seems to make a natural prolongation of the pointed roof (6 June 2018 at 9 am)",
+      "size": [
+        640,
+        640
+      ]
+    },
+    {
+      "file": "sky/03_Li_Phi_falls_at_dusk_with_colorful_sky_and_clouds_in_Don_Khon_Laos.jpg",
+      "category": "sky",
+      "original_category": "sky",
+      "commons_title": "File:Li Phi falls at dusk with colorful sky and clouds in Don Khon Laos.jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Li_Phi_falls_at_dusk_with_colorful_sky_and_clouds_in_Don_Khon_Laos.jpg",
+      "license": "CC BY-SA 4.0",
+      "artist": "Basile Morin",
+      "source_caption": "Li Phi falls (Khone Phapeng) at dusk with colorful sky and clouds, in Don Khon, Si Phan Don, Southern Laos. High-dynamic-range imaging.",
+      "size": [
+        640,
+        426
+      ]
+    },
+    {
+      "file": "sky/04_Clouds_and_blue_sky_in_Russia._IMG_115.jpg",
+      "category": "sky",
+      "original_category": "sky",
+      "commons_title": "File:Clouds and blue sky in Russia. IMG 115.jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Clouds_and_blue_sky_in_Russia._IMG_115.jpg",
+      "license": "CC BY-SA 4.0",
+      "artist": "Dmitry Makeev",
+      "source_caption": "Clouds and blue sky in Russia.",
+      "size": [
+        640,
+        426
+      ]
+    },
+    {
+      "file": "sky/05_Water_reflection_of_a_green_island_at_sunrise_with_blue_sky_and_pirogue_in_Don_D.jpg",
+      "category": "sky",
+      "original_category": "sky",
+      "commons_title": "File:Water reflection of a green island at sunrise with blue sky and pirogue in Don Det Laos.jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Water_reflection_of_a_green_island_at_sunrise_with_blue_sky_and_pirogue_in_Don_Det_Laos.jpg",
+      "license": "CC BY-SA 4.0",
+      "artist": "Basile Morin",
+      "source_caption": "Water reflection of a green island in the Mekong at sunrise with blue sky, white cloud and running pirogue, in Don Det, Si Phan Don, Laos.",
+      "size": [
+        640,
+        426
+      ]
+    },
+    {
+      "file": "sky/06_Reflection_of_Église_Saint-Laurent_in_the_Loue_under_an_overcast_sky__from_Ruell.jpg",
+      "category": "sky",
+      "original_category": "sky",
+      "commons_title": "File:Reflection of Église Saint-Laurent in the Loue under an overcast sky, from Ruelle des Tanneries, Ornans, 2026.jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Reflection_of_%C3%89glise_Saint-Laurent_in_the_Loue_under_an_overcast_sky,_from_Ruelle_des_Tanneries,_Ornans,_2026.jpg",
+      "license": "CC0",
+      "artist": "DimiTalen",
+      "source_caption": "Reflection of Église Saint-Laurent in the Loue under an overcast sky, from Ruelle des Tanneries, Ornans, 2026",
+      "size": [
+        427,
+        640
+      ]
+    },
+    {
+      "file": "wall/02_Wall_plaster_of_uncertain_date__FindID_795795-575609_.jpg",
+      "category": "wall",
+      "original_category": "wall",
+      "commons_title": "File:Wall plaster of uncertain date (FindID 795795-575609).jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Wall_plaster_of_uncertain_date_(FindID_795795-575609).jpg",
+      "license": "CC BY 2.0",
+      "artist": "Derby Museums Trust, Alastair Willis, 2016-07-15 21:25:47",
+      "source_caption": "A fragment of plaster or mortar of uncertain date. One surface is smoothed and painted, in a creamy pink. The fabric is white with many sandy and shell-like inclusions. One edge appears to be fairly regular, forming a close to 90 degree angle with the painted surface, the rest of the fragment is irregular.",
+      "size": [
+        472,
+        640
+      ]
+    },
+    {
+      "file": "wall/03_Wall_plaster_of_uncertain_date__FindID_795795-575608_.jpg",
+      "category": "wall",
+      "original_category": "wall",
+      "commons_title": "File:Wall plaster of uncertain date (FindID 795795-575608).jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Wall_plaster_of_uncertain_date_(FindID_795795-575608).jpg",
+      "license": "CC BY 2.0",
+      "artist": "Derby Museums Trust, Alastair Willis, 2016-07-15 21:25:15",
+      "source_caption": "A fragment of plaster or mortar of uncertain date. One surface is smoothed and painted, in a creamy pink. The fabric is white with many sandy and shell-like inclusions. One edge appears to be fairly regular, forming a close to 90 degree angle with the painted surface, the rest of the fragment is irregular.",
+      "size": [
+        487,
+        640
+      ]
+    },
+    {
+      "file": "wall/04_Ivy_Hedera_Red_Brick_Wall_2892px.jpg",
+      "category": "wall",
+      "original_category": "wall",
+      "commons_title": "File:Ivy Hedera Red Brick Wall 2892px.jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Ivy_Hedera_Red_Brick_Wall_2892px.jpg",
+      "license": "GFDL 1.2",
+      "artist": "Photo by and (c)2007 Derek Ramsey (Ram-Man)",
+      "source_caption": "Photograph of ivy Hedera sp. (probably, but not definitely, Common Ivy H. helix) growing on a red brick wall. The photo was taken in the city of Lancaster, Pennsylvaniaen.",
+      "size": [
+        640,
+        442
+      ]
+    },
+    {
+      "file": "wall/05_Chiang-Mai_Thailand_Brick-wall-01.jpg",
+      "category": "wall",
+      "original_category": "wall",
+      "commons_title": "File:Chiang-Mai Thailand Brick-wall-01.jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Chiang-Mai_Thailand_Brick-wall-01.jpg",
+      "license": "CC BY-SA 3.0",
+      "artist": "CEphoto, Uwe Aranas",
+      "source_caption": "Chiang Mai, Thailand: Brick wall in the old city center",
+      "size": [
+        640,
+        426
+      ]
+    },
+    {
+      "file": "wall/06_Garage_with_ornamental_brick_wall_-_Arlington__MA.jpg",
+      "category": "wall",
+      "original_category": "wall",
+      "commons_title": "File:Garage with ornamental brick wall - Arlington, MA.jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Garage_with_ornamental_brick_wall_-_Arlington,_MA.jpg",
+      "license": "CC0",
+      "artist": "Daderot",
+      "source_caption": "Garage with ornamental brick wall - Arlington, Massachusetts, USA.",
+      "size": [
+        452,
+        640
+      ]
+    },
+    {
+      "file": "text/00_Title_page_of_the_book__Der_dieren_palleys___1520_.jpg",
+      "category": "text",
+      "original_category": "text",
+      "commons_title": "File:Title page of the book 'Der dieren palleys' (1520).png",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Title_page_of_the_book_%27Der_dieren_palleys%27_(1520).png",
+      "license": "Public domain",
+      "artist": "Jan van Doesborch",
+      "source_caption": "Title page of the book 'Der dieren palleys' (1520), printed and published by Jan van Doesborch. It shows a wide variety of creatures, including human beings, birds, fish, mermaids, mammals, and several other chimerical creatures.",
+      "size": [
+        455,
+        640
+      ]
+    },
+    {
+      "file": "text/01_Twenty-five_photographs__printed_in_platinotype___1895___14728176456_.jpg",
+      "category": "text",
+      "original_category": "text",
+      "commons_title": "File:Twenty-five photographs (printed in platinotype) (1895) (14728176456).jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Twenty-five_photographs_(printed_in_platinotype)_(1895)_(14728176456).jpg",
+      "license": "No restrictions",
+      "artist": "Webster, G. Watmough; Newstead, Robert, 1859-1947; Grosvenor Museum (Chester, Cheshire)",
+      "source_caption": "Identifier: Twentyfivephoto00Webs (find matches) Title: Twenty-five photographs (printed in platinotype) Year: 1895 (1890s) Authors: Webster, G. Watmough Newstead, Robert, 1859-1947 Grosvenor Museum (Chester, Cheshire) Subjects: Pictorial works Birds Publisher: Chester: (Grosvenor Museum) Contributing Library: Smithsonian Libraries Digitizing Sponsor: Biodiversity Heritage Library View Book Page: Book Viewer About This Book: Catalog Entry View All Images: All Images From Book Click here to view book online to see this illustration in context in a browseable online version of this book. Text Appearing Before Image: ' Text Appearing After Image: Long-Tailed Titmouse (Acredula caudata) LiNN^us. MALE, FEMALE, NEST, AND EGGS. TCT 0 British birds nest can surpass the nest of this species, either in design orCI &gt; excellency of workmanship. This nest is in situ in a blackthorn bush and had no other protection ; itwas built very early in the spring, just as the buds were bursting. These latterhave been carefully reproduced and the surroundings preserved. Presented by Messrs. Bateman, Smith, &amp; Newstead. Note About Images Please note that these images are extracted from scanned page images that may have been digitally enhanced for readability - coloration and appearance of these illustrations may not perfectly resemble the original work.",
+      "size": [
+        640,
+        480
+      ]
+    },
+    {
+      "file": "text/04_Twenty-five_photographs__printed_in_platinotype___1895___14564546179_.jpg",
+      "category": "text",
+      "original_category": "text",
+      "commons_title": "File:Twenty-five photographs (printed in platinotype) (1895) (14564546179).jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Twenty-five_photographs_(printed_in_platinotype)_(1895)_(14564546179).jpg",
+      "license": "No restrictions",
+      "artist": "Internet Archive Book Images",
+      "source_caption": "Identifier: Twentyfivephoto00Webs (find matches) Title: Twenty-five photographs (printed in platinotype) Year: 1895 (1890s) Authors: Webster, G. Watmough Newstead, Robert, 1859-1947 Grosvenor Museum (Chester, Cheshire) Subjects: Pictorial works Birds Publisher: Chester: (Grosvenor Museum) Contributing Library: Smithsonian Libraries Digitizing Sponsor: Biodiversity Heritage Library View Book Page: Book Viewer About This Book: Catalog Entry View All Images: All Images From Book Click here to view book online to see this illustration in context in a browseable online version of this book. Text Appearing Before Image: The Sheld or Burrow-Duck (Tadorna cornuta) S. G. Gmeun. MALE, FEMALE, WEST, AND EGGS. (JT^HE female of this handsome species is represented going to her nest in arabbit-burrow. The nest shown in section at the end of the sand-bank isthree feet from the entrance to the burrow, and is entirely composed of downand feathers from the breast of the female. It contains seven cream-colouredeggs, which cannot, unfortunately, be shown in the picture. The burrow is but alittle over 6 inches in diameter; the nest cavity being 16 inches in its widest part.The original habitat has been carefully reproduced in every detail, e.g., length ofburrow, nest cavity, sand-bank, and the beautiful Marram Grass (Elymus arenarius)peculiar to our sand-hills and coasts. Collected on the Warren at Talacre by kind permission, and presented bySir Pyers Mostyn. Many pairs of these birds breed annually in the above locality; alwaysselecting a rabbit-burrow to nest in. Text Appearing After Image: The Corn-Crake or Land-Rail ( Crex pratensis) Bechstein. MALE, FEMALE, NEST, BROKEN EGG, AND YOUNG. ORB frequently heard than seen, owing to its exceedingly cautious habits. the wing. They run very rapidly from place to place in a creeping position,holding the body and head very low, and in this manner thread their way throughthe grass, &amp;c, almost entirely concealed. (See male). The female is brooding herfive young ones, covered with brownish-black down, which they retain for aconsiderable time after hatching. Collected in Cheshire, and presented by Mr. A. O. Walker, F.L-S., andMr. R. Newstead, Senr. Note About Images Please note that these images are extracted from scanned page images that may have been digitally enhanced for readability - coloration and appearance of these illustrations may not perfectly resemble the original work.",
+      "size": [
+        640,
+        500
+      ]
+    },
+    {
+      "file": "text/06_Twenty-five_photographs__printed_in_platinotype___1895___14771058843_.jpg",
+      "category": "text",
+      "original_category": "text",
+      "commons_title": "File:Twenty-five photographs (printed in platinotype) (1895) (14771058843).jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Twenty-five_photographs_(printed_in_platinotype)_(1895)_(14771058843).jpg",
+      "license": "No restrictions",
+      "artist": "Internet Archive Book Images",
+      "source_caption": "Identifier: Twentyfivephoto00Webs (find matches) Title: Twenty-five photographs (printed in platinotype) Year: 1895 (1890s) Authors: Webster, G. Watmough Newstead, Robert, 1859-1947 Grosvenor Museum (Chester, Cheshire) Subjects: Pictorial works Birds Publisher: Chester: (Grosvenor Museum) Contributing Library: Smithsonian Libraries Digitizing Sponsor: Biodiversity Heritage Library View Book Page: Book Viewer About This Book: Catalog Entry View All Images: All Images From Book Click here to view book online to see this illustration in context in a browseable online version of this book. Text Appearing Before Image: ' Text Appearing After Image: The Kestrel (F. hnnunculusJ. A NEST OF THREE YOUNG ONES IN THE DOWN,carefully modelled from Life. (TpHIS group has been acknowledged by experts to be one of the finest piecesof the Taxidermists art in Europe. Taken at Oakrnere, Cheshire, and presented by Mr. A. O. Walker, F.L-S. Note About Images Please note that these images are extracted from scanned page images that may have been digitally enhanced for readability - coloration and appearance of these illustrations may not perfectly resemble the original work.",
+      "size": [
+        466,
+        640
+      ]
+    },
+    {
+      "file": "text/07_Frank_Leslie_s_Illustrated_Newspaper__IA_franklesliesillu2418lesl_.djvu.jpg",
+      "category": "text",
+      "original_category": "text",
+      "commons_title": "File:Frank Leslie's Illustrated Newspaper (IA franklesliesillu2418lesl).djvu",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Frank_Leslie%27s_Illustrated_Newspaper_(IA_franklesliesillu2418lesl).djvu",
+      "license": "Public domain",
+      "artist": null,
+      "source_caption": "Cover illustration \"Monument proposed to be erected to Abraham Lincoln, at Springfield, Illinois.—Designed by Larkin G. Meade, Esq. of New York—see page 151.\"",
+      "size": [
+        447,
+        640
+      ]
+    },
+    {
+      "file": "animal/00_Felis_catus-cat_on_snow.jpg",
+      "category": "animal",
+      "original_category": "animal",
+      "commons_title": "File:Felis catus-cat on snow.jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Felis_catus-cat_on_snow.jpg",
+      "license": "CC BY-SA 3.0",
+      "artist": "Von.grzanka",
+      "source_caption": "Domestic cat, a ten month old female.",
+      "size": [
+        640,
+        426
+      ]
+    },
+    {
+      "file": "animal/01_Cat_playing_with_a_lizard.jpg",
+      "category": "animal",
+      "original_category": "animal",
+      "commons_title": "File:Cat playing with a lizard.jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Cat_playing_with_a_lizard.jpg",
+      "license": "CC BY-SA 4.0",
+      "artist": "Basile Morin",
+      "source_caption": "Seated Felis silvestris catus (domestic cat) playing with a passive Calotes versicolor, (oriental garden lizard), facing it, in Laos",
+      "size": [
+        640,
+        360
+      ]
+    },
+    {
+      "file": "animal/02_Cat_November_2010-1a.jpg",
+      "category": "animal",
+      "original_category": "animal",
+      "commons_title": "File:Cat November 2010-1a.jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Cat_November_2010-1a.jpg",
+      "license": "CC BY-SA 3.0",
+      "artist": "Alvesgaspar",
+      "source_caption": "Young male tabby cat, Portugal.",
+      "size": [
+        479,
+        640
+      ]
+    },
+    {
+      "file": "animal/03_Sleeping_cat_on_her_back.jpg",
+      "category": "animal",
+      "original_category": "animal",
+      "commons_title": "File:Sleeping cat on her back.jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Sleeping_cat_on_her_back.jpg",
+      "license": "CC BY 2.0",
+      "artist": "Umberto Salvagnin",
+      "source_caption": "Sleeping cat on her back.",
+      "size": [
+        640,
+        640
+      ]
+    },
+    {
+      "file": "animal/04_Tired_20-year-old_cat.jpg",
+      "category": "animal",
+      "original_category": "animal",
+      "commons_title": "File:Tired 20-year-old cat.jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Tired_20-year-old_cat.jpg",
+      "license": "CC BY 2.0 fr",
+      "artist": "Dimitri “Diti” Torterat",
+      "source_caption": "A 20-year-old cat that looks tired because of its advanced age.",
+      "size": [
+        640,
+        482
+      ]
+    },
+    {
+      "file": "animal/05_Domestic_cat_by_Shagil_Kannur.jpg",
+      "category": "animal",
+      "original_category": "animal",
+      "commons_title": "File:Domestic cat by Shagil Kannur.jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Domestic_cat_by_Shagil_Kannur.jpg",
+      "license": "CC BY-SA 4.0",
+      "artist": "Shagil Kannur",
+      "source_caption": "domestic cat",
+      "size": [
+        640,
+        426
+      ]
+    },
+    {
+      "file": "animal/06_View_of_a_domestic_cat_in_the_Cat_Survival_Trust_-_geograph.org.uk_-_5422937.jpg",
+      "category": "animal",
+      "original_category": "animal",
+      "commons_title": "File:View of a domestic cat in the Cat Survival Trust - geograph.org.uk - 5422937.jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:View_of_a_domestic_cat_in_the_Cat_Survival_Trust_-_geograph.org.uk_-_5422937.jpg",
+      "license": "CC BY-SA 2.0",
+      "artist": "Robert Lamb",
+      "source_caption": "View of a domestic cat in the Cat Survival Trust",
+      "size": [
+        640,
+        319
+      ]
+    },
+    {
+      "file": "animal/07_Photograph_of_Thunder__dog_star_of_the_silent_era_.jpg",
+      "category": "animal",
+      "original_category": "animal",
+      "commons_title": "File:Photograph of Thunder, dog star of the silent era,.jpeg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Photograph_of_Thunder,_dog_star_of_the_silent_era,.jpeg",
+      "license": "Public domain",
+      "artist": "Exhibitors Trade Review (ETR) (Life time: ETR no longer exists. Publication merged with two other companies in 1931 to form Motion Picture Daily, which ceased publication and went out of business in the 1970s.)",
+      "source_caption": "Photograph, portrait, Thunder the Dog, published in Exhibitors Trade Review (New York, N.Y.), March 28, 1925, p. 34.",
+      "size": [
+        263,
+        388
+      ]
+    },
+    {
+      "file": "vehicle_street/00_Abandoned_car_in_Marine_Park__10852p_.jpg",
+      "category": "vehicle_street",
+      "original_category": "vehicle_street",
+      "commons_title": "File:Abandoned car in Marine Park (10852p).jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Abandoned_car_in_Marine_Park_(10852p).jpg",
+      "license": "CC BY-SA 4.0",
+      "artist": "Rhododendrites",
+      "source_caption": "Abandoned car at the Salt Marsh Nature Trail in Marine Park, New York City.",
+      "size": [
+        640,
+        297
+      ]
+    },
+    {
+      "file": "vehicle_street/01_Brewer_Street_Car_Park__Soho__July_2025.jpg",
+      "category": "vehicle_street",
+      "original_category": "vehicle_street",
+      "commons_title": "File:Brewer Street Car Park, Soho, July 2025.jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Brewer_Street_Car_Park,_Soho,_July_2025.jpg",
+      "license": "CC BY-SA 4.0",
+      "artist": "No Swan So Fine",
+      "source_caption": "Brewer Street Car Park, Soho, July 2025",
+      "size": [
+        480,
+        640
+      ]
+    },
+    {
+      "file": "vehicle_street/02_Brewer_Street_Car_Park__London.jpg",
+      "category": "vehicle_street",
+      "original_category": "vehicle_street",
+      "commons_title": "File:Brewer Street Car Park, London.jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Brewer_Street_Car_Park,_London.jpg",
+      "license": "CC BY 4.0",
+      "artist": "APK",
+      "source_caption": "Great Windmill Street and the Brewer Street Car Park, Soho, London",
+      "size": [
+        533,
+        640
+      ]
+    },
+    {
+      "file": "vehicle_street/03_Worcester_Street_car_park_-_geograph.org.uk_-_4918301.jpg",
+      "category": "vehicle_street",
+      "original_category": "vehicle_street",
+      "commons_title": "File:Worcester Street car park - geograph.org.uk - 4918301.jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Worcester_Street_car_park_-_geograph.org.uk_-_4918301.jpg",
+      "license": "CC BY-SA 2.0",
+      "artist": "Philip Jeffrey",
+      "source_caption": "Worcester Street car park",
+      "size": [
+        640,
+        426
+      ]
+    },
+    {
+      "file": "vehicle_street/04_Street_scene_of_Naha_Shintoshin__New_Urban_Center__20250505154927.jpg",
+      "category": "vehicle_street",
+      "original_category": "vehicle_street",
+      "commons_title": "File:Street scene of Naha Shintoshin (New Urban Center) 20250505154927.jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Street_scene_of_Naha_Shintoshin_(New_Urban_Center)_20250505154927.jpg",
+      "license": "CC BY-SA 4.0",
+      "artist": "TurnOnTheNight",
+      "source_caption": "Street scene of Naha Shintoshin (New Urban Center)",
+      "size": [
+        640,
+        426
+      ]
+    },
+    {
+      "file": "device/00_Camera_zoom_burst_on_a_Microsoft_computer_keyboard_in_Tuntorp_8.jpg",
+      "category": "device",
+      "original_category": "device",
+      "commons_title": "File:Camera zoom burst on a Microsoft computer keyboard in Tuntorp 8.jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Camera_zoom_burst_on_a_Microsoft_computer_keyboard_in_Tuntorp_8.jpg",
+      "license": "CC BY-SA 4.0",
+      "artist": "W.carter",
+      "source_caption": "Camera zoom burst, centering on the letter \"U\", on a black Microsoft Wired 600 computer keyboard with Swedish language characters. This is one photo, not a double exposure, made with tiny pauses at the start and end of the shot to make the letters slightly more distinct at those points. The keyboard was lit by two normal desk lamps. Different zoom speeds, starting and ending points were explored, giving widely different patterns and effects. The zoom lens' full range (18-55mm) was used. Photographed in Tuntorp, Brastad, Lysekil Municipality, Sweden.",
+      "size": [
+        640,
+        426
+      ]
+    },
+    {
+      "file": "device/01_Backlit_keyboard.jpg",
+      "category": "device",
+      "original_category": "device",
+      "commons_title": "File:Backlit keyboard.jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Backlit_keyboard.jpg",
+      "license": "CC BY-SA 4.0",
+      "artist": "Colin",
+      "source_caption": "A backlit laptop computer keyboard. Most fingers are on the \"home\" keys for touch-typing; the 'U' key is being pressed.",
+      "size": [
+        640,
+        360
+      ]
+    },
+    {
+      "file": "device/02_Turkish_Q_computer_keyboard.jpg",
+      "category": "device",
+      "original_category": "device",
+      "commons_title": "File:Turkish Q computer keyboard.jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Turkish_Q_computer_keyboard.jpg",
+      "license": "CC BY-SA 4.0",
+      "artist": "Răzvan Sandu",
+      "source_caption": "A Turkish computer keyboard with Q (QWERTY) layout (part of the Lenovo M720q desktop computer as sold in Turkey)",
+      "size": [
+        640,
+        360
+      ]
+    },
+    {
+      "file": "device/03_Computer_keyboard_layout__28808607618_.jpg",
+      "category": "device",
+      "original_category": "device",
+      "commons_title": "File:Computer keyboard layout (28808607618).jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Computer_keyboard_layout_(28808607618).jpg",
+      "license": "CC BY 2.0",
+      "artist": "Eric Fischer",
+      "source_caption": "Helsinki in 2018",
+      "size": [
+        640,
+        480
+      ]
+    },
+    {
+      "file": "device/04_HP_Pavilion_Computer_laptop_keyboard_closeup.jpg",
+      "category": "device",
+      "original_category": "device",
+      "commons_title": "File:HP Pavilion Computer laptop keyboard closeup.jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:HP_Pavilion_Computer_laptop_keyboard_closeup.jpg",
+      "license": "CC BY 2.0",
+      "artist": "Carissa Rogers",
+      "source_caption": "Closeup photographs of the keyboard of an HP Pavilion Entertainment PC notebook computer.",
+      "size": [
+        640,
+        262
+      ]
+    },
+    {
+      "file": "device/06_Wireless_computer_keyboard_with_mouse_an_USB_receiver.jpg",
+      "category": "device",
+      "original_category": "device",
+      "commons_title": "File:Wireless computer keyboard with mouse an USB receiver.jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Wireless_computer_keyboard_with_mouse_an_USB_receiver.jpg",
+      "license": "CC BY-SA 4.0",
+      "artist": "Andreas Schwarzkopf",
+      "source_caption": "Wireless computer keyboard with mouse an USB receiver",
+      "size": [
+        640,
+        384
+      ]
+    },
+    {
+      "file": "device/08_Glass-smartphone-table-2.jpg",
+      "category": "device",
+      "original_category": "device",
+      "commons_title": "File:Glass-smartphone-table-2.jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Glass-smartphone-table-2.jpg",
+      "license": "CC0",
+      "artist": "MartinThoma",
+      "source_caption": "A blue glass. Behind it is a smartphone. Both are on a wooden table.",
+      "size": [
+        640,
+        480
+      ]
+    },
+    {
+      "file": "soil_ground/00_Bare_soil_on_Cefn_y_Ffridd_-_geograph.org.uk_-_7521003.jpg",
+      "category": "soil_ground",
+      "original_category": "soil_ground",
+      "commons_title": "File:Bare soil on Cefn y Ffridd - geograph.org.uk - 7521003.jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Bare_soil_on_Cefn_y_Ffridd_-_geograph.org.uk_-_7521003.jpg",
+      "license": "CC BY-SA 2.0",
+      "artist": "David Medcalf",
+      "source_caption": "Bare soil on Cefn y Ffridd",
+      "size": [
+        640,
+        480
+      ]
+    },
+    {
+      "file": "soil_ground/01_Coastal_erosion_at_Thornwick_Bay_-_bare_soil_-_geograph.org.uk_-_2411926.jpg",
+      "category": "soil_ground",
+      "original_category": "soil_ground",
+      "commons_title": "File:Coastal erosion at Thornwick Bay - bare soil - geograph.org.uk - 2411926.jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Coastal_erosion_at_Thornwick_Bay_-_bare_soil_-_geograph.org.uk_-_2411926.jpg",
+      "license": "CC BY-SA 2.0",
+      "artist": "Leslie",
+      "source_caption": "Coastal erosion at Thornwick Bay - bare soil",
+      "size": [
+        640,
+        480
+      ]
+    },
+    {
+      "file": "soil_ground/02_Are_barren_core_and_bare_mineral_soil_the_same_thing__At_Stanton_Lake__507452170.jpg",
+      "category": "soil_ground",
+      "original_category": "soil_ground",
+      "commons_title": "File:Are barren core and bare mineral soil the same thing? At Stanton Lake (50745217002).jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Are_barren_core_and_bare_mineral_soil_the_same_thing%3F_At_Stanton_Lake_(50745217002).jpg",
+      "license": "Public domain",
+      "artist": "Forest Service - Northern Region",
+      "source_caption": "Photo by Michele Kiefer",
+      "size": [
+        640,
+        480
+      ]
+    },
+    {
+      "file": "soil_ground/03_Hafrahlíð_47.jpg",
+      "category": "soil_ground",
+      "original_category": "soil_ground",
+      "commons_title": "File:Hafrahlíð 47.jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Hafrahl%C3%AD%C3%B0_47.jpg",
+      "license": "CC BY-SA 4.0",
+      "artist": "Reykholt",
+      "source_caption": "Hiking at Hafrahlíð, near Reykjavík, Iceland",
+      "size": [
+        384,
+        640
+      ]
+    },
+    {
+      "file": "soil_ground/04_Hafrahlíð_39.jpg",
+      "category": "soil_ground",
+      "original_category": "soil_ground",
+      "commons_title": "File:Hafrahlíð 39.jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Hafrahl%C3%AD%C3%B0_39.jpg",
+      "license": "CC BY-SA 4.0",
+      "artist": "Reykholt",
+      "source_caption": "Hiking at Hafrahlíð, near Reykjavík, Iceland",
+      "size": [
+        384,
+        640
+      ]
+    },
+    {
+      "file": "soil_ground/05_Gravel_road_-_Preview__Amal_Kumar_via_Poly_Haven_.webp.jpg",
+      "category": "soil_ground",
+      "original_category": "soil_ground",
+      "commons_title": "File:Gravel road - Preview (Amal Kumar via Poly Haven).webp",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Gravel_road_-_Preview_(Amal_Kumar_via_Poly_Haven).webp",
+      "license": "CC0",
+      "artist": "Amal Kumar (https://polyhaven.com/all?a=Amal%20Kumar / https://web.archive.org/web/20230902205408/https://polyhaven.com/all?a=Amal%20Kumar) via Poly Haven",
+      "source_caption": "Texture of a path with earth and larger, angular stones. Included are color textures, normal textures, roughness textures and more. The length is 2 meters, the sampling 8192 pixels per meter.",
+      "size": [
+        640,
+        320
+      ]
+    },
+    {
+      "file": "whole_plant_crop/02_Maize_in_soybean_field__Monroe_Township.jpg",
+      "category": "whole_plant_crop",
+      "original_category": "whole_plant_crop",
+      "commons_title": "File:Maize in soybean field, Monroe Township.jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Maize_in_soybean_field,_Monroe_Township.jpg",
+      "license": "Public domain",
+      "artist": "Nyttend",
+      "source_caption": "Maize plants growing in a soybean field on the western side of S150W immediately south of State Road 18 just west of Flora in Monroe Township, Carroll County, Indiana, United States.",
+      "size": [
+        640,
+        426
+      ]
+    },
+    {
+      "file": "other_foliage/00_New_oak_leaves_with_female_flowers.jpg",
+      "category": "other_foliage",
+      "original_category": "other_foliage",
+      "commons_title": "File:New oak leaves with female flowers.jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:New_oak_leaves_with_female_flowers.jpg",
+      "license": "CC0",
+      "artist": "W.carter",
+      "source_caption": "Young oak leaves (Quercus robur) and female flowers in the setting sun, Brastad, Lysekil Municipality, Sweden. The leaves are dusted with pollen from the male flowers. Focus stacked from two photos (handheld).",
+      "size": [
+        640,
+        480
+      ]
+    },
+    {
+      "file": "other_foliage/01_Oak_tree_leaves_-_geograph.org.uk_-_7276772.jpg",
+      "category": "other_foliage",
+      "original_category": "other_foliage",
+      "commons_title": "File:Oak tree leaves - geograph.org.uk - 7276772.jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Oak_tree_leaves_-_geograph.org.uk_-_7276772.jpg",
+      "license": "CC BY-SA 2.0",
+      "artist": "Philip Halling",
+      "source_caption": "Oak tree leaves",
+      "size": [
+        640,
+        428
+      ]
+    },
+    {
+      "file": "other_foliage/02_Ice_incased_oak_tree_leaves_-_Flickr_-_joncutrer.jpg",
+      "category": "other_foliage",
+      "original_category": "other_foliage",
+      "commons_title": "File:Ice incased oak tree leaves - Flickr - joncutrer.jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Ice_incased_oak_tree_leaves_-_Flickr_-_joncutrer.jpg",
+      "license": "CC BY 2.0",
+      "artist": "Jonathan Cutrer from San Angelo, Texas, United States",
+      "source_caption": "A thick sheet of ice covers everything after a winter storm hits West Texas.",
+      "size": [
+        480,
+        640
+      ]
+    },
+    {
+      "file": "other_foliage/03_Red_oak_autumn_leaves__Quercus_rubra__close-up__Gunnersbury_Park_-_geograph.org..jpg",
+      "category": "other_foliage",
+      "original_category": "other_foliage",
+      "commons_title": "File:Red oak autumn leaves (Quercus rubra) close-up, Gunnersbury Park - geograph.org.uk - 6640198.jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Red_oak_autumn_leaves_(Quercus_rubra)_close-up,_Gunnersbury_Park_-_geograph.org.uk_-_6640198.jpg",
+      "license": "CC BY-SA 2.0",
+      "artist": "David Hawgood",
+      "source_caption": "Red oak autumn leaves (Quercus rubra) close-up, Gunnersbury Park",
+      "size": [
+        640,
+        480
+      ]
+    },
+    {
+      "file": "other_foliage/04_Close_up_of_the_lawn_mower_with_grass_and_flowers_in_background.jpg",
+      "category": "other_foliage",
+      "original_category": "other_foliage",
+      "commons_title": "File:Close up of the lawn mower with grass and flowers in background.jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Close_up_of_the_lawn_mower_with_grass_and_flowers_in_background.jpg",
+      "license": "CC BY 2.0",
+      "artist": "Shixart1985",
+      "source_caption": "Close up of the lawn mower with grass and flowers in background",
+      "size": [
+        640,
+        427
+      ]
+    },
+    {
+      "file": "flower/00_Passiflora_caerulea__makro_close-up_.jpg",
+      "category": "flower",
+      "original_category": "flower",
+      "commons_title": "File:Passiflora caerulea (makro close-up).jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Passiflora_caerulea_(makro_close-up).jpg",
+      "license": "CC BY-SA 4.0",
+      "artist": "Petar Milošević",
+      "source_caption": "Passiflora caerulea. Ljubljana Botanical Garden, Slovenia. Size of flower around 9 cm. Macro stack of 17 images.",
+      "size": [
+        640,
+        455
+      ]
+    },
+    {
+      "file": "flower/01_Bee_in_Loto_in_Botanical_Garden_of_São_Paulo.jpg",
+      "category": "flower",
+      "original_category": "flower",
+      "commons_title": "File:Bee in Loto in Botanical Garden of São Paulo.jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Bee_in_Loto_in_Botanical_Garden_of_S%C3%A3o_Paulo.jpg",
+      "license": "CC BY-SA 4.0",
+      "artist": "Wilfredor",
+      "source_caption": "Bee (Apis mellifera scutellata) in lotus (Nelumbo nucifera) in Botanical Garden of São Paulo",
+      "size": [
+        640,
+        416
+      ]
+    },
+    {
+      "file": "vehicle_street/02_Singapore_Flower-Dome-and-Cloud-Forest-in-The-Gardens-01.jpg",
+      "category": "vehicle_street",
+      "original_category": "flower",
+      "commons_title": "File:Singapore Flower-Dome-and-Cloud-Forest-in-The-Gardens-01.jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Singapore_Flower-Dome-and-Cloud-Forest-in-The-Gardens-01.jpg",
+      "license": "CC BY-SA 3.0",
+      "artist": "CEphoto, Uwe Aranas",
+      "source_caption": "Singapore: Flower Dome and Cloud Forest in The Gardens by the Bay.",
+      "size": [
+        640,
+        426
+      ]
+    },
+    {
+      "file": "flower/03_Chrysantheme_rot_tautropfen_-20191024-RM-102058.jpg",
+      "category": "flower",
+      "original_category": "flower",
+      "commons_title": "File:Chrysantheme rot tautropfen -20191024-RM-102058.jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Chrysantheme_rot_tautropfen_-20191024-RM-102058.jpg",
+      "license": "CC BY-SA 4.0",
+      "artist": "Ermell",
+      "source_caption": "Flower of a red chrysanthemum (Chrysanthemum × morifolium) with dew drops in a garden in Bamberg in Upper Franconia. Focus stack of 32 frames.",
+      "size": [
+        640,
+        480
+      ]
+    },
+    {
+      "file": "flower/04_Close_Up_Flowers__48130627041_.jpg",
+      "category": "flower",
+      "original_category": "flower",
+      "commons_title": "File:Close Up Flowers (48130627041).jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Close_Up_Flowers_(48130627041).jpg",
+      "license": "CC BY 2.0",
+      "artist": "Kevin M Klerks from Inverhuron, Canada",
+      "source_caption": "I took a few minutes to crop the flowers and do a single click of the Sharpen option, otherwise they are straight from my smartphone. These flowers are, mostly, from the garden centre at a local retailer.",
+      "size": [
+        559,
+        640
+      ]
+    },
+    {
+      "file": "flower/05_Autetaranga__sand_pimelea__flowers_close-up.jpg",
+      "category": "flower",
+      "original_category": "flower",
+      "commons_title": "File:Autetaranga (sand pimelea) flowers close-up.jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Autetaranga_(sand_pimelea)_flowers_close-up.jpg",
+      "license": "Public domain",
+      "artist": "Pseudopanax at English Wikipedia",
+      "source_caption": "Autetaranga (sand pimelia) flowers close-up, individual flowers about 5 millimetres (0.20 in) across (growing at dune garden at Manawatū Estuary)",
+      "size": [
+        640,
+        436
+      ]
+    },
+    {
+      "file": "flower/06_Helenium__El_Dorado_._Bloeiwijze._18-07-2021.__d.j.b_.jpg",
+      "category": "flower",
+      "original_category": "flower",
+      "commons_title": "File:Helenium 'El Dorado'. Bloeiwijze. 18-07-2021. (d.j.b).jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Helenium_%27El_Dorado%27._Bloeiwijze._18-07-2021._(d.j.b).jpg",
+      "license": "CC BY-SA 4.0",
+      "artist": "Dominicus Johannes Bergsma",
+      "source_caption": "Flower of a Helenium 'El Dorado' in a misty early morning. Focus stack of 25 photos.",
+      "size": [
+        640,
+        480
+      ]
+    },
+    {
+      "file": "flower/07_Red_rose_with_black_background.jpg",
+      "category": "flower",
+      "original_category": "flower",
+      "commons_title": "File:Red rose with black background.jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Red_rose_with_black_background.jpg",
+      "license": "CC BY-SA 4.0",
+      "artist": "Laitche",
+      "source_caption": "Kardinal – Hybrid tea rose, Raised by R.Kordes, Germany. 1986(reg.)",
+      "size": [
+        640,
+        492
+      ]
+    },
+    {
+      "file": "fruit_veg/00_Organic_home-grown_tomatoes_-_unripe_to_ripe.jpg",
+      "category": "fruit_veg",
+      "original_category": "fruit_veg",
+      "commons_title": "File:Organic home-grown tomatoes - unripe to ripe.jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Organic_home-grown_tomatoes_-_unripe_to_ripe.jpg",
+      "license": "CC BY-SA 4.0",
+      "artist": "Michal Klajban",
+      "source_caption": "Organic home-grown tomatoes arranged in a circle. Christchurch, New Zealand.",
+      "size": [
+        640,
+        640
+      ]
+    },
+    {
+      "file": "fruit_veg/01_Sad_tomato_seller.jpg",
+      "category": "fruit_veg",
+      "original_category": "fruit_veg",
+      "commons_title": "File:Sad tomato seller.jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Sad_tomato_seller.jpg",
+      "license": "CC0",
+      "artist": "Wilfredor",
+      "source_caption": "Photograph of fruit seller.",
+      "size": [
+        448,
+        640
+      ]
+    },
+    {
+      "file": "fruit_veg/02_013Stewed_milkfish__tomatoes_and_eggplant_with_cotton_fruit_and_lemon_grass_brot.jpg",
+      "category": "fruit_veg",
+      "original_category": "fruit_veg",
+      "commons_title": "File:013Stewed milkfish, tomatoes and eggplant with cotton fruit and lemon grass broth 05.jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:013Stewed_milkfish,_tomatoes_and_eggplant_with_cotton_fruit_and_lemon_grass_broth_05.jpg",
+      "license": "CC0",
+      "artist": "JFVelasquez Floro",
+      "source_caption": "Meliaceae Santol Sandoricum koetjape (Burm.f.) Merr. LOLLY FRUIT Suan ming gou Sandoricum koetjape cotton fruit Stewed milkfish, tomatoes and eggplant with cotton fruit and lemon grass broth",
+      "size": [
+        640,
+        480
+      ]
+    },
+    {
+      "file": "fruit_veg/05_Potato_harvest_in_progress_-_geograph.org.uk_-_982737.jpg",
+      "category": "fruit_veg",
+      "original_category": "fruit_veg",
+      "commons_title": "File:Potato harvest in progress - geograph.org.uk - 982737.jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Potato_harvest_in_progress_-_geograph.org.uk_-_982737.jpg",
+      "license": "CC BY-SA 2.0",
+      "artist": "Evelyn Simak",
+      "source_caption": "Potato harvest in progress. What at first glance looks like stubble are the dried remains of flailed potato vines. On maturity of the tubers the potato vines are killed in order to terminate growth and hence control tuber size, and to set skin, which reduces skinning and bruising during harvest, and shrinkage in storage. The most common method of vine killing is chemical desiccation. Sometimes a flail vine shredder (982636, 982683) is used, an implement consisting of varying knife lengths to accommodate the contours of the hill and furrow, producing a very rapid vine kill by mechanically removing all but about 15 centimetres of the vines which are then removed by chemical desiccation. – The crop is now ready for harvesting and a root crop harvester (red) can be seen working in tandem with a trailer-pulling tractor (green). Most potato harvesters operate by cutting through the ground with a digger blade and forcing the dirt and potatoes over a series of chains that transport the potatoes while removing the dirt and vines. The potatoes are elevated by the chains and other conveyers so that they can reach a sufficient height to be dumped into a truck or trailer and hauled away. This process requires constant cooperation between the harvester and the tractor running side by side.",
+      "size": [
+        480,
+        640
+      ]
+    },
+    {
+      "file": "whole_plant_crop/00_Swafield_Hall_Open_Day__Tomato_and_cucumber_plants_in_the_greenhouse_-_geograph..jpg",
+      "category": "whole_plant_crop",
+      "original_category": "whole_plant_crop",
+      "commons_title": "File:Swafield Hall Open Day, Tomato and cucumber plants in the greenhouse - geograph.org.uk - 7806450.jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Swafield_Hall_Open_Day,_Tomato_and_cucumber_plants_in_the_greenhouse_-_geograph.org.uk_-_7806450.jpg",
+      "license": "CC BY-SA 2.0",
+      "artist": "Michael Garlick",
+      "source_caption": "Swafield Hall Open Day: Tomato and cucumber plants in the greenhouse",
+      "size": [
+        640,
+        426
+      ]
+    },
+    {
+      "file": "whole_plant_crop/01_Tomato_planting_day_2025_-_geograph.org.uk_-_8058029.jpg",
+      "category": "whole_plant_crop",
+      "original_category": "whole_plant_crop",
+      "commons_title": "File:Tomato planting day 2025 - geograph.org.uk - 8058029.jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Tomato_planting_day_2025_-_geograph.org.uk_-_8058029.jpg",
+      "license": "CC BY-SA 2.0",
+      "artist": "Jonathan Billinger",
+      "source_caption": "Tomato planting day 2025",
+      "size": [
+        640,
+        480
+      ]
+    },
+    {
+      "file": "whole_plant_crop/02_-2021-09-06_Ripening_fruit_on_variety__Sub_Arctic_Plenty__Tomato_Plants__Triming.jpg",
+      "category": "whole_plant_crop",
+      "original_category": "whole_plant_crop",
+      "commons_title": "File:-2021-09-06 Ripening fruit on variety 'Sub Arctic Plenty' Tomato Plants, Trimingham.JPG",
+      "page_url": "https://commons.wikimedia.org/wiki/File:-2021-09-06_Ripening_fruit_on_variety_%27Sub_Arctic_Plenty%27_Tomato_Plants,_Trimingham.JPG",
+      "license": "CC BY-SA 4.0",
+      "artist": "Kolforn (Kolforn) I'd appreciate if you could mail me (Kolforn@gmail.com) if you want to use this picture out of the Wikimedia project scope. This file is licensed under the Creative Commons Attribution-Share Alike 4.0 International license. You are free: to share – to copy, distribute and transmit the work to remix – to adapt the work Under the following conditions: attribution – You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use. share alike – If you remix, transform, or build upon the material, you must distribute your contributions under the same or compatible license as the original.https://creativecommons.org/licenses/by-sa/4.0CC BY-SA 4.0 Creative Commons Attribution-Share Alike 4.0 truetrue",
+      "source_caption": "Ripe Tomatos (Solanum lycopersicum) on a plant of the variety 'Sub Arctic Plenty' growing in a greenhouse within the village of Trimingham, Norfolk, United Kingdom.",
+      "size": [
+        640,
+        480
+      ]
+    },
+    {
+      "file": "whole_plant_crop/03_-2020-06-20_Bush_tomato_plant__Totem___Trimingham__Norfolk__1_.jpg",
+      "category": "whole_plant_crop",
+      "original_category": "whole_plant_crop",
+      "commons_title": "File:-2020-06-20 Bush tomato plant (Totem), Trimingham, Norfolk (1).JPG",
+      "page_url": "https://commons.wikimedia.org/wiki/File:-2020-06-20_Bush_tomato_plant_(Totem),_Trimingham,_Norfolk_(1).JPG",
+      "license": "CC BY-SA 4.0",
+      "artist": "Kolforn (Kolforn) I'd appreciate if you could mail me (Kolforn@gmail.com) if you want to use this picture out of the Wikimedia project scope. This file is licensed under the Creative Commons Attribution-Share Alike 4.0 International license. You are free: to share – to copy, distribute and transmit the work to remix – to adapt the work Under the following conditions: attribution – You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use. share alike – If you remix, transform, or build upon the material, you must distribute your contributions under the same or compatible license as the original.https://creativecommons.org/licenses/by-sa/4.0CC BY-SA 4.0 Creative Commons Attribution-Share Alike 4.0 truetrue",
+      "source_caption": "A bush tomato plant of the 'Totem' cultivar with un-ripe fruit growing in a greenhouse within a garden in the village of Trimingham, Norfolk, England.",
+      "size": [
+        523,
+        640
+      ]
+    },
+    {
+      "file": "whole_plant_crop/04_-2020-06-20_Bush_tomato_plant__Totem___Trimingham__Norfolk__2_.jpg",
+      "category": "whole_plant_crop",
+      "original_category": "whole_plant_crop",
+      "commons_title": "File:-2020-06-20 Bush tomato plant (Totem), Trimingham, Norfolk (2).JPG",
+      "page_url": "https://commons.wikimedia.org/wiki/File:-2020-06-20_Bush_tomato_plant_(Totem),_Trimingham,_Norfolk_(2).JPG",
+      "license": "CC BY-SA 4.0",
+      "artist": "Kolforn (Kolforn) I'd appreciate if you could mail me (Kolforn@gmail.com) if you want to use this picture out of the Wikimedia project scope. This file is licensed under the Creative Commons Attribution-Share Alike 4.0 International license. You are free: to share – to copy, distribute and transmit the work to remix – to adapt the work Under the following conditions: attribution – You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use. share alike – If you remix, transform, or build upon the material, you must distribute your contributions under the same or compatible license as the original.https://creativecommons.org/licenses/by-sa/4.0CC BY-SA 4.0 Creative Commons Attribution-Share Alike 4.0 truetrue",
+      "source_caption": "A bush tomato plant of the 'Totem' cultivar with un-ripe fruit growing in a greenhouse within a garden in the village of Trimingham, Norfolk, England.",
+      "size": [
+        640,
+        480
+      ]
+    },
+    {
+      "file": "whole_plant_crop/06_Late_blight_on_the_tomatoes_again__7871765694_.jpg",
+      "category": "whole_plant_crop",
+      "original_category": "whole_plant_crop",
+      "commons_title": "File:Late blight on the tomatoes again (7871765694).jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Late_blight_on_the_tomatoes_again_(7871765694).jpg",
+      "license": "CC BY 2.0",
+      "artist": "Dwight Sipler from Stow, MA, USA",
+      "source_caption": "We found a small patch of late blight (Phytophthora infestans) on the tomatoes last week. Three years ago it appeared in New England and destroyed much of the tomato crop. We got about a half a crop that year. This year it appeared later so we hope to be able to keep the loss down. We've removed about 25% of this block of tomatoes. We basically removed all the plants that showed the infection, then removed about 20 feet more just in case. Late blight does not overwinter normally in New England on tomatoes, although it can survive on potatoes. This strain seems to attack only tomatoes, so either it arrived from somewhere else or it survived in a greenhouse somewhere. It appeared July 3 in New England, but the dry weather kept it from spreading significantly. Recent rainy weather provided good conditions for spreading so it has started. We have two options. Spraying the tomatoes with copper inhibits the infection to some extent. Copper is permitted by organic standards, with limitations on the amount that can be used in any one year. We have been spraying a little more often than weekly, but with the appearance of the blight we'll be spraying on a three day cycle. Oxidate (hydrogen peroxide) will kill the spores, but it evaporates easily and has no residual activity. We use it as a sanitizer, but copper is the primary protection. The second option is to remove the plants, as you see here. The plants are bagged to prevent release of spores. The black bags will heat up in the sun and kill the plant material inside. The fungus can't survive on dead plant tissue.",
+      "size": [
+        640,
+        428
+      ]
+    },
+    {
+      "file": "whole_plant_crop/07_Field_of_flowering_potatoes_at_Fishtown_of_Usan_-_geograph.org.uk_-_6377168.jpg",
+      "category": "whole_plant_crop",
+      "original_category": "whole_plant_crop",
+      "commons_title": "File:Field of flowering potatoes at Fishtown of Usan - geograph.org.uk - 6377168.jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Field_of_flowering_potatoes_at_Fishtown_of_Usan_-_geograph.org.uk_-_6377168.jpg",
+      "license": "CC BY-SA 2.0",
+      "artist": "Adrian Diack",
+      "source_caption": "Field of flowering potatoes at Fishtown of Usan",
+      "size": [
+        640,
+        427
+      ]
+    },
+    {
+      "file": "whole_plant_crop/08_Flowering_potato_crop_near_Sudbourne_-_geograph.org.uk_-_6180732.jpg",
+      "category": "whole_plant_crop",
+      "original_category": "whole_plant_crop",
+      "commons_title": "File:Flowering potato crop near Sudbourne - geograph.org.uk - 6180732.jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Flowering_potato_crop_near_Sudbourne_-_geograph.org.uk_-_6180732.jpg",
+      "license": "CC BY-SA 2.0",
+      "artist": "Simon Mortimer",
+      "source_caption": "Flowering potato crop near Sudbourne",
+      "size": [
+        640,
+        426
+      ]
+    },
+    {
+      "file": "whole_plant_crop/09_Slovakia_Sariska_highlands_18.jpg",
+      "category": "whole_plant_crop",
+      "original_category": "whole_plant_crop",
+      "commons_title": "File:Slovakia Sariska highlands 18.jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Slovakia_Sariska_highlands_18.jpg",
+      "license": "CC BY-SA 3.0",
+      "artist": "Jozef Kotulič",
+      "source_caption": "A strip of wildflowers with many flowering poppies (Papaver rhoeas) between potato fields at Ľubovec, Slovakia",
+      "size": [
+        640,
+        480
+      ]
+    },
+    {
+      "file": "whole_plant_crop/10_Slovakia_Sariska_highlands_20.jpg",
+      "category": "whole_plant_crop",
+      "original_category": "whole_plant_crop",
+      "commons_title": "File:Slovakia Sariska highlands 20.jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Slovakia_Sariska_highlands_20.jpg",
+      "license": "CC BY-SA 3.0",
+      "artist": "Jozef Kotulič",
+      "source_caption": "Strips of wildflowers with many flowering poppies (Papaver rhoeas) between potato and grain fields at Ľubovec, Slovakia",
+      "size": [
+        640,
+        480
+      ]
+    },
+    {
+      "file": "whole_plant_crop/11_Summer_in_Flanders__17298628881_.jpg",
+      "category": "whole_plant_crop",
+      "original_category": "whole_plant_crop",
+      "commons_title": "File:Summer in Flanders (17298628881).jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Summer_in_Flanders_(17298628881).jpg",
+      "license": "CC BY 2.0",
+      "artist": "Luc.T from Buggenhout, België",
+      "source_caption": "Vlaamse zomerdag zondag",
+      "size": [
+        640,
+        480
+      ]
+    },
+    {
+      "file": "fruit_veg/01_Healthy_Vegetables__Unsplash_.jpg",
+      "category": "fruit_veg",
+      "original_category": "fruit_veg",
+      "commons_title": "File:Healthy Vegetables (Unsplash).jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Healthy_Vegetables_(Unsplash).jpg",
+      "license": "CC0",
+      "artist": "Ivan Timov ivantimov",
+      "source_caption": "Plovdiv, Bulgaria",
+      "size": [
+        640,
+        424
+      ]
+    },
+    {
+      "file": "other_foliage/02_Stuckenia_pectinata__sago_pondweed_at__Seedskadee_National_Wildlife_Refuge__5323.jpg",
+      "category": "other_foliage",
+      "original_category": "fruit_veg",
+      "commons_title": "File:Stuckenia pectinata (sago pondweed at) Seedskadee National Wildlife Refuge (53237580140).jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Stuckenia_pectinata_(sago_pondweed_at)_Seedskadee_National_Wildlife_Refuge_(53237580140).jpg",
+      "license": "Public domain",
+      "artist": "USFWS Mountain Prairie",
+      "source_caption": "Sago pondweed along the Green River at Seedskadee NWR. Trumpeter swans rely on this as a food source. They eat the plant parts growing above the riverbed and the small potato like roots called tubers that they dig up. Sago pondweed supports many species of aquatic invertebrates that graze on it. There are also numerous species of other waterfowl that graze on it. Photo: Tom Koerner/USFWS",
+      "size": [
+        640,
+        474
+      ]
+    },
+    {
+      "file": "fruit_veg/03_Fruit_and_vegetable_stall_at_Southside_Farmers_Market_November_2025.jpg",
+      "category": "fruit_veg",
+      "original_category": "fruit_veg",
+      "commons_title": "File:Fruit and vegetable stall at Southside Farmers Market November 2025.jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Fruit_and_vegetable_stall_at_Southside_Farmers_Market_November_2025.jpg",
+      "license": "CC BY-SA 4.0",
+      "artist": "Nick-D",
+      "source_caption": "A fruit and vegetable stall at Southside Farmers Market in Canberra",
+      "size": [
+        640,
+        480
+      ]
+    },
+    {
+      "file": "fruit_veg/04_Vegetable_Stall_at_Haeundae_Market.jpg",
+      "category": "fruit_veg",
+      "original_category": "fruit_veg",
+      "commons_title": "File:Vegetable Stall at Haeundae Market.jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Vegetable_Stall_at_Haeundae_Market.jpg",
+      "license": "CC BY-SA 3.0",
+      "artist": "ProjectManhattan",
+      "source_caption": "Vegetable stall at Haeundae Market, Busan, South Korea",
+      "size": [
+        640,
+        360
+      ]
+    },
+    {
+      "file": "fruit_veg/05_Vegetable_stall_2_-_Chiang_Mai.jpg",
+      "category": "fruit_veg",
+      "original_category": "fruit_veg",
+      "commons_title": "File:Vegetable stall 2 - Chiang Mai.jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Vegetable_stall_2_-_Chiang_Mai.jpg",
+      "license": "CC BY-SA 3.0",
+      "artist": "Papa November",
+      "source_caption": "Photograph of vegetables at a Thai market, Chiang Mai, Thailand",
+      "size": [
+        640,
+        480
+      ]
+    },
+    {
+      "file": "fruit_veg/06_Budapest_Stall__Central_Market__6003843356_.jpg",
+      "category": "fruit_veg",
+      "original_category": "fruit_veg",
+      "commons_title": "File:Budapest Stall, Central Market (6003843356).jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Budapest_Stall,_Central_Market_(6003843356).jpg",
+      "license": "CC BY 2.0",
+      "artist": "Alex Proimos from Sydney, Australia",
+      "source_caption": "Budapest Stall, Central Market. - Budapest District IX., Hungary.",
+      "size": [
+        640,
+        426
+      ]
+    }
+  ],
+  "rejected": [
+    {
+      "category": "hand",
+      "file": "C:/Users/harsh/AppData/Local/Temp/claude/C--Users-harsh-cropguard-ai/d660ee83-35d4-4543-8314-473b14271279/scratchpad/ood_staging/hand/05_Palm_leaf_Hand_Fan_of_Bengal.jpg",
+      "commons_title": "File:Palm leaf Hand Fan of Bengal.jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Palm_leaf_Hand_Fan_of_Bengal.jpg",
+      "license": "GODL-India",
+      "artist": "Indian Government",
+      "source_caption": "Traditional Palm leaf Hand Fan of Bengal",
+      "reject_reason": "postage-stamp scan, and depicts a palm-leaf fan"
+    },
+    {
+      "category": "furniture",
+      "file": "C:/Users/harsh/AppData/Local/Temp/claude/C--Users-harsh-cropguard-ai/d660ee83-35d4-4543-8314-473b14271279/scratchpad/ood_staging/furniture/05_Book_of_styles_-_issues_expressly_for_modern_people_and_illustrating_the_Cadilla.jpg",
+      "commons_title": "File:Book of styles - issues expressly for modern people and illustrating the Cadillac \"desk table.\" (1910) (14765292404).jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Book_of_styles_-_issues_expressly_for_modern_people_and_illustrating_the_Cadillac_%22desk_table.%22_(1910)_(14765292404).jpg",
+      "license": "No restrictions",
+      "artist": "Internet Archive Book Images",
+      "source_caption": "Identifier: BookOfStylesIssuesExpresslyForModernPeopleAndIllustratingThe (find matches) Title: Book of styles : issues expressly for modern people and illustrating the Cadillac \"desk table.\" Year: 1910 (1910s) Authors: Wolverine Manufacturing Company Subjects: desks -- catalogs tables -- catalogs Division 12 office furniture Publisher: Wolverine Manufacturing Co. Contributing Library: MBJ collection View Book Page: Book Viewer About This Book: Catalog Entry View All Images: All Images From Book Click here to view book online to see this illustration in context in a browseable online version of this book. Text Appearing Before Image: A Cadillac in Use ix a Hotel. In each room of over two hundred and fifty pronii-ment hotels may be found a Cadillac Desk-Table. Theyare also installed in many Y. M. C. A. dormitories, col-leges and other public and private institutions, such aslibraries, boarding schools and universities. In the home they are invaluable as reading, writingor study tables. A Desk-Table should be in everyhome library and in the boys and girls room. It may beused as a dressing table and writing desk by usingtoilet mirror as shown on page 33. In fact, the uses towhich the Desk-Table may be put are too numerous tomention in this space. Theres a place for a Desk-Table in every home, Fifty-Seven Text Appearing After Image: No. 322 Top, 40 x 24Desk-Bed, 23 x 172%-ineh LegsQuartered Oak, GoldenWeathered, Early EnglishWax Golden or FumedShipping weight, 120 lbs. Fifty-Eight C^c£3ix£ctc^ Note About Images Please note that these images are extracted from scanned page images that may have been digitally enhanced for readability - coloration and appearance of these illustrations may not perfectly resemble the original work.",
+      "reject_reason": "line drawing, not a photograph"
+    },
+    {
+      "category": "wall",
+      "file": "C:/Users/harsh/AppData/Local/Temp/claude/C--Users-harsh-cropguard-ai/d660ee83-35d4-4543-8314-473b14271279/scratchpad/ood_staging/wall/00_Blue_roman_wall_plaster__FindID_877687_.jpg",
+      "commons_title": "File:Blue roman wall plaster (FindID 877687).jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Blue_roman_wall_plaster_(FindID_877687).jpg",
+      "license": "CC BY 2.0",
+      "artist": "Kent County Council, Walter (Jo) Ahmet, 2017-11-29 15:41:52",
+      "source_caption": "1 fragment of blue, probable Roman wall plaster. Description:Fragments is rregular shaped, with a sandy granular render and one flat painted surface, in this case a light blue. The colour is less common with roman wall plaster although relatively well known. The flat painted surface is heavily fagmented Measurements: 25.43mm long, 20.40mm wide, 8.13mm thick and 3.89g in weight. Discussion:These unprepossessing scraps are of importance because they may suggest the proximity of a building colourfully decorated according to Romanised tastes and indeed a known roman villa is known in the vicinity of these fragment.",
+      "reject_reason": "near-duplicate archaeological find photo (kept 2 of 4)"
+    },
+    {
+      "category": "wall",
+      "file": "C:/Users/harsh/AppData/Local/Temp/claude/C--Users-harsh-cropguard-ai/d660ee83-35d4-4543-8314-473b14271279/scratchpad/ood_staging/wall/01_Painted_roman_wall_plaster__FindID_877693_.jpg",
+      "commons_title": "File:Painted roman wall plaster (FindID 877693).jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Painted_roman_wall_plaster_(FindID_877693).jpg",
+      "license": "CC BY 2.0",
+      "artist": "Kent County Council, Walter (Jo) Ahmet, 2017-11-29 16:01:13",
+      "source_caption": "1 fragment of pink and white, probable Roman wall plaster. Description:Fragments is rregular shaped, with a sandy granular render and one flat painted surface, in this case a white with a fleshy pink stripe. The colour on this piece is dififcult to pin down and maybe part of a figurative decorative motive, perhaps a leg or an arm baring in mind we have white eaither side of the 'pink'. The colour is less common with roman wall plaster although relatively well known. The flat painted surface is heavily fagmented Measurements:34.06mm long, 32.84mm wide, 8.45mm thick and 7.15g in weight. Discussion:These unprepossessing scraps are of importance because they may suggest the proximity of a building colourfully decorated according to Romanised tastes and indeed a known roman villa is known in the vicinity of these fragment.",
+      "reject_reason": "near-duplicate archaeological find photo (kept 2 of 4)"
+    },
+    {
+      "category": "text",
+      "file": "C:/Users/harsh/AppData/Local/Temp/claude/C--Users-harsh-cropguard-ai/d660ee83-35d4-4543-8314-473b14271279/scratchpad/ood_staging/text/02_Twenty-five_photographs__printed_in_platinotype___1895___14748839304_.jpg",
+      "commons_title": "File:Twenty-five photographs (printed in platinotype) (1895) (14748839304).jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Twenty-five_photographs_(printed_in_platinotype)_(1895)_(14748839304).jpg",
+      "license": "No restrictions",
+      "artist": "Internet Archive Book Images",
+      "source_caption": "Identifier: Twentyfivephoto00Webs (find matches) Title: Twenty-five photographs (printed in platinotype) Year: 1895 (1890s) Authors: Webster, G. Watmough Newstead, Robert, 1859-1947 Grosvenor Museum (Chester, Cheshire) Subjects: Pictorial works Birds Publisher: Chester: (Grosvenor Museum) Contributing Library: Smithsonian Libraries Digitizing Sponsor: Biodiversity Heritage Library View Book Page: Book Viewer About This Book: Catalog Entry View All Images: All Images From Book Click here to view book online to see this illustration in context in a browseable online version of this book. Text Appearing Before Image: ' Text Appearing After Image: The House-Martin ( Ckelidon urbica) LlNKdSUS. MALE, FEMALE, NEST, AND EGGS. (JT~*HIS species is easily recognised by its conspicuous white rump, which isclearly seen when the bird is flying, and which acts as a capital recognitionmark, and readily separates it from the other British Hirundinidce. The nest, composed of mud lined with a little grass and feathers, isfixed to the wall beneath some projecting masonry. The female is carrying afeather in her beak; her partner is clinging to the side of the nest. The purewhite eggs cannot be shown owing to the depth of the nest. The brickwork and stone coping are both reproductions—the former incoloured plaster, the other in papier mache. Presented by Mr. R. Newstead, Senr. Note About Images Please note that these images are extracted from scanned page images that may have been digitally enhanced for readability - coloration and appearance of these illustrations may not perfectly resemble the original work.",
+      "reject_reason": "near-duplicate plate from the same 1895 album"
+    },
+    {
+      "category": "text",
+      "file": "C:/Users/harsh/AppData/Local/Temp/claude/C--Users-harsh-cropguard-ai/d660ee83-35d4-4543-8314-473b14271279/scratchpad/ood_staging/text/03_Twenty-five_photographs__printed_in_platinotype___1895___14564753727_.jpg",
+      "commons_title": "File:Twenty-five photographs (printed in platinotype) (1895) (14564753727).jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Twenty-five_photographs_(printed_in_platinotype)_(1895)_(14564753727).jpg",
+      "license": "No restrictions",
+      "artist": "Internet Archive Book Images",
+      "source_caption": "Identifier: Twentyfivephoto00Webs (find matches) Title: Twenty-five photographs (printed in platinotype) Year: 1895 (1890s) Authors: Webster, G. Watmough Newstead, Robert, 1859-1947 Grosvenor Museum (Chester, Cheshire) Subjects: Pictorial works Birds Publisher: Chester: (Grosvenor Museum) Contributing Library: Smithsonian Libraries Digitizing Sponsor: Biodiversity Heritage Library View Book Page: Book Viewer About This Book: Catalog Entry View All Images: All Images From Book Click here to view book online to see this illustration in context in a browseable online version of this book. Text Appearing Before Image: WE are deeply indebted to His Grace the Duke oe Westminster, K.G.,for this exceedingly interesting group of birds. They were taken in1888 from the Heronry at Eaton Hall, which is the largest in Cheshire orNorth Wales, and fortunately is carefully preserved. The nest, composed of large sticks and lined with smaller ones and stemsof various plants, is in the topmost branch of a willow tree, and was between40 and 50 feet from the ground. It contains its rightful occupants, e.g., the fouryoung ones that were hatched in it. They are of different sizes, however, whichis remarkable; but as they were taken at the same time they must have beenhatched at different periods. (See also Proceedings of the Chester Society of NaturalScience Part IV., p. 22j~\\. Their attitudes are very grotesque, but they arefaithfully preserved; all being carefully modelled from life. The upper specimen is the female; it has an unusually long crest, andbears a greater similarity to the male than is usually the case. Text Appearing After Image: The Sheld or Burrow-Duck (Tadorna cornuta) S. G. Gmeun. MALE, FEMALE, WEST, AND EGGS. (JT^HE female of this handsome species is represented going to her nest in arabbit-burrow. The nest shown in section at the end of the sand-bank isthree feet from the entrance to the burrow, and is entirely composed of downand feathers from the breast of the female. It contains seven cream-colouredeggs, which cannot, unfortunately, be shown in the picture. The burrow is but alittle over 6 inches in diameter; the nest cavity being 16 inches in its widest part.The original habitat has been carefully reproduced in every detail, e.g., length ofburrow, nest cavity, sand-bank, and the beautiful Marram Grass (Elymus arenarius)peculiar to our sand-hills and coasts. Collected on the Warren at Talacre by kind permission, and presented bySir Pyers Mostyn. Many pairs of these birds breed annually in the above locality; alwaysselecting a rabbit-burrow to nest in. Note About Images Please note that these images are extracted from scanned page images that may have been digitally enhanced for readability - coloration and appearance of these illustrations may not perfectly resemble the original work.",
+      "reject_reason": "near-duplicate plate from the same 1895 album"
+    },
+    {
+      "category": "text",
+      "file": "C:/Users/harsh/AppData/Local/Temp/claude/C--Users-harsh-cropguard-ai/d660ee83-35d4-4543-8314-473b14271279/scratchpad/ood_staging/text/05_Twenty-five_photographs__printed_in_platinotype___1895___14748856574_.jpg",
+      "commons_title": "File:Twenty-five photographs (printed in platinotype) (1895) (14748856574).jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Twenty-five_photographs_(printed_in_platinotype)_(1895)_(14748856574).jpg",
+      "license": "No restrictions",
+      "artist": "Internet Archive Book Images",
+      "source_caption": "Identifier: Twentyfivephoto00Webs (find matches) Title: Twenty-five photographs (printed in platinotype) Year: 1895 (1890s) Authors: Webster, G. Watmough Newstead, Robert, 1859-1947 Grosvenor Museum (Chester, Cheshire) Subjects: Pictorial works Birds Publisher: Chester: (Grosvenor Museum) Contributing Library: Smithsonian Libraries Digitizing Sponsor: Biodiversity Heritage Library View Book Page: Book Viewer About This Book: Catalog Entry View All Images: All Images From Book Click here to view book online to see this illustration in context in a browseable online version of this book. Text Appearing Before Image: Rarely indeed, except when flushed by a dog, are these birds seen on Text Appearing After Image: Lapwing or Peewit ( Vanellus vulgaris) BECHSTEIN, MALE, FEMALE, NEST, EGGS, AND YOUNG. HE long and broadly rounded primaries of this species give these birds their peculiar-shaped wings. The non-naturalist would scarcely imagine that thefemale, which is standing on the meadow-grass, had a wing-expansion equal to thatof the male; yet such is the case. The only appreciable difference between the sexesis that the female generally has a smaller crest and is not so bright in colour.Crouching beneath some overhanging grass, in the foreground on the left, is ayoung bird in down, a few days old. The nest is a mere hollow lined with a fewblades of grass and some very short rushes collected from numerous stumps of thesame, which had been inadvertently pulled up by cattle and scattered over themeadow land. The latter, from their reddish-brown bases, rendered it much moredifficult to find the eggs. Collected on the Eaton Estate, and presented by Mr. R. J. Smith. Note About Images Please note that these images are extracted from scanned page images that may have been digitally enhanced for readability - coloration and appearance of these illustrations may not perfectly resemble the original work.",
+      "reject_reason": "near-duplicate plate from the same 1895 album"
+    },
+    {
+      "category": "vehicle_street",
+      "file": "C:/Users/harsh/AppData/Local/Temp/claude/C--Users-harsh-cropguard-ai/d660ee83-35d4-4543-8314-473b14271279/scratchpad/ood_staging/vehicle_street/05_Kirchner_-_STRASSENSZENE__STREET_SCENE__-_recto__1913__lot.13__cropped_.jpg",
+      "commons_title": "File:Kirchner - STRASSENSZENE (STREET SCENE) - recto, 1913, lot.13 (cropped).jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Kirchner_-_STRASSENSZENE_(STREET_SCENE)_-_recto,_1913,_lot.13_(cropped).jpg",
+      "license": "Public domain",
+      "artist": "Ernst Ludwig Kirchner",
+      "source_caption": "- RECTO of 2",
+      "reject_reason": "painting, not a photograph"
+    },
+    {
+      "category": "device",
+      "file": "C:/Users/harsh/AppData/Local/Temp/claude/C--Users-harsh-cropguard-ai/d660ee83-35d4-4543-8314-473b14271279/scratchpad/ood_staging/device/05_Camera_zoom_burst_on_a_Microsoft_computer_keyboard_in_Tuntorp_3.jpg",
+      "commons_title": "File:Camera zoom burst on a Microsoft computer keyboard in Tuntorp 3.jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Camera_zoom_burst_on_a_Microsoft_computer_keyboard_in_Tuntorp_3.jpg",
+      "license": "CC BY-SA 4.0",
+      "artist": "W.carter",
+      "source_caption": "Camera zoom burst on a black Microsoft Wired 600 computer keyboard with Swedish language characters. The keyboard was lit by two normal desk lamps. Different zoom speeds, starting and ending points were explored, giving widely different patterns and effects. Photographed in Tuntorp, Brastad, Lysekil Municipality, Sweden.",
+      "reject_reason": "near-duplicate of device/00 (same zoom-burst series)"
+    },
+    {
+      "category": "device",
+      "file": "C:/Users/harsh/AppData/Local/Temp/claude/C--Users-harsh-cropguard-ai/d660ee83-35d4-4543-8314-473b14271279/scratchpad/ood_staging/device/07_Camera_zoom_burst_on_a_Microsoft_computer_keyboard_in_Tuntorp_4.jpg",
+      "commons_title": "File:Camera zoom burst on a Microsoft computer keyboard in Tuntorp 4.jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Camera_zoom_burst_on_a_Microsoft_computer_keyboard_in_Tuntorp_4.jpg",
+      "license": "CC BY-SA 4.0",
+      "artist": "W.carter",
+      "source_caption": "Camera zoom burst on a black Microsoft Wired 600 computer keyboard with Swedish language characters. The keyboard was lit by two normal desk lamps. Different zoom speeds, starting and ending points were explored, giving widely different patterns and effects. Photographed in Tuntorp, Brastad, Lysekil Municipality, Sweden.",
+      "reject_reason": "near-duplicate of device/00 (same zoom-burst series)"
+    },
+    {
+      "category": "whole_plant_crop",
+      "file": "C:/Users/harsh/AppData/Local/Temp/claude/C--Users-harsh-cropguard-ai/d660ee83-35d4-4543-8314-473b14271279/scratchpad/ood_staging/whole_plant_crop/00_Bolgiano_s_extremely_early_prolific_I.X.L._tomato__1909___20364142646_.jpg",
+      "commons_title": "File:Bolgiano's extremely early prolific I.X.L. tomato (1909) (20364142646).jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Bolgiano%27s_extremely_early_prolific_I.X.L._tomato_(1909)_(20364142646).jpg",
+      "license": "No restrictions",
+      "artist": "Internet Archive Book Images",
+      "source_caption": "Title: Bolgiano's extremely early prolific I.X.L. tomato Identifier: bolgianosextreme19jbol (find matches) Year: 1909 (1900s) Authors: J. Bolgiano &amp; Son; Henry G. Gilbert Nursery and Seed Trade Catalog Collection Subjects: Seeds Maryland Baltimore Catalogs; Vegetables Maryland Baltimore Catalogs; Flowers Maryland Baltimore Catalogs; Fruit Maryland Baltimore Catalogs; Grasses Maryland Baltimore Catalogs; Gardening Maryland Baltimore Equipment and supplies Catalogs; Nurseries (Horticulture) Maryland Baltimore Catalogs Publisher: Baltimore, Md. : Bolgiano Contributing Library: U.S. Department of Agriculture, National Agricultural Library Digitizing Sponsor: U.S. Department of Agriculture, National Agricultural Library View Book Page: Book Viewer About This Book: Catalog Entry View All Images: All Images From Book Click here to view book online to see this illustration in context in a browseable online version of this book. Text Appearing Before Image: iQclgianc^$ Tlew \"Centurii \"Cauliflower It can never be any cheaper. It is by far the best CauHflower Seed in the World. If you grow Cauliflower, give it a trial. Large grow^ers who have tried it by the ounce, are now buying it by the pound. It is in a class to itselfâit stands supreme. ^ew %enturii \"CauUflcwer 54. THE BEST IN THE WORLD. 1 It heads when others tail. 2. Large, perfect heads measure from 12 to 14 inches in diameter. 3. The beaatifal white heads are compact, deep and solid. 4. Heads will outweigh those of any other strain. 5. It is the earliest of all Cauliflowers. -^^ 6. One-third more can be planted on ^^ the same space than can be done with other varieties because of its close growing, compact habit, ,.â -- 7. It is the Most Carefully Grown Cauliflower Seed in the World. 8. The best is the cheap- est, receiving the care and attention which is absolutely necessary for the growing of this Special StocK. We Can Never Sell It For Less Than PUts.. 10c and 25c. 1/4 Oz. $1.00. 1/2 Oz. $2.00. lOz. $4.00. 1/4 Lb. $15.00. The Highest Priced Cauliflower Seed In The World* Does it pay to buy the best? Read these two letters. /. Bolgiano &amp; Son, Feb. lit, 19U8. Baliimore. Md. Let me compliment you on your New Century Cauliflower. I am now crating half an acre, heads large.white and firm as a potato ; taking them as they run from 24 to 28 fills a crate. J need some seed next fall, and hope they won't be higher than $60.00 per pound: however, they would be by far the cheapest at se-L'eral times that price. S. O.Meddleton, St. John Co., Fla. Sept. 18,1907. J. Bolgiano &amp; Son, Baltimore, Md. Your New Century CauHflower turned out so fine for 7ne. and sold so â well, it would have been cheap ij I had paid you $10an ounce instead of $4. John Trabandt, Orangeville Md. Complete Cauliflower UstâSee Page 37 =^38. Text Appearing After Image: BOLGIANO'S NEW CENTURY CAULIFLOWER. The Best Cauliflower in the World. i^olgianc's ^ew Sant S)n( Weather 'CauUflcwer, 105. This splendid new Cauliflower will succeed and make fine crops in the dryest kind of weather when other varieties fail. It produces large, solid, pure white heads weighing from 3 to 8 pounds. The soil should be made quite rich and thoroughly cultivated. It will succeed in such dry weather states as Arizona. Be sure to give it a trial as vou are never sure of the weather conditions through which your crop will have to eo. PKts. 10cS25c. 1/2 Oz. $1.00. Oz. $2.00. 1/4 Lb. $7.50. 1/2 Lb. $12.50 Lb. $25.00. ^Â£feÂ£i :5reen Mountain S'M 9^^^ A TABLE ADORNER OF RARE BEAUTY. 221. Never before have we been able to offer to the public a gift of Nature equal to our beautiful Green Mountain Parsley. Always alert, always ready to appreciate any seed of exceptional merit, we soon saw that everybody would wantour New Green Mountain Parsley when thej' heard of its wonder- ful beauty. Hardy, immensely productive, deep velvet green. The leaves are densely curled and are borne in abundance. It is exceptionally easy to grow, and vrith very little care everybody can have for the whole jear round abed of the finest flavored Parsley in cultivation. If you have but a few square feet, you can raise sufiicient Parsley to supply your table with decora- tion and your soups with fine fresh flavor. If you grow for your market stall, you cannot afford to have poor Parsley when your neighbor has the beautiful Green Mountain Triple Parsley. If you are a shipper to Northern markets grow Green Mountain Parslev and j'ou will make more monev than you ever did. PKts. 5c Â» 10c. Oz. 15c. 1/4 Lb. 30c. 1/2 Lb. 50c. Lb. $1.00. J. BOLGIANO &amp; SON, Baltimore Md. _ Oct. 9th, 1908. Vour Green Mountain Parsley is certainly handsotne. I ant welf pleased 7uifh all the Garden Seed I purchased of you and wish to say F take the lime and pleasure to thank you for your prompt attention to my orders. d y. M. KIRKPA TRICK. Cecil Co., Md. Note About Images Please note that these images are extracted from scanned page images that may have been digitally enhanced for readability - coloration and appearance of these illustrations may not perfectly resemble the original work.",
+      "reject_reason": "seed-catalogue engraving, not a photograph"
+    },
+    {
+      "category": "whole_plant_crop",
+      "file": "C:/Users/harsh/AppData/Local/Temp/claude/C--Users-harsh-cropguard-ai/d660ee83-35d4-4543-8314-473b14271279/scratchpad/ood_staging/whole_plant_crop/01_Satoimo_taro_potato_with_plant_growing_in_the_background_LCCN2009630033.jpg",
+      "commons_title": "File:Satoimo taro potato with plant growing in the background LCCN2009630033.jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Satoimo_taro_potato_with_plant_growing_in_the_background_LCCN2009630033.jpg",
+      "license": "Public domain",
+      "artist": "Japanese fine prints, pre-1915",
+      "source_caption": "Title: Satoimo taro potato with plant growing in the background Abstract/medium: 1 drawing : watercolor ; 10.9 x 10.9 cm (sheet)",
+      "reject_reason": "archival drawing, not a photograph"
+    },
+    {
+      "category": "whole_plant_crop",
+      "file": "C:/Users/harsh/AppData/Local/Temp/claude/C--Users-harsh-cropguard-ai/d660ee83-35d4-4543-8314-473b14271279/scratchpad/ood_staging/whole_plant_crop/03_Burpee_s_farm_annual_-_the_best_seeds_that_grow_including_rare_novelties__1895__.jpg",
+      "commons_title": "File:Burpee's farm annual - the best seeds that grow including rare novelties (1895) (20324362359).jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Burpee%27s_farm_annual_-_the_best_seeds_that_grow_including_rare_novelties_(1895)_(20324362359).jpg",
+      "license": "No restrictions",
+      "artist": "W. Atlee Burpee Company; Henry G. Gilbert Nursery and Seed Trade Catalog Collection",
+      "source_caption": "Title: Burpee's farm annual : the best seeds that grow including rare novelties Identifier: burpeesfarmannua1895watl (find matches) Year: 1895 (1890s) Authors: W. Atlee Burpee Company; Henry G. Gilbert Nursery and Seed Trade Catalog Collection Subjects: Nurseries (Horticulture) Pennsylvania Philadelphia Catalogs; Vegetables Seeds Catalogs; Fruit Catalogs; Plants, Ornamental Catalogs; Flowers Seeds Catalogs Publisher: (Philadelphia, PA. : W. Atlee Burpee &amp; Co. ) Contributing Library: U.S. Department of Agriculture, National Agricultural Library Digitizing Sponsor: U.S. Department of Agriculture, National Agricultural Library View Book Page: Book Viewer About This Book: Catalog Entry View All Images: All Images From Book Click here to view book online to see this illustration in context in a browseable online version of this book. Text Appearing Before Image: BURPEE'S SEED CORN. 107 BURPEE'S GOLDEN BEAUTY CORN. The productiveness of the Golden Beauty is due to the economical shape of the ears and the fact that a large proportion of the stalks produce two tine ears. It is the largest grained and handsomest yellow corn we have ever seen. The ears are of perfect shape, with ten to fourteen straight rows of brightest golden-yellow grains, of remarkable size, and completely tilled out to the extreme end of cob. The cobs are unusually small; when broken in half, the grains will always reach across. The richness of color and tine quality of grain make it very superior for grinding into meal. The ears are easily shelled, al- though the kernels are firm on the ear, and in every\"respect present as perfect a type as could be desired. The stalks take a strong hold in the ground; grow vigorously to a height of eight to ten feet. In 1885 C. W. Holman's, West Willington, Conn., prize crop was 158% bushels shelled corn on one acre. Price 10 cts. per package; 30 cts. per ft&gt;; 3 lbs. for 75 cts., postpaid, by mail. By express or freight, per peck 65 cts.; per bushel $2.00 ; per sack of 2 bushels $3.50; 10 bushels or more at $1.60 per bushel, sacks included. EARLY MASTODON DENT CORN. Descriptive of this Corn we quote the following:— \"I claim that it is the largest-eared early Dent Corn ever seen in this section of the country, and the largest grain of any early Dent Corn. It grows strong, rank, quick, and makes the finest appearing shelled corn of them all, being purely Dent, of two shades of white and yellow. To convince your customers that it will ripen with them, just say that it was grown within eight miles of Lake Erie.\" Prices same as for Golden Beauty. CHESTER COUNTY MAMMOTH. It yields, under good cultivation, from one hun- dred to one hundred and forty bushels shelled corn per acre. The ears are very large, containing fourteen to thirty-two rows of medium-sized yellow grains. It furnishes a large amount of fodder, growing twelve to sixteen feet high. It is, undoubtedly, one of the best yellow varieties for good land in this latitude and the South, but cannot be relied upon to mature sufficiently early for the North. Prices same as for Golden Beauty. HICKORY KING CORN. This white field Corn has the largest grains, with the smallest cob, of any white Corn yet introduced. So large are the grains and so extremely small the cob that on an ear broken in half a single grain will utmost completely cover the cob section. No other variety of field Corn that we have ever seen will do this. \"Of strong, vigorous growth, the stalks take a firm hold in the ground and stand upright, resist- ing the severe storms. The stalks generally bear too good ears each, and occasionally three. It yields splendid crops on light soil, and is undoubtedly the best and most productive white field Corn for the South. We do not, however, consider it a safe crop north of Pennsylvania. The ears are well filled and will make more shelled corn to bulk of ears than any other variety. Per large pkt. 10 cts.; per lb. 35 cts.; or 3 lbs. for 80 cts., postpaid, by mail. By express or freight, per peck 60 cts.; bushel $2.00 ; sack of 2 bushels $3.75. EARLY CANADA YELLOW FLINT. We consider our selected stock the best strain of hard-grained, eight-rowed, yellow Flint Corn in cultivation. It matures in about ninety days, and while not so productive as the varieties of Dent Corn, is valuable for the short seasons of the far North, and also for second planting. Per pkt. 10 cts.; ft) 30 cts.; 3 ft&gt;s. 75 cts., postpaid. By freight, per peck 60 cts.; bushel §2.00. NEW CONNECTICUT GOLDEN GIANT FLINT CORN. This is the largest-eared and handsomest yellow Flint Corn we have ever seen. The gigantic ears frequently reach eighteen inches in length and are always well filled. It matures early, and certainly few other varieties make such fine ears for exhibi- tion at County or State Fairs. Per pkt, 10 cts.; per ft) 40 cts., postpaid. Bv express or freight, per peck 81.00; per bushel §3.50\". Supply limited. Text Appearing After Image: BURPEE'S GOLDEN BEAUTY OORN, Note About Images Please note that these images are extracted from scanned page images that may have been digitally enhanced for readability - coloration and appearance of these illustrations may not perfectly resemble the original work.",
+      "reject_reason": "seed-catalogue engraving, not a photograph"
+    },
+    {
+      "category": "whole_plant_crop",
+      "file": "C:/Users/harsh/AppData/Local/Temp/claude/C--Users-harsh-cropguard-ai/d660ee83-35d4-4543-8314-473b14271279/scratchpad/ood_staging/whole_plant_crop/04_Annual_catalogue_vegetable__field_and_flower_seeds__1900___20368845908_.jpg",
+      "commons_title": "File:Annual catalogue vegetable, field and flower seeds (1900) (20368845908).jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Annual_catalogue_vegetable,_field_and_flower_seeds_(1900)_(20368845908).jpg",
+      "license": "No restrictions",
+      "artist": "O.W. Clark &amp; Son; Henry G. Gilbert Nursery and Seed Trade Catalog Collection",
+      "source_caption": "Title: Annual catalogue vegetable, field &amp; flower seeds Identifier: CAT31284486 (find matches) Year: 1900 (1900s) Authors: O. W. Clark &amp; Son; Henry G. Gilbert Nursery and Seed Trade Catalog Collection Subjects: Nursery stock New York (State) Catalogs; Vegetables Seeds Catalogs; Flowers Seeds Catalogs; Fruit Catalogs; Gardening Equipment and supplies Catalogs Publisher: Buffalo, N. Y. : O. W. Clark &amp; Son Contributing Library: U.S. Department of Agriculture, National Agricultural Library Digitizing Sponsor: U.S. Department of Agriculture, National Agricultural Library View Book Page: Book Viewer About This Book: Catalog Entry View All Images: All Images From Book Click here to view book online to see this illustration in context in a browseable online version of this book. Text Appearing Before Image: SELECT VEGETABLE, FIELD AND FLOWER SEEDS. ir CORN, SWEET OR SUGAR. French, Mais de Sucre. German, ^ucfer SBBelfcfiforn. Spanish, Mai':. Culture.—Plant about the middle of May, or as soon as the ground is dry (if planted too early, Corn is apt to rot), in hills 3 feet apart each way; 7 or 8 kernels in a hill ; hoe often, and draw up dirt to the stems; thin to 4 stalks, and break off side shoots. Use plenty of old, hue manure. For succession, plant every 2 or 3 weeks until last of July. First of All. The very earliest Sweet Corn, ripening nearly a week earlier than the Cory; superior quality ; ears medium sized and of delicate flavor. Qt. 20 cts., J^pk. 60 cts., pk. $1. Mammoth White Cory. For market pur- poses it will be found of great value; ears large; Corn is very sweet and of fine quality. Qt. 20 cts , )4pk. 60 cts., pk. $1. Moore's Early Concord. An excellent second early varietv of large size and fine flavor. Qt. 20 cts., Kpk. 60 cts., pk. $1. New Champion. A second early and very superior market sort; strong grower and heavy yielder; of finest table quality. Large-sized ears, 12 to 14-rowed. Qt. 20 cts., J^pk. 60 cts., pk. $1. Early Crosby. One of the best early sorts ; of dwarf habit; good-sized ears, with small kernels; a desirable sort. Qt. 20 cts., &gt;^pk. 60 cts , pk. $1. Early Minnesota. Small ears of excellent quality ; very productive. Qt. 20c, &gt;£pk. 60 cts., pk $1. Stowell's Evergreen. A favorite late, sweet variety, and largely grown by market-gardeners. Qt. 20 cts., )4pk. 60 cts., pk. $i. Black Mexican. Late ; very sweet, good. Qt. 20 cts , &gt;4pk. 60cts., pk. $1. Late Mammoth. The largest variety grown. Qt. 20c, ^pk. 60 cts., pk. $1. FIELD AND ENSILAGE CORN. Early White Flint. A very desirable variety for field culture ; ears 8-rowed, about 10 inches long ; kernel white, very sound and heavy; very de- sirable sort for field culture. Bus. $1.25. Longfellow Flint. A standard variety for a main crop ; ears long, set low on the stalk, which grows tall ; color deep yellow, and similar to the Early White Flint. Bus. $1.25. Early Waterloo Dent. The earliest of the large-eared Dent varieties, and will mature in 100 days with favor- able corn weather. Bus. Ir.50. Pride of the North. Ears as large as Learning, and ma- tures a week earlier. Bus. $1.25. Learning. The best variety for ensilage or dry fodder, for which it is largely used. Bus. 80 cts. Red Cob Ensilage. Our stock of this well-known variety is genuine. Look for registered trademark on each bag. Bus. 75 cts. White Rice. A very choice white variety ; best for pop- ping ; may be sown thickly in rows ; requires ordinary Culture. BUS. $2. New Champion. Text Appearing After Image: ' Note About Images Please note that these images are extracted from scanned page images that may have been digitally enhanced for readability - coloration and appearance of these illustrations may not perfectly resemble the original work.",
+      "reject_reason": "seed-catalogue engraving, not a photograph"
+    },
+    {
+      "category": "fruit_veg",
+      "file": "C:/Users/harsh/AppData/Local/Temp/claude/C--Users-harsh-cropguard-ai/d660ee83-35d4-4543-8314-473b14271279/scratchpad/ood_staging/fruit_veg/03_013Stewed_milkfish__tomatoes_and_eggplant_with_cotton_fruit_and_lemon_grass_brot.jpg",
+      "commons_title": "File:013Stewed milkfish, tomatoes and eggplant with cotton fruit and lemon grass broth 10.jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:013Stewed_milkfish,_tomatoes_and_eggplant_with_cotton_fruit_and_lemon_grass_broth_10.jpg",
+      "license": "CC0",
+      "artist": "JFVelasquez Floro",
+      "source_caption": "Meliaceae Santol Sandoricum koetjape (Burm.f.) Merr. LOLLY FRUIT Suan ming gou Sandoricum koetjape cotton fruit Stewed milkfish, tomatoes and eggplant with cotton fruit and lemon grass broth",
+      "reject_reason": "near-duplicate of fruit_veg/02 (same meal)"
+    },
+    {
+      "category": "fruit_veg",
+      "file": "C:/Users/harsh/AppData/Local/Temp/claude/C--Users-harsh-cropguard-ai/d660ee83-35d4-4543-8314-473b14271279/scratchpad/ood_staging/fruit_veg/04_013Stewed_milkfish__tomatoes_and_eggplant_with_cotton_fruit_and_lemon_grass_brot.jpg",
+      "commons_title": "File:013Stewed milkfish, tomatoes and eggplant with cotton fruit and lemon grass broth 21.jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:013Stewed_milkfish,_tomatoes_and_eggplant_with_cotton_fruit_and_lemon_grass_broth_21.jpg",
+      "license": "CC0",
+      "artist": "JFVelasquez Floro",
+      "source_caption": "Meliaceae Santol Sandoricum koetjape (Burm.f.) Merr. LOLLY FRUIT Suan ming gou Sandoricum koetjape cotton fruit Stewed milkfish, tomatoes and eggplant with cotton fruit and lemon grass broth",
+      "reject_reason": "near-duplicate of fruit_veg/02 (same meal)"
+    },
+    {
+      "category": "whole_plant_crop",
+      "file": "C:/Users/harsh/AppData/Local/Temp/claude/C--Users-harsh-cropguard-ai/d660ee83-35d4-4543-8314-473b14271279/scratchpad/ood_staging2/whole_plant_crop/05_Greenhouses__3285417473_.jpg",
+      "commons_title": "File:Greenhouses (3285417473).jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Greenhouses_(3285417473).jpg",
+      "license": "CC BY 2.0",
+      "artist": "Andrea_44 from Leamington, Ontario , Canada",
+      "source_caption": "Who knows what's growing inside! My husband thinks they are tomato plants (Essex County is known for growing tomatoes), but all we could see was green plants!",
+      "reject_reason": "greenhouse exterior — a building, already covered by the built-environment categories"
+    },
+    {
+      "category": "fruit_veg",
+      "file": "C:/Users/harsh/AppData/Local/Temp/claude/C--Users-harsh-cropguard-ai/d660ee83-35d4-4543-8314-473b14271279/scratchpad/ood_staging2/fruit_veg/00_Childs__rare_flowers__vegetables_and_fruits__1917___20419728740_.jpg",
+      "commons_title": "File:Childs' rare flowers, vegetables and fruits (1917) (20419728740).jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Childs%27_rare_flowers,_vegetables_and_fruits_(1917)_(20419728740).jpg",
+      "license": "No restrictions",
+      "artist": "Internet Archive Book Images",
+      "source_caption": "Title: Childs' rare flowers, vegetables and fruits Identifier: childsrareflower00john_20 (find matches) Year: 1917 (1910s) Authors: John Lewis Childs (Firm); Henry G. Gilbert Nursery and Seed Trade Catalog Collection Subjects: Commercial catalogs Seeds; Nurseries (Horticulture) Catalogs; Seeds Catalogs; Flowers Catalogs; Vegetables Catalogs; Fruit Catalogs; John Lewis Childs (Firm); Commercial catalogs; Nurseries (Horticulture); Seeds; Flowers; Vegetables; Fruit Publisher: Floral Park, N. Y. : John Lewis Childs Contributing Library: U.S. Department of Agriculture, National Agricultural Library Digitizing Sponsor: U.S. Department of Agriculture, National Agricultural Library View Book Page: Book Viewer About This Book: Catalog Entry View All Images: All Images From Book Click here to view book online to see this illustration in context in a browseable online version of this book. Text Appearing Before Image: 10 John Lewis Childs. Inc., Floral Park, N. Y. Text Appearing After Image: Grand New Tomato, Top Notch The EarliestâThe Best Medium SizeâThe Most Perfect in Shape and ColorâThe Least Vine The Most FruitâThe Longest in Bearing and KeepingâThe Least AcidâThe Sweetest Tomato, and in Every Respect the Best for Home or Market. With qualities as brilliant as the Comet. Top-Notch has, as it were, dropped from the sky a perrect Tomato, in every quality that can he named it is superior to any other; earliest, large, round and smooth, uniform in size and .shape, and rich, ruby color. It makes very little vine, but bears enormous quantities of Truit, fifty to seventy large, perfect Tomatoes to a plant which covers very little area. In quality it Tar outranks any other variety, for it lacks the objectionable acid or other sorts. People who suffer bad effects from the acid of Tomatoes â wifl enjoy Top-Notch. Begins ripening- very early and continues all the season. It is most decidedly the finest Tomato for market and the best for the home garden. Per pkt., lie; 2 pkts. for 25c; %-oz., 60c; 1 oz., Â§1.00. New Early Tomato, John Baer \"John Baer\" Tomato is the result of fifteen gen- erations of improvement and selection for easi- ness, quality, shape, fruit, color and Shipping â¢quality. It produces the most perfect high crown Tomatoes ever grown and enormous crip, fifty to one hundred to each plant. Ripens evenly, right up to the stem. No cripples, no scalds, no blight, no cracked, no wrinkled, no one-sided, uneven scarred fruit. When dead ripe will not burst. Has a wonderful glistening bright red color, a mud, deliciously sweet flavor. In shape and form exactly like its photograph. It is almost seedless. It has just enough Toliageâwill stand plenty or manuring without going to vine. \"John Baer\" is the most perfect shipping To- mato ever grown; weight, about 6% ounces. We llnd it to lie a wonderful Tomato m miny ways, and will surely disappoint no one. regardless of high expectations which mav he entertained. Per pkt., loc: 3 pkts. for â¢.â¢.\".&lt;â¢; oz.. 50c. Tomato Snowball â At last we have a Tomato so white that it shows only a faint tinge or straw color. This tint will probably vary a little in different soils, climates and at different times of the year. But for all practical purposes it is a white Tomato, the most beautirul fruit vou Â«ver saw, large, smooth, very solid and meatv. and of very finest quality. Pkt.. 10c. Note About Images Please note that these images are extracted from scanned page images that may have been digitally enhanced for readability - coloration and appearance of these illustrations may not perfectly resemble the original work.",
+      "reject_reason": "seed-catalogue engraving, not a photograph"
+    },
+    {
+      "category": "fruit_veg",
+      "file": "C:/Users/harsh/AppData/Local/Temp/claude/C--Users-harsh-cropguard-ai/d660ee83-35d4-4543-8314-473b14271279/scratchpad/ood_staging2/fruit_veg/07_Lucas_van_Valckenborch_and_Georg_Flegel_-_A_fruit_and_vegetable_stall_above_the_.jpg",
+      "commons_title": "File:Lucas van Valckenborch and Georg Flegel - A fruit and vegetable stall above the Weinmarkt in Frankfurt (Allegory of Autumn).jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Lucas_van_Valckenborch_and_Georg_Flegel_-_A_fruit_and_vegetable_stall_above_the_Weinmarkt_in_Frankfurt_(Allegory_of_Autumn).jpg",
+      "license": "Public domain",
+      "artist": "Lucas van Valckenborch / Georg Flegel",
+      "source_caption": null,
+      "reject_reason": "painting, not a photograph"
+    }
+  ]
+}

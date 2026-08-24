@@ -1,0 +1,411 @@
+{
+  "model": "models\\cropguard_v1.keras",
+  "note": "scores computed on the Keras float model; the shipped .tflite exposes no logits or embeddings \u2014 see src/export_ood_model.py",
+  "head_reconstruction_max_abs_err": null,
+  "populations": {
+    "fit": {
+      "n": 2026,
+      "per_class": 120,
+      "split": "train",
+      "seed": 42
+    },
+    "id_val": {
+      "n": 3625
+    },
+    "id_test": {
+      "n": 3625
+    },
+    "ood": {
+      "n": 101,
+      "categories": {
+        "animal": 8,
+        "device": 7,
+        "face": 6,
+        "flower": 7,
+        "fruit_veg": 9,
+        "furniture": 6,
+        "hand": 6,
+        "other_foliage": 6,
+        "sky": 7,
+        "soil_ground": 6,
+        "text": 6,
+        "uncategorised": 4,
+        "vehicle_street": 6,
+        "wall": 5,
+        "whole_plant_crop": 12
+      }
+    },
+    "shifted": {
+      "n": 37,
+      "sources": {
+        "real_world_test": 17,
+        "web_sourced_test": 20
+      }
+    }
+  },
+  "mahalanobis_shrinkage": 0.030249885022405828,
+  "detectors": {
+    "msp": {
+      "clean_vs_ood": {
+        "auroc": 0.910014339364971,
+        "aupr_id": 0.9971074356003591,
+        "aupr_ood": 0.21994488540555657,
+        "fpr_at_95tpr": 0.5445544554455446,
+        "n_id": 3625,
+        "n_ood": 101
+      },
+      "field_vs_ood": {
+        "auroc": 0.5948621889215947,
+        "n_field": 37,
+        "n_ood": 101
+      },
+      "operating_points": {
+        "clean_val@0.95": {
+          "threshold": 0.616534631153647,
+          "accept_rate": {
+            "id_val": 0.9497931034482758,
+            "id_test": 0.9478620689655173,
+            "ood": 0.504950495049505,
+            "shifted": 0.6756756756756757
+          },
+          "ood_accept_by_category": {
+            "animal": 0.75,
+            "device": 0.42857142857142855,
+            "face": 0.6666666666666666,
+            "flower": 0.7142857142857143,
+            "fruit_veg": 0.6666666666666666,
+            "furniture": 0.16666666666666666,
+            "hand": 0.5,
+            "other_foliage": 0.3333333333333333,
+            "sky": 0.42857142857142855,
+            "soil_ground": 0.6666666666666666,
+            "text": 0.6666666666666666,
+            "uncategorised": 0.5,
+            "vehicle_street": 0.16666666666666666,
+            "wall": 0.4,
+            "whole_plant_crop": 0.4166666666666667
+          }
+        },
+        "field@0.9": {
+          "threshold": 0.4007022294660099,
+          "accept_rate": {
+            "id_val": 0.9972413793103448,
+            "id_test": 0.9942068965517241,
+            "ood": 0.8811881188118812,
+            "shifted": 0.8918918918918919
+          },
+          "ood_accept_by_category": {
+            "animal": 1.0,
+            "device": 0.7142857142857143,
+            "face": 0.8333333333333334,
+            "flower": 1.0,
+            "fruit_veg": 1.0,
+            "furniture": 0.6666666666666666,
+            "hand": 0.8333333333333334,
+            "other_foliage": 0.8333333333333334,
+            "sky": 0.7142857142857143,
+            "soil_ground": 0.8333333333333334,
+            "text": 0.8333333333333334,
+            "uncategorised": 1.0,
+            "vehicle_street": 1.0,
+            "wall": 0.8,
+            "whole_plant_crop": 1.0
+          }
+        }
+      },
+      "mean_score": {
+        "id_val": 0.9342447124962597,
+        "id_test": 0.9311427293242683,
+        "ood": 0.6392634237134736,
+        "shifted": 0.6965745054969036
+      }
+    },
+    "energy": {
+      "clean_vs_ood": {
+        "auroc": 0.9274947080914988,
+        "aupr_id": 0.997658029809663,
+        "aupr_ood": 0.37393693529110916,
+        "fpr_at_95tpr": 0.38613861386138615,
+        "n_id": 3625,
+        "n_ood": 101
+      },
+      "field_vs_ood": {
+        "auroc": 0.6312550173936312,
+        "n_field": 37,
+        "n_ood": 101
+      },
+      "operating_points": {
+        "clean_val@0.95": {
+          "threshold": 2.8792717972223563,
+          "accept_rate": {
+            "id_val": 0.9497931034482758,
+            "id_test": 0.9409655172413793,
+            "ood": 0.36633663366336633,
+            "shifted": 0.5135135135135135
+          },
+          "ood_accept_by_category": {
+            "animal": 0.0,
+            "device": 0.14285714285714285,
+            "face": 0.3333333333333333,
+            "flower": 0.7142857142857143,
+            "fruit_veg": 0.6666666666666666,
+            "furniture": 0.16666666666666666,
+            "hand": 0.3333333333333333,
+            "other_foliage": 0.6666666666666666,
+            "sky": 0.5714285714285714,
+            "soil_ground": 0.5,
+            "text": 0.0,
+            "uncategorised": 0.5,
+            "vehicle_street": 0.3333333333333333,
+            "wall": 0.4,
+            "whole_plant_crop": 0.25
+          }
+        },
+        "field@0.9": {
+          "threshold": 0.1283888096275239,
+          "accept_rate": {
+            "id_val": 0.9991724137931034,
+            "id_test": 0.9977931034482759,
+            "ood": 0.8613861386138614,
+            "shifted": 0.8918918918918919
+          },
+          "ood_accept_by_category": {
+            "animal": 0.875,
+            "device": 0.8571428571428571,
+            "face": 0.8333333333333334,
+            "flower": 1.0,
+            "fruit_veg": 1.0,
+            "furniture": 0.5,
+            "hand": 0.8333333333333334,
+            "other_foliage": 1.0,
+            "sky": 1.0,
+            "soil_ground": 0.8333333333333334,
+            "text": 0.8333333333333334,
+            "uncategorised": 1.0,
+            "vehicle_street": 0.6666666666666666,
+            "wall": 0.8,
+            "whole_plant_crop": 0.8333333333333334
+          }
+        }
+      },
+      "mean_score": {
+        "id_val": 8.216820682658042,
+        "id_test": 8.197112510742324,
+        "ood": 2.2292221278076494,
+        "shifted": 3.8493411195092904
+      }
+    },
+    "mahalanobis": {
+      "clean_vs_ood": {
+        "auroc": 0.999726869238648,
+        "aupr_id": 0.999992566892159,
+        "aupr_ood": 0.9758058391720916,
+        "fpr_at_95tpr": 0.0,
+        "n_id": 3625,
+        "n_ood": 101
+      },
+      "field_vs_ood": {
+        "auroc": 0.9649451431629649,
+        "n_field": 37,
+        "n_ood": 101
+      },
+      "operating_points": {
+        "clean_val@0.95": {
+          "threshold": -997.966902434855,
+          "accept_rate": {
+            "id_val": 0.9497931034482758,
+            "id_test": 0.9404137931034483,
+            "ood": 0.0,
+            "shifted": 0.0
+          },
+          "ood_accept_by_category": {
+            "animal": 0.0,
+            "device": 0.0,
+            "face": 0.0,
+            "flower": 0.0,
+            "fruit_veg": 0.0,
+            "furniture": 0.0,
+            "hand": 0.0,
+            "other_foliage": 0.0,
+            "sky": 0.0,
+            "soil_ground": 0.0,
+            "text": 0.0,
+            "uncategorised": 0.0,
+            "vehicle_street": 0.0,
+            "wall": 0.0,
+            "whole_plant_crop": 0.0
+          }
+        },
+        "field@0.9": {
+          "threshold": -3112.8814324998507,
+          "accept_rate": {
+            "id_val": 1.0,
+            "id_test": 0.9997241379310344,
+            "ood": 0.10891089108910891,
+            "shifted": 0.8918918918918919
+          },
+          "ood_accept_by_category": {
+            "animal": 0.25,
+            "device": 0.0,
+            "face": 0.3333333333333333,
+            "flower": 0.14285714285714285,
+            "fruit_veg": 0.1111111111111111,
+            "furniture": 0.0,
+            "hand": 0.0,
+            "other_foliage": 0.3333333333333333,
+            "sky": 0.14285714285714285,
+            "soil_ground": 0.0,
+            "text": 0.0,
+            "uncategorised": 0.0,
+            "vehicle_street": 0.0,
+            "wall": 0.4,
+            "whole_plant_crop": 0.0
+          }
+        }
+      },
+      "mean_score": {
+        "id_val": -646.4886783248438,
+        "id_test": -653.6163557336511,
+        "ood": -5205.762003721902,
+        "shifted": -2207.6673796484324
+      }
+    },
+    "cosine": {
+      "clean_vs_ood": {
+        "auroc": 0.9996585865483101,
+        "aupr_id": 0.9999906824301652,
+        "aupr_ood": 0.966682945983557,
+        "fpr_at_95tpr": 0.0,
+        "n_id": 3625,
+        "n_ood": 101
+      },
+      "field_vs_ood": {
+        "auroc": 0.9710998126839709,
+        "n_field": 37,
+        "n_ood": 101
+      },
+      "operating_points": {
+        "clean_val@0.95": {
+          "threshold": 0.7802025211383682,
+          "accept_rate": {
+            "id_val": 0.9497931034482758,
+            "id_test": 0.9428965517241379,
+            "ood": 0.0,
+            "shifted": 0.05405405405405406
+          },
+          "ood_accept_by_category": {
+            "animal": 0.0,
+            "device": 0.0,
+            "face": 0.0,
+            "flower": 0.0,
+            "fruit_veg": 0.0,
+            "furniture": 0.0,
+            "hand": 0.0,
+            "other_foliage": 0.0,
+            "sky": 0.0,
+            "soil_ground": 0.0,
+            "text": 0.0,
+            "uncategorised": 0.0,
+            "vehicle_street": 0.0,
+            "wall": 0.0,
+            "whole_plant_crop": 0.0
+          }
+        },
+        "field@0.9": {
+          "threshold": 0.5981325258907545,
+          "accept_rate": {
+            "id_val": 0.999448275862069,
+            "id_test": 0.999448275862069,
+            "ood": 0.07920792079207921,
+            "shifted": 0.8918918918918919
+          },
+          "ood_accept_by_category": {
+            "animal": 0.125,
+            "device": 0.0,
+            "face": 0.0,
+            "flower": 0.0,
+            "fruit_veg": 0.2222222222222222,
+            "furniture": 0.0,
+            "hand": 0.0,
+            "other_foliage": 0.5,
+            "sky": 0.0,
+            "soil_ground": 0.0,
+            "text": 0.0,
+            "uncategorised": 0.0,
+            "vehicle_street": 0.0,
+            "wall": 0.2,
+            "whole_plant_crop": 0.08333333333333333
+          }
+        }
+      },
+      "mean_score": {
+        "id_val": 0.8709233600506361,
+        "id_test": 0.8680489425675009,
+        "ood": 0.46759956359316734,
+        "shifted": 0.6702959274554283
+      }
+    }
+  },
+  "winner": "cosine",
+  "winner_selected_on": "field_vs_ood AUROC",
+  "shipped_threshold": 0.5981325258907545,
+  "shipped_field_tpr": 0.9,
+  "embedding_probe": {
+    "pca32_mahalanobis": {
+      "auroc_clean_vs_ood": 0.9943106862410379,
+      "auroc_field_vs_ood": 0.6387476585496388,
+      "params": 20576
+    },
+    "pca64_mahalanobis": {
+      "auroc_clean_vs_ood": 0.9980990099009901,
+      "auroc_field_vs_ood": 0.7366871822317366,
+      "params": 42624
+    },
+    "pca128_mahalanobis": {
+      "auroc_clean_vs_ood": 0.9995766473199044,
+      "auroc_field_vs_ood": 0.824993310141825,
+      "params": 92864
+    },
+    "mahalanobis_full": {
+      "auroc_clean_vs_ood": 0.999726869238648,
+      "auroc_field_vs_ood": 0.9649451431629649,
+      "params": 341568
+    },
+    "cosine": {
+      "auroc_clean_vs_ood": 0.9996585865483101,
+      "auroc_field_vs_ood": 0.9710998126839709,
+      "params": 9792
+    }
+  },
+  "shifted_accept_rate_at_field_threshold": {
+    "msp": {
+      "real_world_test": 0.8823529411764706,
+      "web_sourced_test": 0.9
+    },
+    "energy": {
+      "real_world_test": 0.9411764705882353,
+      "web_sourced_test": 0.85
+    },
+    "mahalanobis": {
+      "real_world_test": 0.8823529411764706,
+      "web_sourced_test": 0.9
+    },
+    "cosine": {
+      "real_world_test": 0.9411764705882353,
+      "web_sourced_test": 0.85
+    }
+  },
+  "tier_impact_on_ood": {
+    "calibrated_conf_mean": 0.6754179096238011,
+    "calibrated_conf_max": 0.9998273900191343,
+    "high_tier_before": 0.09900990099009901,
+    "high_tier_after_gate": 0.019801980198019802,
+    "diagnosis_shown_before": 0.6237623762376238,
+    "diagnosis_shown_after_gate": 0.0594059405940594
+  },
+  "plots": {
+    "scores": "outputs\\ood_scores.png",
+    "roc": "outputs\\ood_roc.png"
+  },
+  "gate_params": "models\\ood_gate.json"
+}

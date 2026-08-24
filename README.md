@@ -593,8 +593,13 @@ just called unreliable would contradict itself.
 
 ## ⚠️ Known limitations
 
-1. **OOD inputs can be confidently wrong.** The classifier is closed-set with no
-   "not a leaf" rejection; a whole-plant photo returned 79.74% on `Corn_healthy`.
+1. **OOD inputs can be confidently wrong — now gated, not solved.** The classifier is
+   closed-set: 9.9% of 101 non-leaf photos reached the HIGH tier and 62.4% got some
+   diagnosis shown. A cosine-to-class-mean gate on the embedding
+   (`web/src/lib/oodGate.ts`) now rejects them before any diagnosis appears, cutting
+   those to 2.0% / 5.9% while keeping 90% of real field leaf photos. What still gets
+   through is mostly *other species'* leaves — the gate knows "leaf", not "my crop".
+   Its threshold is a percentile of only 37 field photos. See `docs/OOD.md`.
 2. **Confidence tiers help but do not fully solve false confidence.** 0.52% of test
    images are still HIGH-tier and wrong (was 1.16% before calibration). Tiering catches
    genuine uncertainty, not confident errors on inputs that merely resemble the training

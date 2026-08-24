@@ -119,8 +119,12 @@ def main():
             continue
         if entry.startswith('_') or entry.startswith('.'):
             if entry == '_ood':
-                ood_count = len([f for f in os.listdir(sub)
-                                 if f.lower().endswith(IMAGE_EXTS)])
+                # Recursive: the Phase 4 negative set is filed under per-category
+                # subfolders (_ood/face/, _ood/whole_plant_crop/, ...), which a
+                # flat listdir would report as zero.
+                ood_count = sum(
+                    1 for _, _, files in os.walk(sub) for f in files
+                    if f.lower().endswith(IMAGE_EXTS))
             continue
 
         canon = lookup.get(_norm(entry))

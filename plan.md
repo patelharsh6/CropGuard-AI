@@ -420,25 +420,104 @@ wrong".
 *Concepts: CAM / Grad-CAM mechanics, shortcut learning and spurious correlation,
 qualitative error analysis.*
 
-## Phase 4 — OOD gate: "is this even a leaf?" (1–2 days)
+## Phase 4 — OOD gate: "is this even a leaf?" — ✅ **COMPLETE (2026-08-24)**
 
-Directly fixes the project's worst known limitation.
+Directly fixes the project's worst known limitation. Full write-up: `docs/OOD.md`;
+numbers in `outputs/ood_report.json` and `outputs/gate_export_report.json`.
 
-- [ ] Build a small negative set (~100 images): faces, furniture, sky, text, whole
-      plants, blank walls. Store in `real_world_test/_ood/`.
-- [ ] New `src/ood.py` comparing three detectors on penultimate-layer embeddings /
-      logits, scored by **AUROC and FPR@95TPR**:
-      1. Maximum Softmax Probability (the baseline everyone quotes)
-      2. **Energy score** (`-logsumexp(logits)`) — usually beats MSP, and is cheap
-      3. Mahalanobis distance to per-class embedding means
-- [ ] Ship the winner as a **pre-classification gate** in the UI: below threshold →
-      "this doesn't look like a single crop leaf — retake the photo," and skip the
-      diagnosis entirely. Requires exporting logits or the embedding as a second
-      TFLite output.
-- [ ] Record the AUROC table in `docs/OOD.md`.
+- [x] Negative set: **97 hand-vetted Wikimedia Commons photos** in
+      `real_world_test/_ood/` across 14 categories (faces, hands, furniture, devices,
+      text, sky, walls, streets, animals, soil — plus the hard ones: whole crop
+      plants, other foliage, flowers, produce), joining the 4 already in
+      `web_sourced_test/_ood` for **n = 101**. Built by `scripts/harvest_ood.py` +
+      `scripts/curate_ood.py`; 19 of 116 candidates rejected with per-image reasons
+      in `real_world_test/_ood/provenance.json`.
+- [x] `src/ood.py` — MSP, energy, Mahalanobis **and a fourth added mid-phase**
+      (class-mean cosine), scored by AUROC and FPR@95TPR against *two* ID
+      populations, which turned out to be the whole story.
+- [x] Shipped as a pre-classification gate: `models/cropguard_v1_gate.tflite`
+      (probs + logits + 576-d embedding, built and verified by
+      `src/export_ood_model.py`), `models/ood_gate.json` (17 unit class means +
+      threshold), `web/src/lib/oodGate.ts`, and a rejection panel in `page.tsx` that
+      replaces the diagnosis entirely.
+- [x] `docs/OOD.md`.
+
+### Result A — the clean-split AUROC is a trap, and it fooled the plan
+
+Every detector was supposed to be ranked by AUROC on ID-test-vs-OOD. On that metric
+both embedding detectors look finished — 0.9997, FPR@95TPR 0.0000. Then apply the
+textbook threshold (95% TPR on the clean *validation* split) to the 37 real field
+photos, which are in-scope inputs a gate must accept:
+
+| detector | AUROC clean vs OOD | keeps field leaves | accepts OOD |
+|---|---|---|---|
+| MSP | 0.9100 | 0.676 | 0.505 |
+| energy | 0.9275 | 0.514 | 0.366 |
+| Mahalanobis | **0.9997** | **0.000** | 0.000 |
+| class-mean cosine | **0.9997** | **0.054** | 0.000 |
+
+**The 0.9997 detector rejects every real photograph of a leaf.** It never learned
+"leaf"; it learned "grey studio card", because that is what every training image is.
+When the training distribution is narrower than the deployment distribution, OOD
+AUROC measured against it answers the wrong question.
+
+### Result B — re-asked against field photos, and a detector that was not in the plan
+
+| detector | AUROC field vs OOD | params to ship |
+|---|---|---|
+| MSP | 0.5949 | 0 |
+| energy | 0.6313 | 0 |
+| Mahalanobis | 0.9649 | 341,568 (1.33 MB) |
+| **class-mean cosine** | **0.9711** | **9,792 (38 KB)** |
+
+MSP and energy collapse to near-chance: they read the logits, and domain shift
+flattens the logits of a real leaf into something indistinguishable from a wall.
+Dropping Mahalanobis's covariance and L2-normalizing *helps* — a field leaf's
+embedding points the same direction as a studio leaf's at a different magnitude, and
+only cosine ignores the magnitude. It also fits in 38 KB against a 1.3 MB precision
+matrix, on a 1.15 MB model.
+
+Same trap on the compression axis: PCA-64 + Mahalanobis holds 0.9981 clean and falls
+to 0.7367 field. The leading components carry the studio; the leaf-vs-not signal is
+in the tail.
+
+### Result C — what shipped, and what it buys
+
+Threshold **0.5981**, set to keep 90% of the field photos rather than 95% of the
+clean split. Accepts 0.999 of clean test, 0.941 / 0.850 of the two field sets, and
+**0.079 of the 101 negatives**. Over those negatives:
+
+| | before gate | after |
+|---|---|---|
+| reach HIGH tier (diagnosis + treatment) | 9.9% | **2.0%** |
+| reach MODERATE+ (a diagnosis is shown) | 62.4% | **5.9%** |
+
+Eight negatives still pass; three are oak-leaf close-ups, which is species
+recognition rather than OOD detection — a 17-class head cannot say "leaf, but not one
+of mine".
+
+`models/cropguard_v1_gate.tflite` is bit-identical to the production model on
+probabilities (max |Δ| = 0.0, argmax agreement 1.000 over 338 images), so the swap
+cannot change a diagnosis. The **gate decision** is less clean: the quantized
+embedding moves the cosine score by up to 0.061 and flips 5 of 338 images across the
+threshold — the same float-vs-quantized divergence under shift that Phase 3 found.
+
+### What Phase 4 changes about the roadmap
+
+- **`real_world_test/` is now blocking two results, not one.** The threshold is a
+  percentile of 37 photos; more of them is the single highest-value input to the
+  project.
+- **Phase 5 gains a row:** the class means are fitted on studio images. Whether
+  training with `BackgroundReplace` is *why* cosine survives the shift is an ablation.
+- **Phase 6 gains a contract test:** `ood_gate.json`'s class order must match
+  `CLASS_NAMES` and the embedding dim must match the model, or the gate silently
+  scores against the wrong means.
+- A "leaf, but not a crop I know" class would close the one systematic hole (§6 of
+  `docs/OOD.md`) — Phase 7 material, since it needs new data.
 
 *Concepts: open-set recognition, OOD detection, AUROC / FPR@95, why closed-set
-softmax classifiers fail on unseen input classes.*
+softmax classifiers fail on unseen input classes, and choosing an operating point on
+the deployment distribution rather than the training one.*
 
 ## Phase 5 — Baselines & ablations: the table that answers "why?" (2–3 days)
 
@@ -503,7 +582,7 @@ What to be ready to whiteboard, and which artifact in this repo backs it up.
 | Metrics beyond accuracy — precision/recall/F1, top-k, confusion structure | `src/evaluate.py` |
 | **Calibration** — ECE, reliability diagrams, temperature scaling | `src/calibration.py`, `docs/CALIBRATION.md`, `outputs/reliability_diagram.png` |
 | **Selective prediction / abstention**, risk–coverage | `outputs/risk_coverage.png` (AURC 0.0067) plus the derived thresholds in `confidenceTier.ts` |
-| **OOD / open-set** — MSP vs energy vs Mahalanobis, AUROC | Phase 4 |
+| **OOD / open-set** — MSP vs energy vs Mahalanobis vs class-mean cosine, AUROC / FPR@95, and why the ID population you measure against decides the answer | `src/ood.py`, `docs/OOD.md`, `web/src/lib/oodGate.ts` (Phase 4) |
 | **Explainability** — Grad-CAM, shortcut learning | `src/explain.py`, `docs/EXPLAINABILITY.md` (Phase 3) |
 | **Baselines and ablations** — experimental discipline | Phase 5 |
 | Quantization — PTQ dynamic-range vs full INT8, weights vs activations, QAT, architecture sensitivity (hard-swish, SE blocks) | `docs/quantization_findings.md`, Phase 5 capstone |
