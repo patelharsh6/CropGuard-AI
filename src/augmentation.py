@@ -314,6 +314,20 @@ def get_training_augmentation(config=AUG_CONFIG):
 # Initialize the pipeline
 train_transform = get_training_augmentation()
 
+
+def set_training_transform(config=AUG_CONFIG):
+    """Rebind the module-level pipeline used by the tf.data wrapper.
+
+    The wrapper below reads `train_transform` at call time, so swapping it here
+    changes what a tf.data pipeline applies. Used by src/experiments.py to run
+    the augmentation ablation (probabilities zeroed per variant) without
+    duplicating get_training_augmentation. Callers that want the production
+    pipeline back call this with no arguments.
+    """
+    global train_transform
+    train_transform = get_training_augmentation(config)
+    return train_transform
+
 # ==========================================
 # TF.DATA INTEGRATION
 # ==========================================

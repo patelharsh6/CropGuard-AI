@@ -1,0 +1,61 @@
+{
+  "budget": {
+    "train_fraction": 0.4,
+    "head_epochs": 8,
+    "ft_epochs": 4,
+    "batch_size": 32,
+    "head_lr": 0.001,
+    "ft_lr": 1e-05,
+    "freeze_fraction": 0.75,
+    "dropout": 0.3,
+    "early_stopping": false,
+    "seed": 42
+  },
+  "shipped_for_context": {
+    "keras_test_accuracy": 0.9465,
+    "tflite_test_accuracy": 0.9401,
+    "field_accuracy": 0.5294
+  },
+  "runs": {
+    "majority": {
+      "config": {
+        "id": "majority",
+        "kind": "trivial",
+        "rule": "global",
+        "label": "Majority class",
+        "note": "The floor. Anything not beating this has learned nothing."
+      },
+      "config_hash": "e351fa490db6",
+      "metrics": {
+        "test_accuracy": 0.22179310344827585,
+        "test_top3_accuracy": null,
+        "detail": {
+          "prediction": "Tomato___Tomato_Yellow_Leaf_Curl_Virus"
+        },
+        "n_test": 3625
+      }
+    },
+    "majority_per_crop": {
+      "config": {
+        "id": "majority_per_crop",
+        "kind": "trivial",
+        "rule": "per_crop",
+        "label": "Majority class per crop (crop given)",
+        "note": "Oracle floor: assumes the crop is known, which the model is never told. Beating this is the real bar."
+      },
+      "config_hash": "86eb6c4f1f2a",
+      "metrics": {
+        "test_accuracy": 0.31255172413793103,
+        "test_top3_accuracy": null,
+        "detail": {
+          "prediction_per_crop": {
+            "Corn_(maize)": "Corn_(maize)___Common_rust_",
+            "Potato": "Potato___Early_blight",
+            "Tomato": "Tomato___Tomato_Yellow_Leaf_Curl_Virus"
+          }
+        },
+        "n_test": 3625
+      }
+    }
+  }
+}
